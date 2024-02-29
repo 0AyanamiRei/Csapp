@@ -1,0 +1,37 @@
+chip:芯片
+enhance:增强
+flash memory:闪存
+bus transaction:总线事务
+transaction:处理,业务,办理
+platter:盘片
+spindle:主轴
+track：v.跟踪 n.磁道,轨道
+sector：扇形，行业
+adapter:适配器，转接器
+solid state disk：SSD固态硬盘
+locality：局部性
+temporal locality：时间局部性
+spatial locality：空间局部性
+stride-k reference pattern： 步长为k的引用模式
+reference：引用,参考,编号
+pattern: 模式，方案
+victim：受害者,牺牲品
+capacity：容量
+load：加载
+evict：驱逐
+conflict：v.抵触 n.冲突,矛盾
+Write Deferred：延迟写入
+defer：延期的，推迟的
+fetch:v.去拿来 
+corresponding：符合的，相应的
+correspond：v.符合，相当于
+anatomy：n.解刨
+metrics: 指标
+evaluate：v.评估,估计
+source code：源代码
+machine code：机器代码
+machine：机器
+separate：v.分离，隔开，adj.单独的，独立的
+crucial：至关重要的
+archive：n.存档, v.把···存档
+
