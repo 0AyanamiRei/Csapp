@@ -1,0 +1,14 @@
+终于结束了进程(process)和那些函数了(fork、execve)
+    ps：现在欠下的，以后都会在bug中爆发出来的！！！ 做lab之前要好好复习进程
+尽量保证动词名词使用英文单词.
+现在让我们进入信号(signal!)
+####Introduce#####
+    It's a higher-level software form of exceptional control flow, known
+as a Linux signal.
+
+####信号术语######
+    transfer一个signal到目的process通常由两个步骤组成：
+    ·Sending a signal
+    ·Receiving a signal
+
+    发送信号
