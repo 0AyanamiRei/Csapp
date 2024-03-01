@@ -3,15 +3,17 @@
 #define MAXARGS 128
 #define MAXLINE 128
 
-
 void eval(char *cmdline);
 int parseline(char *buf, char **argv);
 int builtin_command(char **argv);
-void Fgets(char *str, int n, FILE *stream)1
-
+char *Fgets(char *str, int n, FILE *stream)
 {
-    fgets(str, n, stream);
-
+    char *res = fgets(str, n, stream);
+    if(res == NULL){
+        printf("error: fgets读取失败!");
+        exit(0);
+    }
+    return res;
 }
 
 int main()
