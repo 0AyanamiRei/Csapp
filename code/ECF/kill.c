@@ -9,7 +9,7 @@ int main()
         exit(0);
     }
 
-    kill(pid, SIGKILL);/* 注意windows没有提供kill函数 */
+    // kill(pid, SIGKILL);/* 注意windows没有提供kill函数 */
     
     return 0;
 }

@@ -34,4 +34,5 @@ machine：机器
 separate：v.分离，隔开，adj.单独的，独立的
 crucial：至关重要的
 archive：n.存档, v.把···存档
-
+implicit：隐式的
+explicit：显式的
