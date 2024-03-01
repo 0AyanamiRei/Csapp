@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-#include <unistd.h>
 #include <errno.h>
 #include <sys/types.h>
-#include <sys/wait.h>
+// #include <sys/wait.h>  /* windows中没有该头文件 */
 
  void unix_error(char *msg) /* Unix-style error */
 {
