@@ -7,6 +7,15 @@
     SIGCHLD:默认行为=忽略(进程忽略掉该信号), 事件=子进程停止或者终止
 */
 
+/*
+
+        child立马exit-------+
+        |         1         ↓
+····---fork()---addjob()---(handler)deletejob()
+        |_______2______|
+
+如果从路线1的时间比路线2更小,那么就会先进行deletejob再进行addjob
+*/
 
 void handler(int sig)
 {
