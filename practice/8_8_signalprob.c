@@ -20,7 +20,7 @@ void handler1(int sig)
 
     Sigfillset(&mask);
     Sigprocmask(SIG_BLOCK, &mask, &prev_mask); /* Block sigs */
-    Sio_putl(--counter); /* 打印long类型变量 1 */
+    Sio_putl(--counter); /* 打印long类型变量 ouput 1 */
     Sigprocmask(SIG_SETMASK, &prev_mask, NULL); /* Restore sigs */
 
     _exit(0);
@@ -31,7 +31,7 @@ int main()
     pid_t pid;
     sigset_t mask, prev_mask;
 
-    printf("%ld", counter); /* input 2 */
+    printf("%ld", counter); /* ouput 2 */
     fflush(stdout);
 
     /* SIGUSR1: 默认行为=终止, 用户自定义的信号1*/
@@ -42,12 +42,12 @@ int main()
         {
         };
     }
-    Kill(pid, SIGUSR1); /* Father process will send the signal to child process */
+    Kill(pid, SIGUSR1); /* Parent process will send the signal to child process */
     Waitpid(-1, NULL, 0);
 
     Sigfillset(&mask);
     Sigprocmask(SIG_BLOCK, &mask, &prev_mask); /* Block sigs */
-    printf("%ld", ++counter); /* input 3*/
+    printf("%ld", ++counter); /* ouput 3*/
     Sigprocmask(SIG_SETMASK, &prev_mask, NULL); /* Restore sigs */
 
     exit(0);
