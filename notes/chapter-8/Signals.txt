@@ -29,6 +29,6 @@ as a Linux signal.
     return control给I_{next}
 
     介绍了修改每个signal对应行为的函数signal(int signum, sighandler_t handler);
-    这给到我们自定义处理signal的自由, 可以往handler填函数的地址，称为：signal handler
+    这给到我们自定义处理signal的自由, 可以往handler填函数的地s址，称为：signal handler
     改变signal default行为的这个操作我们叫"installing the handler"。
 
