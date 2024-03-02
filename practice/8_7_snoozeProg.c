@@ -11,11 +11,8 @@
 /* Mission Accomplished：
     以防第一遍读不明白到底要让我们干什么，我建议你应该实际运行一下调用snooze函数后按Ctrl+C会发生什么。
 
-    并没有得到sleep剩下的时间，而是直接退出了程序
-
-
-
-
+    并没有得到sleep剩下的时间，而是直接退出了程序，查阅Linux信号, 我们发现Ctrl+C对应的信号是SIGINT k=2
+    是直接终止程序, 所以我们需要利用signal函数修改SIGINT的默认行为
 */
 
 
@@ -59,10 +56,3 @@ unsigned int snooze(unsigned int secs){
 
     return secs - selpt_secs;
 }
-
-
-/* How??
-    在收到I/O键盘的输入信号 Ctrl+C的时候,程序收到一个k=2 SIGINT的信号默认行为为终止
-    程序不会输出Slept for %d of 5 secs.这段话,更不会看到Now time is going, 所以我们要做的
-    就是改变这个信号的默认行为,
-*/
