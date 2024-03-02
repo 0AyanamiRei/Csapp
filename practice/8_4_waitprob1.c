@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-// #include <sys/wait.h>
-#include <unistd.h>
+#include "/home/refrain/csapp/Csapp/code/chapter-8/ECF/mycsapp.c"
 
 int main() {
     int status;
