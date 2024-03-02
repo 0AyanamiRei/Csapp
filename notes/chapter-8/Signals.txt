@@ -41,8 +41,12 @@ as a Linux signal.
 
     显示的阻塞信号，这是我们需要掌握的，使用函数sigprocmask(翻译下来应该叫做signal-process-mask)
     以及一些辅助的函数(主要还是sigprocmask函数), 它能够明确的告诉我们要阻塞什么信号，以及如何解除对该信号的阻塞
-
+    函数定义：int sigprocmask(int how, const sigset_t* set, sigset_t oldset);
+    how决定了怎么修改blocked bit vector的信号, set中告诉我们修改哪些信号
     
+    ( 实际上添加set中的信号就是B|set, 从B中删除set中的信号就是B&(~set) )    
+
+
 
 
 
