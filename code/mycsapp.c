@@ -54,6 +54,9 @@ void Sigfillset(sigset_t *set);
 void Sigaddset(sigset_t *set, int signum);
 void Sigdelset(sigset_t *set, int signum);
 int Sigismember(const sigset_t *set, int signum);
+void Execve(const char *filename, char *const argv[], char *const envp[]);
+
+
 
 /* 实现函数 */
 
@@ -239,6 +242,33 @@ int Sigismember(const sigset_t *set, int signum)
         unix_error("Sigismember error");
     return rc;
 }
+
+
+void Execve(const char *filename, char *const argv[], char *const envp[]) 
+{
+    if (execve(filename, argv, envp) < 0)
+	unix_error("Execve error");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 函数解析 */
 // 1 waitpid
