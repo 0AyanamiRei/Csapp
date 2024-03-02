@@ -1,0 +1,107 @@
+Book practice
+
+//求和定义
+#define IDENT 0
+#define OP +
+// 求积定义
+#define IDENT 1
+#define OP *
+
+typedef struct
+{
+    long len;
+    data_t *data;
+} vec_rec, *vec_prt;
+
+typedef long data_t ;
+
+vec_ptr new_vec(long len); //返回一个长度为len的vector
+long vec_length(vec_ptr v); // 返回vector长度
+
+
+
+void combine_1(vec_ptr v)
+{
+    long i;
+
+    *dest = IDENT;
+    for(i = 0; i < vec_length(v); i ++){
+        data_t val;
+        get_vec_elemet(v, i, &val);
+        *dest = *dest OP val;
+    }
+}
+数据类型         Integer                   Double FP
+操作           +        *                +         *
+未优化       22.68    20.02            19.98      20.18
+O1优化       10.12    10.12            10.17      11.14
+
+void combine_2(vec_ptr v)
+{
+    long i;
+    long length = vec_length(v)
+
+    *dest = IDENT;
+    for(i = 0; i < length; i ++){
+        data_t val;
+        get_vec_elemet(v, i, &val);
+        *dest = *dest OP val;
+    }
+}
+数据类型                Integer                   Double FP
+操作                   +        *                +         *
+O1优化                10.12    10.12            10.17      11.14
+code motion优化       7.02      9.03            9.02       11.03
+
+
+void combine_3(vec_ptr v)
+{
+    long i;
+    long length = vec_length(v)
+    data_t *data = get_vec_start(v);
+
+    *dest = IDENT;
+    for(i = 0; i < length; i ++){
+        *dest = *dest OP data[i];
+    }
+}
+数据类型                Integer                   Double FP
+操作                   +        *                +         *
+combine_2             7.02      9.03            9.02       11.03
+消除循环中的函数引用    7.17      9.02            9.02       11.03
+
+
+void combine_4(vec_ptr v)
+{
+    long i;
+    long length = vec_length(v)
+    data_t *data = get_vec_start(v);
+    data_t acc = IDENT
+
+    *dest = IDENT;
+    for(i = 0; i < length; i ++){
+        acc = acc OP data[i];
+    }
+    *dest = acc;
+}
+数据类型                Integer                   Double FP
+操作                   +        *                +         *
+combine_3             7.17      9.02            9.02       11.03
+消除不必要的内存引用    1.27      3.01            3.01       5.01
+
+下面我们来总结一下combine从1到4的优化历程:
+#1 combine_1   基准代码
+#2 combine_2   code motion优化,避免多次调用函数
+#3 combine_3   减少循环体内的函数调用,但是事实上性能并没有提高甚至整数求和略有下降,在后面解答疑惑
+#4 combine_4   消除不必要的内存引用,查看汇编代码可知 循环体内*dest每次运算就会进行一次内存读写
+
+查阅汇编代码我们能够看见很多特点,类似*dest、data[i]这种有内存引用的代码,会进行一次读操作
+赋值会进行一次写操作,而使用临时变量进行类似的操作则直接省去了一次读和写操作
+
+请注意,combine_3到combine_4编译器并不会自动优化,原因仍然是内存别名使用的问题,例如
+combine_3(v, get_vec_start(v) + 2);     初始值[2,3,5]   结果[2,3,36]
+combine_4(v, get_vec_start(v) + 2);     初始值[2,3,5]   结果[2,3,30]
+最后一次操作时,前者为6*6=36  后者为6*5=30
+
+后面我们会进行循环展开以及从并行性的角度上进一步优化代码,使其的瓶颈不再是延迟而是接近吞吐量界限.
+(见笔记现代处理器)

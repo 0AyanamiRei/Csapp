@@ -1,0 +1,82 @@
+程序的数据流图 data-flow 
+
+从机器级代码到数据流图，从而分析程序性能
+以combine_4为例，示范一下如何从机器级代码到画出最终的数据流图，进而分析其CPE
+
+void combine_4(vec_ptr v, data_t *dest)
+{
+    long i;
+    long length = vec_length(v);
+    data_t *data = get_vec_start(v);
+    data_t acc = IDENT;
+
+    for(i = 0; i < length; i ++){
+        acc = acc OP data[i];
+    }
+}
+我们将重心放在循环代码上，因为对于较大vector来说，这是决定性能的主要因素
+考虑类型为double， 以乘法作为合并运算的情况。
+先查阅这部分对应的汇编代码：
+
+.L25:
+    vmulsd      (%rdx),%xmm(),%xmm()
+    addq        $8,%rdx
+    cmpq        %rax,%rdx
+    jne         .L25
+
+
+%rax    %rdx    %xmm()         load    ICU中的指令译码器会将这4条汇编指令扩展成左边的五步
+  ↓       ↓       ↓            mul     操作，#1：(%rdx) 从内存中读出源操作数
+ ...     ...     ...           add     #2：mul操作执行乘法   #3：%rdx 加8
+  ↓       ↓       ↓            cmp     #4：cmp比较%rax和%rdx修改条件码寄存器   
+%rax    %rdx    %xmm()         jne     #5：jne根据条件码寄存器执行指令
+
+在csapp书上P363到P365页从图5-13到图5-15展现了从顶部源寄存器到底部目的寄存器的数据流
+可以看到图5-15，程序的两条数据相关链，主要是针对%xmm()和%rdx的修改，可以看到每次%rdx
+进行整数加法延迟为一个周期，假设浮点乘法延迟为5个周期，另一条相关链每修改一次%xmm()的值
+延迟5个周期，那么整数加法一边需要n个周期，而浮点乘法一边需要5n个周期。
+
+这说明了为什么对于combine_4我们有CPE=5，当主要性能瓶颈是浮点乘法器的时候，
+其他操作：控制、整数加法、读取则会与乘法器并行的进行。
+
+对于所有情况如果运算的延迟L>1，那么可以看到测量的CPE=L，表示该链是制约性能的关键路径。
+
+需要关注的是，整数加法的情况下，combine_4的CPE=1.27而不是1，因为有其他因素也同样会限制性能
+这里不再展开。
+
+总之我们需要优化代码，增强指令级并行性，使唯一的限制是吞吐量界限。
+
+
+test5.5
+多项式求值函数
+double poly_1(double a[], double x, long n)
+{
+    long i;
+    double res = a[0];
+    double xpwr = x;
+    for(i = 1; i <= n; i ++){
+        res += a[i] * xpwr;
+        xpwr = x * xpwr;
+    }
+    return res;
+}
+
+double poly_2(double a[], double x, long n)
+{
+    long i;
+    double res = a[d];
+    for(i = n - 1; i >= 0; i --){
+        res = a[i] + x * res;
+    }
+    return res;
+}
+#1分析两种风格的代码执行多少次加法和多少次乘法运算？
+#2计算两个代码的CPE。
+#3解释为什么第二个函数CPE需要更多操作但是运行更快？
+
+我们只关注循环体的计算次数，poly_1的计算次数需要2n次乘法和2n次加法。
+poly_2需要2n次加法，n次乘法。
+
+绘制二者的数据流图，只关注循环体部分
+
+

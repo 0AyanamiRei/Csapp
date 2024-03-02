@@ -1,0 +1,41 @@
+readelf -h test.o
+    ELF Header:
+    Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+    Class:                             ELF64
+    Data:                              2's complement, little endian
+    Version:                           1 (current)
+    OS/ABI:                            UNIX - System V
+    ABI Version:                       0
+    Type:                              REL (Relocatable file)         
+    Machine:                           Advanced Micro Devices X86-64
+    Version:                           0x1
+    Entry point address:               0x0
+    Start of program headers:          0 (bytes into file)
+    Start of section headers:          1136 (bytes into file)
+    Flags:                             0x0
+    Size of this header:               64 (bytes)
+    Size of program headers:           0 (bytes)
+    Number of program headers:         0
+    Size of section headers:           64 (bytes)
+    Number of section headers:         14
+    Section header string table index: 13
+ 解释含义
+    Magic:
+    前4个字节:ELF文件的魔数,对应ASCII码的'DEL控制' 'E' 'L' 'F', 用于确定文件类型是否正确.
+    第五个字节:0x1表示32位   0x2表示64位
+    第六个字节:0x1表示小端   0x2表示大端
+    第七个字节表示ELF文件的版本号,通常是01
+    最后九个字节没有定义,用0填充
+
+    Type:
+    查看文件类型,比如上面的,REL (Relocatable file)表示可重定位文件
+
+    Size of section headers:
+    ELF header的长度64字节(0x40),这说明section的起始地址应该是0x40
+
+    Start of section headers:
+    Section header table的起始地址是1136
+
+    根据下面的Number of section headers和Size of section headers信息
+    可以看出一共有14个表项,每个表项大小64bytes, 那么section header table的大小就是896bytes
+    而section header table的起始地址是1136,那么整个elf文件大小就是1136+896=2032

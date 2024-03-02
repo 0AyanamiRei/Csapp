@@ -1,0 +1,348 @@
+Chapter：7
+    linking, 由linker(链接器)在compile time、load time、run time时执行
+    解释一下：
+    compile time，source code is translated into machine code by the "compiler"
+    load time，program is loaded into memory and executed by the "loader"
+    run time，application programs
+
+##7.1 compiler driver
+    示例程序 main.c和sum.c
+    shell中输入指令 "gcc -Og -o prog mian.c sum.c"将main.c和sum.c翻译成二进制可重定位目标
+    文件( binary relocatable object file)后通过链接器(ld)组合形成一个可执行目标文件
+    (executable object file)prog.
+
+    注: -Og:Optimize debugging experience表示代码优化等级，-Og表示结构符合原始代码
+        -o：output file
+
+    书上P465图7-2展示了Static linking(静态链接)的过程。
+    分别使用
+    cpp main.c main.i                   cpp：c preprocessor(C 预处理器)
+    cc main.i -Og -o main.s             cc： c compiler(C 编译器)
+    as  -o main.o main.s                as： assembler(汇编器)
+    然后使用ld将两个.o文件组合起来ld -static -o prog main.o sum.o
+    然后运行prog程序 ./prog
+    
+    gcc -E main.c -o main.i            -E:只进行预处理
+    gcc -S main.i -o main.s            -S:只进行编译
+    gcc -c main.s -o main.o            -c:只进行编译和汇编
+    gcc -o prog main.o sum.o
+    ./prog运行
+
+    总之上述的过程简单的介绍了如何从.c文件变成可执行目标文件
+
+
+##7.2 static link
+    7.1部分使用的ld即 linux LD, 称作static linker：静态链接器
+    linker完成的两个主要任务：
+    ·symbol resolution(符号解析)
+    ·relocation(重定位)
+
+    分别解释一下两个主要任务是什么：
+    ·符号解析，目标文件中定义和引用"函数"、"全局变量"、"静态变量"的符号, 而符号解析的目的就是将每个符号
+              引用和其定义关联起来。
+    .重定位，编译器和汇编器生成带有地址的codes and data sections，linker则通过把每个符号定义与一个内存
+            位置关联起来，从而重定位这些sections, 然后修改对这些符号的引用，使这些引用指向内存位置，
+            链接器使用汇编器产生的relocation entry(重定位条件)来执行重定位。
+
+##7.3 object file
+    目标文件分为三种：
+    ·Relocatable object file(可重定位目标文件)
+    ·Executable object file(可执行目标文件)
+    ·Shared object file(共享目标文件)
+
+    可重定位目标文件，如上文的main.o和sum.o 包含二进制代码和数据，可以与其他可重定位目标文件
+    合并起来创建一个可执行目标文件。
+
+    可执行目标文件，如上文的prog, 包含二进制代码和数据，可以被直接复制到内存中执行
+
+    共享目标文件，特殊的可重定位目标文件，可以在load time和run time被动态的加载进内存并链接。
+
+    注意，可重定位目标文件和共享目标文件是由编译器和汇编器生成的，可执行目标文件是由链接器生成的。
+
+##7.4 Relocatable object file
+    这一小节介绍了一个典型的ELF可重定位目标文件的格式，从ELF header到Section header table, 中间
+    各个sections存储的信息。
+    大致分为三部分:
+    ·ELF header
+    ·Sections
+    ·Section header table(描述sections的信息)
+    ____________
+    |ELF头      |    生成该文件的系统的word size和字节顺序
+    |.text      |    已编译程序的机器代码
+    |.rodata    |    只读数据
+    |.data      |    初始化的全局变量和静态C变量
+    |.bss       |    未初始化与初始化为0的全局变量和静态C变量(为了节省空间该section不占据实际的内存)
+    |.symtab    |    符号表，symbol tables
+    |.rel.text  |    A list of locations in the .text section，猜测是将符号
+    |.rel.data  |
+    |.debug     |
+    |.line      |
+    |.strtab    |
+    |headerTAB__|
+
+##7.5 Symbols and Symbols tables
+    一个可重定位目标模块(文件)m有一个符号表，包含m定义和引用的符号的信息，一共有三种
+    ·模块m定义的全局符号
+    ·其他模块定义的全局符号
+    ·模块m定义的局部符号, 对应于带static属性的C函数和全局变量
+    顾名思义，全局符号就是能够被不同模块引用的，局部符号就是只能本地引用的。需要特别注意的是
+    定义时带有static属性的本地变量不被栈管理，而是在.data section或.bss section中分配空间。
+    
+    符号表由汇编器(assembliers)构造.
+
+    接下来在命令行中进行操作(这里的test是九曲阑干视频中的main):
+    wc -c test.o       解释:word count,显示整个ELF文件的大小是多少(可以通过header信息算出)
+    readelf -h test.o  解释:显示ELF文件的信息,  -h参数显示header信息(内容见Book practice)
+    readelf -S test.o  解释:查看每个section的信息, 注意有时会多余.note.gnu.propert这条
+    readelf -s test.o  解释:查看symbols符号表的信息
+
+##7.6 Symbol Resolution
+    linker解析symbol reference的方法是将每个reference和它在symbol table中的定义关联起来。
+    对于那些reference和definition在同一个module(file)中的symbols十分容易处理，但是对于
+    那些不在本地定义的symbol的时候(global symbols)，compiler会假设它是在其他module(file)
+    定义的，生成一个linker symbol table entry交给linker处理。
+
+    补充内容：C++和Java中链接器symbol的重整
+    编译器将方法和参数列表组合编码形成唯一的一个symbol
+
+    linker如何处理重定义的global symbols？
+    compiler将每个global symbols是strong还是weak汇报给linker，定义：
+    ·函数和已初始化的全局变量是strong symbols
+    ·未初始化的全局变量是weak symbols 
+    然后linux linker使用如下规则处理重定义的global symbols：
+    1、不允许出现多个strong symbol
+    2、strong symbol和weak symbol同时出现优先选择strong symbol
+    3、如果有多个weak symbols，随机选择
+    (回忆一下COMMON和.bss的差异就明白为什么要有这两种不同的分配了)
+    我们就这三条规则举例子
+
+    rule1:
+    /*foo.c*/                     /*bar.c*/
+    int x = 15213;                int x = 15231;  
+
+    int main()                    void f()
+    {                             {
+        return 0;                 }
+    }
+
+    rule2:
+    /*foo.c*/                    /*bar.c*/
+    #include<stdio.h>            int x;
+    void f(void);                void f()
+    int x = 15213;               {
+    int main()                      x = 15212;
+    {                            }
+        f();                        
+        printf("x= %d\n", x);
+        return 0;
+    }
+
+    rule3:
+    /*foo.c*/                    /*bar.c*/
+    #include<stdio.h>            int x;
+    int x;                       void f()
+    void f(void);                {
+    int main()                      x = 15212;
+    {                            }
+        x = 15213;                        
+        f();                        
+        printf("x= %d\n", x);
+        return 0;
+    }
+
+    rule2和rule3会造成一些不容易察觉的错误，如果改写为如下：
+    /*foo.c*/                                    /*bar.c*/
+    #include<stdio.h>                            double x;
+    void f(void);                                void f()
+    int x = 15213;                               {
+    int y = 15231;                                  x = -0.0;
+    int main()                                   }
+    {                                                    
+        f();                        
+        printf("x= 0x%x, y= 0x%x\n", x, y);
+        return 0;
+    }
+    观察程序的输出会发现，x=0x0，y=0x80000000(本地测试y的值没有被覆盖)
+
+##static library
+
+## How Linkers Use Static Libraries to Resolve References
+    linker通过维护三个集合来使用静态库解析引用, 具体操作是linker从命令行上从左往右扫码可重定位目标文件和archive文件
+    来维护这三个集合：
+    ·E，存放可重定位目标文件(最终会被合并成一个可执行程序)
+    ·U，存放未解析的符号
+    ·D，存放在前面已经输入文件中已定义过的符合
+    
+    linker判断文件f的类型，若为目标文件则添加进E,同时根据f中符号定义和符号引用来修改U和D中的内容，
+    若为archive文件, linker会试图在archive文件成员中找到U中的符号，比如archive文件成员m，定义了一个符号
+    用于解析U中的一个引用，那么linker就将对m执行类似目标文件的操作(其他的成员就被丢弃),
+    最后根据U是否非空来选择输出错误或者合并和重定位E中的目标文件(应该是包含m的),生成可执行文件
+
+    这样解析的方式也产生了一些有趣的现象：
+    --如果各个库之间的成员是独立的，那么按任意的顺序放置都行
+    --但是如果库与库之间不是独立的，就必须要保证引用外部符号的库在定义对应符号的库的前面
+    举一个例子来说明：定义A->B表示A有引用B的符号(函数、变量等)有：
+    foo.c->libx.a     libx.a->liby.a
+    foo.c->libz.a     libz.a->liby.a   
+    那么在命令行中, foo.c必须放在libx.a和libz.a前面，libx.a和libz.a必须放在liby.a前面
+    linux> gcc foo.c libx.a liby.a libx.a
+
+##7.7Relocation
+    重定位的两个步骤：
+
+    ·linkerr将所有相同类型的section合并成⼀个。⽐如有多个⽬标⽂件的.data类型section将会被合
+        并为⼀个，作为可执⾏程序的.data类型section，然后linker分配运⾏时内存地址给新的aggregate 
+        section聚合section、每个被input modules定义的section和符号。
+    ·linker利⽤relocation entry 修改每个符号引⽤使其指向正确的运行时内存地址
+
+    (重定位条⽬)relocation entry
+
+    当汇编器遇到对最终位置未知的objection reference时，汇编器会⽣成⼀个“relocation entry”
+    告诉linker在合并⽬标⽂件成⼀个可执⾏⽂件的时候如何修改这些未知的reference,代码的重定位条目
+    放在.rel.text中,已初始化数据的放在.rel.data(即rel是relocation的缩写)
+
+    ELF的relocation reference分为⼏个部分如下，书上图7-9
+    ·offset：offset of the reference 
+    ·type：relocation type
+    ·symol：symbol table index
+    ·addend：constant part of relocation expression
+    ELF⼀共定义了32种不同的relocation type，这⾥只介绍两个：
+    R_X86_64_PC32: 重定位一个使用32位PC相对地址的引用
+    R_X86_64_32:   重定位一个使用32位绝对地址的引用
+    下面举一个具体重定位的例子: 见code/link/elfstructs.c
+    ····
+    理解了重定位相对地址的引用后，重定位绝对地址的引用也就很简单的，这里不再分析了。
+
+##7.8可执行目标文件(Executable Object Files)
+    可执行目标文件是包含加载程序到内存并运行它所需的所有信息的一个二进制文件
+    书上483图7-13给出了一个ELF可执行目标文件，可以发现构成与ELF可重定位目标文件很类似，总体分为3个segments
+    ·read-only memory segment(code segment代码段)
+    ·read-write memory segment(data segment数据段)
+    ·symbol table and debugging info(不加载到内存的符号表和调试信息)
+
+    program header table给出了"可执行程序<---->内存"的一个映射关系
+
+    copy一下书上的例子：
+    Read-only code segment
+    1 LOAD off 0x0000000000000000 vaddr 0x0000000000400000 paddr 0x0000000000400000 align 2**21
+    2 filesz 0x000000000000069c   memsz 0x000000000000069c flags r-x
+
+    Read/write data segment
+    3 LOAD off 0x0000000000000df8 vaddr 0x0000000000600df8 paddr 0x0000000000600df8 align 2**21
+    4 filesz 0x0000000000000228 memsz 0x0000000000000230 flags rw-
+    罗列一下各个部分的含义，这样比较清晰：
+    ·LOAD:   segment type 表示这个段需要被加载到内存中
+    ·off 0x0:该段在文件中的偏移量
+    ·vaddr 0x400000:  该段在虚拟内存中的地址,run-time加载到这个地址
+    ·paddr 0x400000:  该段在物理内存中的地址,这个字段一般不使用
+    ·align 2**21   :  该段在内存中的对齐要求, 该段的vaddr和paddr必须是这个值的倍数
+    ·filesz 0x69c  :  该段在文件中的大小
+    ·memsz 0x69c   :  该段在内存中的大小,如果memsz>filesz,那么多出的部分会被初始化
+    ·flags r-x     :  权限  r:read, x:eXecute, w:write
+    有趣的是对齐要求和vaddr于paddr的数学关系，这是一个优化，在第九章会学到虚拟内存的知识
+
+##7.9加载可执行目标文件(Loading Executable Object Files)
+    这个任务由loader(加载器)完成，将程序复制到内存并运行的过程叫做load(加载)
+
+    loader运行的时候：
+    1、根据program header table的内容，将可执行文件的chunk复制到代码段和数据段
+    2、加载器跳转到_start函数的地址处(入口点)
+    3、_start函数调用系统启动函数__libc_start_main, 初始化执行环境，调用main函数, 处理其返回值
+
+
+#7.10动态链接共享库(也称为共享目标 shared object)
+    当有多个进程的时候，一些静态库的函数代码会被复制到每个进程的.text segment中, 这是一个极大的浪费。
+    共享库(shared library)，在运行和加载时，可以加载到任意的内存地址，并和一个在内存中的程序用
+    动态链接器(dynamic linker)动态链接(dynamic link)起来，
+    
+    通过以下指令创建一个.so文件(shared object)
+    linux> gcc -shared -fpic -o libvector.so addvec.c multvec.c
+    然后链接到图7-7的程序中:
+    gcc -o prog21 main2.c ./libvector.so
+    这样prog21文件在执行的时候就可以和libvector.so链接了
+    与静态链接的差异是："没有任何libvector.so的代码和数据被复制到了可执行文件prog21中, 而是复制一些
+    重定位和符号表的信息"，总结过程就是：
+        静态执行一些链接，然后在程序加载的时候动态的完成链接过程。
+
+    ********关于动态链接和静态链接的实验和差异需要多看书上图7-8和图7-16对图7-7所示程序的演示************
+
+##7.11从应用程序中加载和链接共享库 Loading and Linking Shared Libraries from Applications
+    这里简单介绍了一些linux系统为动态链接器提供的一些接口，方便应用程序在运行的时候加载和链接其。
+    void *dlopen(const char *filename, int flag);
+    void *dlsym(void *handle, char *symbol);
+    int dlclose (void *handle);
+    const char *dlerror(void);
+    然后给了一个程序code/link/dll.c 用于演示如何使用这些接口
+
+
+##7.12位置无关代码 Position-Independent Code (PIC)
+    这小节介绍了dynamic linker是如何link的, 即如何办到让所有线程共享一个动态链接库的。
+    首先是PIC, 可以加载而无需重定位的代码称为位置无关代码 position-independent code
+    可以通过GCC 用-fpic参数编译生成
+    下面我们来看是如何利用dynamic linker和 PIC来实现动态链接的
+
+    #PIC数据引用
+    注意到这样一个事实，不管我们在哪儿加载目标文件，data segment和code segment之间的距离都是一个
+    run-time constant。
+    编译器在data segment开始的地方创建"全局偏移量表(Global Offset Table)" 简称GOT
+    表的内容大致是这样的：
+    +___________________+
+    |GOT[0]: ····       |
+    |GOT[1]: ····       |
+    |GOT[2]: ····       |
+    |GOT[3]: ····       |
+    +___________________+
+    GOT为每个目标文件引用的函数或变量(在动态库中的) 创建一个8-byte 的 entry，编译器为GOT中每个entry生成一个重定位记录
+    在加载的时候，动态链接器就会重定位GOT中的每个entry使其包含目标的绝对地址
+    我们展示变量addcnt是如何被加载的
+        +-----------------------------+
+        | data segment                |
+        | GOT:                        |
+        | +___________________+       |
+        | |GOT[0]: ····       |       |
+        | |GOT[1]: ····       |       |
+        | |GOT[2]: ····       |       |
+    +---|-|GOT[3]: &addcnt    |       |
+    |   | +___________________+       |
+    |   |                             |
+    ↓   |                             |
+    |   +-----------------------------+
+    |: GOT[3]存放的位置和指令addl的位置差值是固定的0x2008b9
+    |   +-----------------------------+
+    |   | code segment                |
+    ↑   | addvec:                     |
+    |   |    mov 0x2008b9(%rip),%rax  |
+    +---|----addl $0x1,(%rax)         |
+        +-----------------------------+
+    
+    图示很清晰的能看到, 在data segment中GOT的第四行GOT[3]存放有全局变量addcnt的地址,
+    在执行到需要addvec的代码段时, 将0x2008b9+%rip给%rax, 然后读取该地址的内容即GOT[3]=&addcnt
+    再间接引用了addcnt(实际应该是 ((%rax)) = *&addcnt )
+    
+    #PIC函数调用
+    函数调用采用了Lazy bingding(延迟绑定)的技术, 即放弃了为每个引用生成一个重定位记录，在加载的时候
+    让链接器去解析它，而是选择将过程地址的绑定推迟到第一次调用该过程，从而避免链接器在加载的时候
+    进行成百上千个不需要的重定位(一个库里有很多的函数)。
+
+    #include <func.h>
+    比如下面的代码
+    if(A) {
+        func1();
+    }
+    else{
+        func2();
+    }
+    如果我们是采用lazy bingding的技术的话，我们只需要重定位func1或者func2,而不是在一开始加载的时候就都进行重定位。
+    PIC和GOT一起与动态链接器实现lazy bingding的过程图可以简单的叙述：
+
+    第一次调用到函数addvec(): callq 0x4005c0
+    0x4005c0-> jmpq *GOT[4]: jmpq  4005c6      ps:GOT[4] = 0x4005c6
+    0x4005c6-> pushq $0x1
+    0x4005cb-> jmpq 4005a0  -> pushq *GOT[1]
+                    4005a6  -> jmpq  *GOT[2]
+
+
+    GOT[1]和GOT[2]存储的是一些操作的地址，这些操作就将重定位到我们需要的函数addvec()的真实地址，并把GOT[4]赋成&addvec
+    这样下一次调用该函数的时候，从0x4005c0-> jmpq *GOT[4]这条指令开始就能够调用到而无需重定位
+##7.13 库打桩机制
+    

@@ -1,0 +1,157 @@
+练习题6.1
+    给定一个组织，确定其r(行),c(列),使得寻址时max(b_r, b_c)最小。
+
+    看到题的第一眼，我还在思考什么是行寻址(b_r),我猜测就是在确定的阵列rxc中确定一个单元
+    的地址的行坐标，所以问题转变成给定大小，如何分配形状使得阵列中所有点的max(x,y)最小。
+    直观的想法是r=c=sqrt(size),换句话说，尽可能接近正方形即可。
+
+    答案给出了数学上的想法，使得max(r,c)/min(r,c)最小即可。
+
+练习题6.4
+(题目纠正/补充) 假设使用的是单磁头读写而不是多磁头多磁片同时读取的技术
+    假设1MB的文件由512个字节的逻辑块组成,存在给定参数的磁盘驱动器上,假设程序顺序地读文件逻辑块，将
+    读/写头定位到第一块上的时间是T_{avg seek}+T_{avg rotation},问：
+    A,最好的映射情况：读这个文件需要的最优时间
+    B,随机的映射情况：读这个文件需要的
+    
+    1MB=2000x512B,所以这个文件由2k个逻辑块(扇区)组成,参数给出了平均寻道时间T_{avg seek}=5ms
+    而平均旋转T_{avg rotation}=二分之一最大旋转时间=60/2*RPM=60/2*10000=3ms,所以将读/写头定位
+    到目标扇区的第一位字节用时8ms,剩下的就是考虑读取的时间
+    A,最好的情况下即逻辑块被映射到了连续的扇区,那么只需要从第一个扇区开始连续读2k个即可,
+      那就是转2000/1000=2圈，用时即2倍的最大旋转时间=2*6=12ms，所以一共需要20ms
+    B,随机(应该是最坏？)的情况下,即考虑读取每一个扇区都要先移动读/写头,那么一共就需要8ms*2000=16s
+
+
+练习题6.10
+   dotprod函数的例子中,计算修正后对x和y的引用的命中率有多少？
+   对于第一次引入：x[0]和y[0]，会各自发生一次cold miss,随后的x[1~3]和y[1~3]均命中
+   对于第五次引入：x[4]和y[4]，两个数组存储数据的cache set相当于交换一次,会先evict原有的缓存再load
+   这里又各自发生一次cache miss, 随后的x[5~7]和y[5~7]均命中。
+
+   所以一共有16次引用，一共cache miss 4次  命中 12次，命中率=12/16=75%
+
+练习题6.11
+  对旁注"为什么用中间的位来做索引"的具体例子
+  假设我们现在用高s位做set index,内存块中连续的chunk会被映射到同一个cache set中
+  A:每个这样的连续的数组片中有多少个块
+
+练习题6.12到练习题6.15请按书上图示完成以巩固知识。
+
+练习题6.17
+  转置矩阵的行和列是一个很重要的问题。
+  typedef int array[2][2];
+
+  void transpose1(array dst, array src)
+  {
+      int i, j;
+
+      for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+          dst[j][i] = src[i][j];
+        }
+      }
+  }
+  假定：
+  sizeof(int)==4
+  src从地址0开始，dst从地址16(10进制)开始
+  仅有一个L1 data-cache, E=1, write-through， write-allocation, cache block = 8个bytes
+  cache总共有16 data bytes
+  对src和dst的访问分别是读和写不命中的唯一来源
+
+  考虑问题
+  A:对每个row和col，说明src[row][col]和dst[row][col]的访问是命中还是不命中(读和写)
+  B:对一个大小为32 data bytes 的cache重复A题
+
+  先把参数都翻译完
+  data bytes=16bytes,而一个cache line(set)的cache block是8bytes 所以S=2,一共有两个cache set
+  b=3,m=5,s=1,t=1
+  再翻译src和dst的地址
+  元素         地址             set       元素      地址               set
+  src[0][0]   0:   0|0|000      0     dst[0][0]    16:  1|0|000       0       
+  src[0][1]   4:   0|0|100      0     dst[0][1]    20:  1|0|100       0
+  src[1][0]   8:   0|1|000      1     dst[1][0]    24:  1|1|000       1
+  src[1][1]   12:  0|1|100      1     dst[1][1]    28:  1|1|100       1
+
+  i=0,j=0：读src[0][0] miss, 写dst[0][0] miss
+  对dst[0][0]的引用会使src[0][0~1]的缓存被驱逐从而使src[0][1] miss
+  i=0,j=1：读src[0][1] miss, 写dst[1][0] miss
+  i=1,j=0：读src[1][0] miss, 写dst[0][1] miss
+  i=0,j=1：读src[1][1] hit,  写dst[1][1] miss
+
+  B: 重新计算一遍参数
+  b=3,s=2,m=5, 很特别的t=0,也就是说对于src和dst的所有数据,每个cache set(E=1, line)都能唯一的存放了
+  不需要再开设t位去区分某个set(line)是存放src的还是dst的。那么除了第一次cold miss以外 其他全部hit
+
+练习题6.18
+  给定一台机器以及一些定义
+  struct algae_position {
+    int x;
+    int y;
+  };
+
+  struct algae_position grid[16][16];
+  int total_x = 0, total_y = 0;
+  int i, j;
+  规定：
+   sizeof(int) = 4
+   grid从内存地址0开始
+   cache初始为空
+   唯一内存访问是对数组grid，变量i,j,total_x,total_y存在寄存器中
+
+  确定以下代码的cache性能
+  for (i = 0; i < 16; i--) {
+    for (j = 0; j < 16; j--) {
+      total_x += grid[i][j].x;
+    }
+  } 
+
+  for (i = 0; i < 16; i--) {
+    for (j = 0; j < 16; j--) {
+      total_y += grid[i][j].y;
+    }
+  }
+  A:读总数是多少？
+  B:read miss总数是多少？
+  C:不命中率是多少？
+ 分析题目:
+  题目背景给出了  B=16bytes, E=1, 整个Cache大小为1024bytes(注意 C是仅计算cache block的大小)
+  所以C=1024；B=16；b=4, 根据C=S*E*B可以算出2^s=64, s=6
+  分析最大的地址, 一个"algae_position"占8bytes, 定义了16*16=256个这样的结构体
+  总共是256*8=2048，即M=2048，m=11
+
+  总之得到了在这台机器上cache的所有参数：m=11，b=4，s=6，t=1
+ A:
+  read总数比较容易，两个循环共16*16*2次，每次读grid[i][j].x或者grid[i][j].y，所以读总数=512次
+ B&C:
+  一个cache block大小为16，一个algae_position的大小为8, 所以每个cache set(E=1:cache line)
+  可以存放两组grid[][]的数据, 且两个循环都是按行读取的grid, 地址是连续的，有良好的空间局部性，
+  在第一次cold miss后 紧跟着的下一次就会cache hit, 然而整个cache能存放的grid[][]=1024/8=128
+  即所有algae_position的一半,对于前128，内存读取按照cold miss - hit - cold miss - hit ···
+  的顺序交替，一共64次命中，64次不命中
+  (我在这里想到了一点, 每一次放进cache block的数据都是一个algae_position如下图：
+   ___________________________
+  |__x1__|__y1__|__x2__|__y2__|     
+  为什么要浪费这次caching存储的y1和y2呢？
+  )
+  ····对于后面128次, 就是重复这个过程，只是不命中从cold miss变成了conflic miss
+  所以一轮循环读256次，caching不命中128次，命中128次，  整个程序缓存不命中的读总数是256次，不命中率50%
+
+练习题6.18的优化(省略书上6.19 6.20)
+ 继续上面的思考：
+   ___________________________
+  |__x1__|__y1__|__x2__|__y2__|  
+  每一次cache时，都同时存入了x和y的值,所以一轮循环中,我们只需要读一次grid[][]即可
+  total_x += grid[i][j].x;
+  total_y += grid[i][j].y;
+
+  total_x += grid[i][j+1].x;
+  total_y += grid[i][j+1].y;
+
+  两次迭代只有一次cache miss, 也就是每四轮迭代miss一次，此外，两轮循环也变为了一轮：
+  for (i = 0; i < 16; i--) {
+    for (j = 0; j < 16; j--) {
+      total_x += grid[i][j].x;
+      total_y += grid[i][j].y;
+    }
+  }
+  此时的缓存不命中数=256/4=64，缓存不命中率为75%

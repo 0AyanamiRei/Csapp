@@ -1,0 +1,111 @@
+关于分块技术：
+    个人见解，由于cache的大小是有限的，所以我们想要尽可能降低cache misses的数量，就要充分利用"连续的几组数据位于同一个cache block"这个
+    特点, 手写笔记上的图示很清晰：
+    求A的转置B  假设cache block size足够存放两个A数组的元素   用{1 _}表示该cache block已经被caching过数据，"1"的下一位是空缺的。
+    {1  2}  3  4           {1 _}
+    {5  6}  7  8      ->   {2 _}
+    9  10   11 12  
+    13 14   15 16
+    B[0][0]=A[0][0]; 从A中取出"1",cold miss一次, 然后store到B[0][0],cold miss一次
+    B[1][0] = A[0][1]; 从A中取出"2", hit一次,store到B[1][0], cold miss一次
+    问题是接下来应该怎么读A的元素，是读{3 4} 还是{5 6}?  答案是{5 6}, 一个默认的假设是cache不能完全装下A和B的元素
+    由于之前已经store过B[0][0]和B[1][0], 所以B[0][1]和B[1][1]的位置暂时是会hit的,但是如果继续往A的行走，有可能会发生conflict miss
+    所以为了防止已经caching进cache block的元素被驱逐导致conflict miss,我们选择尽可能利用它
+    B[0][1]=A[1][0]; 在A中取"5" cold miss一次, store到B[0][1] hit
+    B[1][1]=A[1][1]; 在A中取"6" hit, store到B[1][1] hit
+    ···
+    也就是说我们按照cache block size能够存放的元素个数为block(分块)边长，就能尽可能降低conflict miss的数量，提高命中率
+
+计算C=A@B(矩阵乘法)操作分块时的misses：
+    ·设int [n][n] A,B,C;
+    ·假设cache大小远远小于sizeof(A);
+    ·假设一个cache block的size为B, 一个分块的大小采用B*B的规定
+    ·数组被分为 (n/(B/sizeof(int)))^2=(n*sizeof(int)/B)^2个块
+
+    对于一个block能存放的int类型变量数等于B/sizeof(int),先计算一个分块的内容caching的misses数量，
+    第一列的caching,是不可避免的cold miss, 后面(B/sizeof(int))-1列,caching hit.所以一个分块的不命中数量等于B/sizeof(int)
+
+    对内层循环, c_ij = A[i][_]              *      B[_][j]
+    misses: (B/sizeof(int))*(n*sizeof(int)/B)+   same~   = 2n
+    外面两层循环一共(n*sizeof(int)/B)^2次
+    所以total misses = (n*sizeof(int)/B)^2 * 2n = n^3*2*sizeof(int)^2/B^2
+    换句话说等于2*n^3除以每个cache block能存放的元素数量的平方, 这大大的减少了矩阵乘法运算的misses数量。
+
+再来看对求解矩阵转置的效率提升
+    假设cache block能存放8个变量(按照实验和ppt的要求)
+    经过相同的推算可得使用分块与否的misses数量
+
+    matrix size         unblocking        blocking
+       32x32              910                128
+       64x64              4608               512
+    可以见得,block这个technology对于矩阵的操作性能提升十分大.
+
+·cache config: cache:1KB, cache block:32bytes(8*sizeof(int))
+·s=5, E=1, b=5
+·matrix config: M=N=32
+实际测试得到的数据
+       unblcoking      blocking
+misses： 1183            343
+
+这只能得到部分分，因为满分要求m<300
+分析trace的报告后我们发现对A矩阵的读取, 沿着对角线的分块每一个小行会出现两次cache miss，而这本应该是只有第一次
+cold miss后全为hit的, 却有conflict miss出现, 猜测是因为A和B两个数组元素占用共同块的问题,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+如何处理61x67的矩阵转置?
+一个blcok是8x8,能完整被一个block处理的size是  56x64       63
+  0 _______________________63______66
+0  |-----------------------|       |
+   |-----------------------|       |
+   |-----------------------|       |
+   |-----------------------|       |
+   |-----------------------|       |
+   |-----------------------|       |
+   |-----------------------|       |
+55 |_______________________|_______|
+   |                       |       |
+   |                       |       |
+60 |_______________________|_______|60
+                                  66

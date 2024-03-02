@@ -1,0 +1,34 @@
+终于结束了进程(process)和那些函数了(fork、execve)
+    ps：现在欠下的，以后都会在bug中爆发出来的！！！ 做lab之前要好好复习进程
+尽量保证动词名词使用英文单词.
+现在让我们进入信号(signal!)
+####Introduce#####
+    It's a higher-level software form of exceptional control flow, known
+as a Linux signal.
+
+####信号术语######
+    process group (pgrp): 译为进程组，由一个正整数进程组ID(pgid)标识, 将进程与进程之间
+    抽象成一个组，书上介绍了一些相关的函数：getpgrp(void)、setpgid(pid_t pid, pid_t pgid)等
+
+    transfer一个signal到目的process通常由两个步骤组成：
+        ·Sending a signal
+        ·Receiving a signal
+
+    **Sending a signal, Unix sys提供了许多发送信号的进制,在书上P529列出了以下方式：
+        ·/bin/kill程序发送信号
+        ·通过I/O设备(键盘)发送信号
+        ·使用kill函数发送信号
+        ·使用alarm函数发送信号
+    这些方法发送信号的目标也不尽相同，可以对某一个进程发送，也可以为某一个进程组的所有进程发送，也可以
+    给调用进程(自己)发送；
+
+    **Receiving a signal, 
+    进程p从内核模式切换到用户模式时，内核会检查进程p的pending & ~blocked set:未被阻塞的待处理信号
+    若该集合为空，则直接将control transfer 给进程p的I_{next}; 若不为空，则选择集合中某个signal k
+    (通常较小的k是来自用户发出的,更重要, 所以一般选择最小的k), 强制进程p receives 这个signal后再
+    return control给I_{next}
+
+    介绍了修改每个signal对应行为的函数signal(int signum, sighandler_t handler);
+    这给到我们自定义处理signal的自由, 可以往handler填函数的地址，称为：signal handler
+    改变signal default行为的这个操作我们叫"installing the handler"。
+
