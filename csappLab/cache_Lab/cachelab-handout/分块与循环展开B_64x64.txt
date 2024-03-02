@@ -1,0 +1,4610 @@
+0 6 0000  miss eviction 
+0 14 0000  miss 
+0 22 0000  miss 
+0 30 0000  miss 
+1 6 0000  miss eviction        1/8
+1 14 0000  miss eviction 
+1 22 0000  miss eviction 
+1 30 0000  miss eviction 
+
+0 6 0100  miss eviction 
+0 14 0100  miss eviction 
+0 22 0100  miss eviction       2/8
+0 30 0100  miss eviction 
+1 6 0100  miss eviction 
+1 14 0100  miss eviction 
+1 22 0100  miss eviction 
+1 30 0100  miss eviction 
+
+0 6 1000  miss eviction 
+0 14 1000  miss eviction 
+0 22 1000  miss eviction 
+0 30 1000  miss eviction         3/8
+1 6 1000  miss eviction 
+1 14 1000  miss eviction 
+1 22 1000  miss eviction 
+1 30 1000  miss eviction 
+
+0 6 1100  miss eviction 
+0 14 1100  miss eviction 
+0 22 1100  miss eviction 
+0 30 1100  miss eviction         4/8
+1 6 1100  miss eviction 
+1 14 1100  miss eviction 
+1 22 1100  miss eviction 
+1 30 1100  miss eviction 
+
+0 6 0000  miss eviction 
+0 14 0000  miss eviction 
+0 22 0000  miss eviction 
+0 30 0000  miss eviction 
+1 6 0000  miss eviction         5/8
+1 14 0000  miss eviction 
+1 22 0000  miss eviction 
+1 30 0000  miss eviction 
+
+0 6 0100  miss eviction 
+0 14 0100  miss eviction 
+0 22 0100  miss eviction 
+0 30 0100  miss eviction         6/8
+1 6 0100  miss eviction 
+1 14 0100  miss eviction 
+1 22 0100  miss eviction 
+1 30 0100  miss eviction 
+
+0 6 1000  miss eviction 
+0 14 1000  miss eviction 
+0 22 1000  miss eviction 
+0 30 1000  miss eviction         7/8
+1 6 1000  miss eviction 
+1 14 1000  miss eviction 
+1 22 1000  miss eviction 
+1 30 1000  miss eviction 
+
+0 6 1100  miss eviction 
+0 14 1100  miss eviction 
+0 22 1100  miss eviction 
+0 30 1100  miss eviction         8/8
+1 6 1100  miss eviction 
+1 14 1100  miss eviction 
+1 22 1100  miss eviction 
+1 30 1100  miss eviction 
+*******************************************************************************************************
+2 6 0000  miss eviction 
+2 14 0000  miss eviction 
+2 22 0000  miss eviction 
+2 30 0000  miss eviction          1/8
+3 6 0000  miss eviction 
+3 14 0000  miss eviction 
+3 22 0000  miss eviction 
+3 30 0000  miss eviction 
+
+2 6 0100  miss eviction 
+2 14 0100  miss eviction 
+2 22 0100  miss eviction 
+2 30 0100  miss eviction          2/8
+3 6 0100  miss eviction 
+3 14 0100  miss eviction 
+3 22 0100  miss eviction 
+3 30 0100  miss eviction 
+
+2 6 1000  miss eviction 
+2 14 1000  miss eviction 
+2 22 1000  miss eviction 
+2 30 1000  miss eviction          3/8
+3 6 1000  miss eviction 
+3 14 1000  miss eviction 
+3 22 1000  miss eviction 
+3 30 1000  miss eviction 
+
+2 6 1100  miss eviction 
+2 14 1100  miss eviction 
+2 22 1100  miss eviction 
+2 30 1100  miss eviction          4/8
+3 6 1100  miss eviction 
+3 14 1100  miss eviction 
+3 22 1100  miss eviction 
+3 30 1100  miss eviction 
+
+2 6 0000  miss eviction 
+2 14 0000  miss eviction 
+2 22 0000  miss eviction 
+2 30 0000  miss eviction          5/8
+3 6 0000  miss eviction 
+3 14 0000  miss eviction 
+3 22 0000  miss eviction 
+3 30 0000  miss eviction 
+
+2 6 0100  miss eviction 
+2 14 0100  miss eviction 
+2 22 0100  miss eviction 
+2 30 0100  miss eviction          6/8
+3 6 0100  miss eviction 
+3 14 0100  miss eviction 
+3 22 0100  miss eviction 
+3 30 0100  miss eviction 
+
+2 6 1000  miss eviction 
+2 14 1000  miss eviction 
+2 22 1000  miss eviction 
+2 30 1000  miss eviction          7/8
+3 6 1000  miss eviction 
+3 14 1000  miss eviction 
+3 22 1000  miss eviction 
+3 30 1000  miss eviction 
+
+2 6 1100  miss eviction 
+2 14 1100  miss eviction 
+2 22 1100  miss eviction 
+2 30 1100  miss eviction          8/8
+3 6 1100  miss eviction 
+3 14 1100  miss eviction 
+3 22 1100  miss eviction 
+3 30 1100  miss eviction 
+*******************************************************************************************************
+
+0 6 0000  miss eviction 
+0 14 0000  miss eviction 
+0 22 0000  miss eviction 
+0 30 0000  miss eviction 
+1 6 0000  miss eviction 
+1 14 0000  miss eviction 
+1 22 0000  miss eviction 
+1 30 0000  miss eviction 
+
+0 6 0100  miss eviction 
+0 14 0100  miss eviction 
+0 22 0100  miss eviction 
+0 30 0100  miss eviction 
+1 6 0100  miss eviction 
+1 14 0100  miss eviction 
+1 22 0100  miss eviction 
+1 30 0100  miss eviction 
+
+0 6 1000  miss eviction 
+0 14 1000  miss eviction 
+0 22 1000  miss eviction 
+0 30 1000  miss eviction 
+1 6 1000  miss eviction 
+1 14 1000  miss eviction 
+1 22 1000  miss eviction 
+1 30 1000  miss eviction 
+
+0 6 1100  miss eviction 
+0 14 1100  miss eviction 
+0 22 1100  miss eviction 
+0 30 1100  miss eviction 
+1 6 1100  miss eviction 
+1 14 1100  miss eviction 
+1 22 1100  miss eviction 
+1 30 1100  miss eviction 
+
+0 6 0000  miss eviction 
+0 14 0000  miss eviction 
+0 22 0000  miss eviction 
+0 30 0000  miss eviction 
+1 6 0000  miss eviction 
+1 14 0000  miss eviction 
+1 22 0000  miss eviction 
+1 30 0000  miss eviction 
+
+0 6 0100  miss eviction 
+0 14 0100  miss eviction 
+0 22 0100  miss eviction 
+0 30 0100  miss eviction 
+1 6 0100  miss eviction 
+1 14 0100  miss eviction 
+1 22 0100  miss eviction 
+1 30 0100  miss eviction 
+
+0 6 1000  miss eviction 
+0 14 1000  miss eviction 
+0 22 1000  miss eviction 
+0 30 1000  miss eviction 
+1 6 1000  miss eviction 
+1 14 1000  miss eviction 
+1 22 1000  miss eviction 
+1 30 1000  miss eviction 
+
+0 6 1100  miss eviction 
+0 14 1100  miss eviction 
+0 22 1100  miss eviction 
+0 30 1100  miss eviction 
+1 6 1100  miss eviction 
+1 14 1100  miss eviction 
+1 22 1100  miss eviction 
+1 30 1100  miss eviction 
+
+2 6 0000  miss eviction 
+2 14 0000  miss eviction 
+2 22 0000  miss eviction 
+2 30 0000  miss eviction 
+3 6 0000  miss eviction 
+3 14 0000  miss eviction 
+3 22 0000  miss eviction 
+3 30 0000  miss eviction 
+
+2 6 0100  miss eviction 
+2 14 0100  miss eviction 
+2 22 0100  miss eviction 
+2 30 0100  miss eviction 
+3 6 0100  miss eviction 
+3 14 0100  miss eviction 
+3 22 0100  miss eviction 
+3 30 0100  miss eviction 
+
+2 6 1000  miss eviction 
+2 14 1000  miss eviction 
+2 22 1000  miss eviction 
+2 30 1000  miss eviction 
+3 6 1000  miss eviction 
+3 14 1000  miss eviction 
+3 22 1000  miss eviction 
+3 30 1000  miss eviction 
+
+2 6 1100  miss eviction 
+2 14 1100  miss eviction 
+2 22 1100  miss eviction 
+2 30 1100  miss eviction 
+3 6 1100  miss eviction 
+3 14 1100  miss eviction 
+3 22 1100  miss eviction 
+3 30 1100  miss eviction 
+
+2 6 0000  miss eviction 
+2 14 0000  miss eviction 
+2 22 0000  miss eviction 
+2 30 0000  miss eviction 
+3 6 0000  miss eviction 
+3 14 0000  miss eviction 
+3 22 0000  miss eviction 
+3 30 0000  miss eviction 
+
+2 6 0100  miss eviction 
+2 14 0100  miss eviction 
+2 22 0100  miss eviction 
+2 30 0100  miss eviction 
+3 6 0100  miss eviction 
+3 14 0100  miss eviction 
+3 22 0100  miss eviction 
+3 30 0100  miss eviction 
+
+2 6 1000  miss eviction 
+2 14 1000  miss eviction 
+2 22 1000  miss eviction 
+2 30 1000  miss eviction 
+3 6 1000  miss eviction 
+3 14 1000  miss eviction 
+3 22 1000  miss eviction 
+3 30 1000  miss eviction 
+
+2 6 1100  miss eviction 
+2 14 1100  miss eviction 
+2 22 1100  miss eviction 
+2 30 1100  miss eviction 
+3 6 1100  miss eviction 
+3 14 1100  miss eviction 
+3 22 1100  miss eviction 
+3 30 1100  miss eviction 
+
+0 6 0000  miss eviction 
+0 14 0000  miss eviction 
+0 22 0000  miss eviction 
+0 30 0000  miss eviction 
+1 6 0000  miss eviction 
+1 14 0000  miss eviction 
+1 22 0000  miss eviction 
+1 30 0000  miss eviction 
+
+0 6 0100  miss eviction 
+0 14 0100  miss eviction 
+0 22 0100  miss eviction 
+0 30 0100  miss eviction 
+1 6 0100  miss eviction 
+1 14 0100  miss eviction 
+1 22 0100  miss eviction 
+1 30 0100  miss eviction 
+
+0 6 1000  miss eviction 
+0 14 1000  miss eviction 
+0 22 1000  miss eviction 
+0 30 1000  miss eviction 
+1 6 1000  miss eviction 
+1 14 1000  miss eviction 
+1 22 1000  miss eviction 
+1 30 1000  miss eviction 
+
+0 6 1100  miss eviction 
+0 14 1100  miss eviction 
+0 22 1100  miss eviction 
+0 30 1100  miss eviction 
+1 6 1100  miss eviction 
+1 14 1100  miss eviction 
+1 22 1100  miss eviction 
+1 30 1100  miss eviction 
+
+0 6 0000  miss eviction 
+0 14 0000  miss eviction 
+0 22 0000  miss eviction 
+0 30 0000  miss eviction 
+1 6 0000  miss eviction 
+1 14 0000  miss eviction 
+1 22 0000  miss eviction 
+1 30 0000  miss eviction 
+
+0 6 0100  miss eviction 
+0 14 0100  miss eviction 
+0 22 0100  miss eviction 
+0 30 0100  miss eviction 
+1 6 0100  miss eviction 
+1 14 0100  miss eviction 
+1 22 0100  miss eviction 
+1 30 0100  miss eviction 
+
+0 6 1000  miss eviction 
+0 14 1000  miss eviction 
+0 22 1000  miss eviction 
+0 30 1000  miss eviction 
+1 6 1000  miss eviction 
+1 14 1000  miss eviction 
+1 22 1000  miss eviction 
+1 30 1000  miss eviction 
+
+0 6 1100  miss eviction 
+0 14 1100  miss eviction 
+0 22 1100  miss eviction 
+0 30 1100  miss eviction 
+1 6 1100  miss eviction 
+1 14 1100  miss eviction 
+1 22 1100  miss eviction 
+1 30 1100  miss eviction 
+
+2 6 0000  miss eviction 
+2 14 0000  miss eviction 
+2 22 0000  miss eviction 
+2 30 0000  miss eviction 
+3 6 0000  miss eviction 
+3 14 0000  miss eviction 
+3 22 0000  miss eviction 
+3 30 0000  miss eviction 
+
+2 6 0100  miss eviction 
+2 14 0100  miss eviction 
+2 22 0100  miss eviction 
+2 30 0100  miss eviction 
+3 6 0100  miss eviction 
+3 14 0100  miss eviction 
+3 22 0100  miss eviction 
+3 30 0100  miss eviction 
+
+2 6 1000  miss eviction 
+2 14 1000  miss eviction 
+2 22 1000  miss eviction 
+2 30 1000  miss eviction 
+3 6 1000  miss eviction 
+3 14 1000  miss eviction 
+3 22 1000  miss eviction 
+3 30 1000  miss eviction 
+
+2 6 1100  miss eviction 
+2 14 1100  miss eviction 
+2 22 1100  miss eviction 
+2 30 1100  miss eviction 
+3 6 1100  miss eviction 
+3 14 1100  miss eviction 
+3 22 1100  miss eviction 
+3 30 1100  miss eviction 
+
+2 6 0000  miss eviction 
+2 14 0000  miss eviction 
+2 22 0000  miss eviction 
+2 30 0000  miss eviction 
+3 6 0000  miss eviction 
+3 14 0000  miss eviction 
+3 22 0000  miss eviction 
+3 30 0000  miss eviction 
+
+2 6 0100  miss eviction 
+2 14 0100  miss eviction 
+2 22 0100  miss eviction 
+2 30 0100  miss eviction 
+3 6 0100  miss eviction 
+3 14 0100  miss eviction 
+3 22 0100  miss eviction 
+3 30 0100  miss eviction 
+
+2 6 1000  miss eviction 
+2 14 1000  miss eviction 
+2 22 1000  miss eviction 
+2 30 1000  miss eviction 
+3 6 1000  miss eviction 
+3 14 1000  miss eviction 
+3 22 1000  miss eviction 
+3 30 1000  miss eviction 
+
+2 6 1100  miss eviction 
+2 14 1100  miss eviction 
+2 22 1100  miss eviction 
+2 30 1100  miss eviction 
+3 6 1100  miss eviction 
+3 14 1100  miss eviction 
+3 22 1100  miss eviction 
+3 30 1100  miss eviction 
+
+0 6 0000  miss eviction 
+0 14 0000  miss eviction 
+0 22 0000  miss eviction 
+0 30 0000  miss eviction 
+1 6 0000  miss eviction 
+1 14 0000  miss eviction 
+1 22 0000  miss eviction 
+1 30 0000  miss eviction 
+
+0 6 0100  miss eviction 
+0 14 0100  miss eviction 
+0 22 0100  miss eviction 
+0 30 0100  miss eviction 
+1 6 0100  miss eviction 
+1 14 0100  miss eviction 
+1 22 0100  miss eviction 
+1 30 0100  miss eviction 
+
+0 6 1000  miss eviction 
+0 14 1000  miss eviction 
+0 22 1000  miss eviction 
+0 30 1000  miss eviction 
+1 6 1000  miss eviction 
+1 14 1000  miss eviction 
+1 22 1000  miss eviction 
+1 30 1000  miss eviction 
+
+0 6 1100  miss eviction 
+0 14 1100  miss eviction 
+0 22 1100  miss eviction 
+0 30 1100  miss eviction 
+1 6 1100  miss eviction 
+1 14 1100  miss eviction 
+1 22 1100  miss eviction 
+1 30 1100  miss eviction 
+
+0 6 0000  miss eviction 
+0 14 0000  miss eviction 
+0 22 0000  miss eviction 
+0 30 0000  miss eviction 
+1 6 0000  miss eviction 
+1 14 0000  miss eviction 
+1 22 0000  miss eviction 
+1 30 0000  miss eviction 
+
+0 6 0100  miss eviction 
+0 14 0100  miss eviction 
+0 22 0100  miss eviction 
+0 30 0100  miss eviction 
+1 6 0100  miss eviction 
+1 14 0100  miss eviction 
+1 22 0100  miss eviction 
+1 30 0100  miss eviction 
+
+0 6 1000  miss eviction 
+0 14 1000  miss eviction 
+0 22 1000  miss eviction 
+0 30 1000  miss eviction 
+1 6 1000  miss eviction 
+1 14 1000  miss eviction 
+1 22 1000  miss eviction 
+1 30 1000  miss eviction 
+
+0 6 1100  miss eviction 
+0 14 1100  miss eviction 
+0 22 1100  miss eviction 
+0 30 1100  miss eviction 
+1 6 1100  miss eviction 
+1 14 1100  miss eviction 
+1 22 1100  miss eviction 
+1 30 1100  miss eviction 
+
+2 6 0000  miss eviction 
+2 14 0000  miss eviction 
+2 22 0000  miss eviction 
+2 30 0000  miss eviction 
+3 6 0000  miss eviction 
+3 14 0000  miss eviction 
+3 22 0000  miss eviction 
+3 30 0000  miss eviction 
+
+2 6 0100  miss eviction 
+2 14 0100  miss eviction 
+2 22 0100  miss eviction 
+2 30 0100  miss eviction 
+3 6 0100  miss eviction 
+3 14 0100  miss eviction 
+3 22 0100  miss eviction 
+3 30 0100  miss eviction 
+
+2 6 1000  miss eviction 
+2 14 1000  miss eviction 
+2 22 1000  miss eviction 
+2 30 1000  miss eviction 
+3 6 1000  miss eviction 
+3 14 1000  miss eviction 
+3 22 1000  miss eviction 
+3 30 1000  miss eviction 
+
+2 6 1100  miss eviction 
+2 14 1100  miss eviction 
+2 22 1100  miss eviction 
+2 30 1100  miss eviction 
+3 6 1100  miss eviction 
+3 14 1100  miss eviction 
+3 22 1100  miss eviction 
+3 30 1100  miss eviction 
+
+2 6 0000  miss eviction 
+2 14 0000  miss eviction 
+2 22 0000  miss eviction 
+2 30 0000  miss eviction 
+3 6 0000  miss eviction 
+3 14 0000  miss eviction 
+3 22 0000  miss eviction 
+3 30 0000  miss eviction 
+
+2 6 0100  miss eviction 
+2 14 0100  miss eviction 
+2 22 0100  miss eviction 
+2 30 0100  miss eviction 
+3 6 0100  miss eviction 
+3 14 0100  miss eviction 
+3 22 0100  miss eviction 
+3 30 0100  miss eviction 
+
+2 6 1000  miss eviction 
+2 14 1000  miss eviction 
+2 22 1000  miss eviction 
+2 30 1000  miss eviction 
+3 6 1000  miss eviction 
+3 14 1000  miss eviction 
+3 22 1000  miss eviction 
+3 30 1000  miss eviction 
+
+2 6 1100  miss eviction 
+2 14 1100  miss eviction 
+2 22 1100  miss eviction 
+2 30 1100  miss eviction 
+3 6 1100  miss eviction 
+3 14 1100  miss eviction 
+3 22 1100  miss eviction 
+3 30 1100  miss eviction 
+
+0 7 0000  miss eviction 
+0 15 0000  miss eviction 
+0 23 0000  miss eviction 
+0 31 0000  miss eviction 
+1 7 0000  miss eviction 
+1 15 0000  miss eviction 
+1 23 0000  miss eviction 
+1 31 0000  miss eviction 
+
+0 7 0100  miss eviction 
+0 15 0100  miss eviction 
+0 23 0100  miss eviction 
+0 31 0100  miss eviction 
+1 7 0100  miss eviction 
+1 15 0100  miss eviction 
+1 23 0100  miss eviction 
+1 31 0100  miss eviction 
+
+0 7 1000  miss eviction 
+0 15 1000  miss eviction 
+0 23 1000  miss eviction 
+0 31 1000  miss eviction 
+1 7 1000  miss eviction 
+1 15 1000  miss eviction 
+1 23 1000  miss eviction 
+1 31 1000  miss eviction 
+
+0 7 1100  miss eviction 
+0 15 1100  miss eviction 
+0 23 1100  miss eviction 
+0 31 1100  miss eviction 
+1 7 1100  miss eviction 
+1 15 1100  miss eviction 
+1 23 1100  miss eviction 
+1 31 1100  miss eviction 
+
+0 7 0000  miss eviction 
+0 15 0000  miss eviction 
+0 23 0000  miss eviction 
+0 31 0000  miss eviction 
+1 7 0000  miss eviction 
+1 15 0000  miss eviction 
+1 23 0000  miss eviction 
+1 31 0000  miss eviction 
+
+0 7 0100  miss eviction 
+0 15 0100  miss eviction 
+0 23 0100  miss eviction 
+0 31 0100  miss eviction 
+1 7 0100  miss eviction 
+1 15 0100  miss eviction 
+1 23 0100  miss eviction 
+1 31 0100  miss eviction 
+
+0 7 1000  miss eviction 
+0 15 1000  miss eviction 
+0 23 1000  miss eviction 
+0 31 1000  miss eviction 
+1 7 1000  miss eviction 
+1 15 1000  miss eviction 
+1 23 1000  miss eviction 
+1 31 1000  miss eviction 
+
+0 7 1100  miss eviction 
+0 15 1100  miss eviction 
+0 23 1100  miss eviction 
+0 31 1100  miss eviction 
+1 7 1100  miss eviction 
+1 15 1100  miss eviction 
+1 23 1100  miss eviction 
+1 31 1100  miss eviction 
+
+2 7 0000  miss eviction 
+2 15 0000  miss eviction 
+2 23 0000  miss eviction 
+2 31 0000  miss eviction 
+3 7 0000  miss eviction 
+3 15 0000  miss eviction 
+3 23 0000  miss eviction 
+3 31 0000  miss eviction 
+
+2 7 0100  miss eviction 
+2 15 0100  miss eviction 
+2 23 0100  miss eviction 
+2 31 0100  miss eviction 
+3 7 0100  miss eviction 
+3 15 0100  miss eviction 
+3 23 0100  miss eviction 
+3 31 0100  miss eviction 
+
+2 7 1000  miss eviction 
+2 15 1000  miss eviction 
+2 23 1000  miss eviction 
+2 31 1000  miss eviction 
+3 7 1000  miss eviction 
+3 15 1000  miss eviction 
+3 23 1000  miss eviction 
+3 31 1000  miss eviction 
+
+2 7 1100  miss eviction 
+2 15 1100  miss eviction 
+2 23 1100  miss eviction 
+2 31 1100  miss eviction 
+3 7 1100  miss eviction 
+3 15 1100  miss eviction 
+3 23 1100  miss eviction 
+3 31 1100  miss eviction 
+
+2 7 0000  miss eviction 
+2 15 0000  miss eviction 
+2 23 0000  miss eviction 
+2 31 0000  miss eviction 
+3 7 0000  miss eviction 
+3 15 0000  miss eviction 
+3 23 0000  miss eviction 
+3 31 0000  miss eviction 
+
+2 7 0100  miss eviction 
+2 15 0100  miss eviction 
+2 23 0100  miss eviction 
+2 31 0100  miss eviction 
+3 7 0100  miss eviction 
+3 15 0100  miss eviction 
+3 23 0100  miss eviction 
+3 31 0100  miss eviction 
+
+2 7 1000  miss eviction 
+2 15 1000  miss eviction 
+2 23 1000  miss eviction 
+2 31 1000  miss eviction 
+3 7 1000  miss eviction 
+3 15 1000  miss eviction 
+3 23 1000  miss eviction 
+3 31 1000  miss eviction 
+
+2 7 1100  miss eviction 
+2 15 1100  miss eviction 
+2 23 1100  miss eviction 
+2 31 1100  miss eviction 
+3 7 1100  miss eviction 
+3 15 1100  miss eviction 
+3 23 1100  miss eviction 
+3 31 1100  miss eviction 
+
+0 7 0000  miss eviction 
+0 15 0000  miss eviction 
+0 23 0000  miss eviction 
+0 31 0000  miss eviction 
+1 7 0000  miss eviction 
+1 15 0000  miss eviction 
+1 23 0000  miss eviction 
+1 31 0000  miss eviction 
+
+0 7 0100  miss eviction 
+0 15 0100  miss eviction 
+0 23 0100  miss eviction 
+0 31 0100  miss eviction 
+1 7 0100  miss eviction 
+1 15 0100  miss eviction 
+1 23 0100  miss eviction 
+1 31 0100  miss eviction 
+
+0 7 1000  miss eviction 
+0 15 1000  miss eviction 
+0 23 1000  miss eviction 
+0 31 1000  miss eviction 
+1 7 1000  miss eviction 
+1 15 1000  miss eviction 
+1 23 1000  miss eviction 
+1 31 1000  miss eviction 
+
+0 7 1100  miss eviction 
+0 15 1100  miss eviction 
+0 23 1100  miss eviction 
+0 31 1100  miss eviction 
+1 7 1100  miss eviction 
+1 15 1100  miss eviction 
+1 23 1100  miss eviction 
+1 31 1100  miss eviction 
+
+0 7 0000  miss eviction 
+0 15 0000  miss eviction 
+0 23 0000  miss eviction 
+0 31 0000  miss eviction 
+1 7 0000  miss eviction 
+1 15 0000  miss eviction 
+1 23 0000  miss eviction 
+1 31 0000  miss eviction 
+
+0 7 0100  miss eviction 
+0 15 0100  miss eviction 
+0 23 0100  miss eviction 
+0 31 0100  miss eviction 
+1 7 0100  miss eviction 
+1 15 0100  miss eviction 
+1 23 0100  miss eviction 
+1 31 0100  miss eviction 
+
+0 7 1000  miss eviction 
+0 15 1000  miss eviction 
+0 23 1000  miss eviction 
+0 31 1000  miss eviction 
+1 7 1000  miss eviction 
+1 15 1000  miss eviction 
+1 23 1000  miss eviction 
+1 31 1000  miss eviction 
+
+0 7 1100  miss eviction 
+0 15 1100  miss eviction 
+0 23 1100  miss eviction 
+0 31 1100  miss eviction 
+1 7 1100  miss eviction 
+1 15 1100  miss eviction 
+1 23 1100  miss eviction 
+1 31 1100  miss eviction 
+
+2 7 0000  miss eviction 
+2 15 0000  miss eviction 
+2 23 0000  miss eviction 
+2 31 0000  miss eviction 
+3 7 0000  miss eviction 
+3 15 0000  miss eviction 
+3 23 0000  miss eviction 
+3 31 0000  miss eviction 
+
+2 7 0100  miss eviction 
+2 15 0100  miss eviction 
+2 23 0100  miss eviction 
+2 31 0100  miss eviction 
+3 7 0100  miss eviction 
+3 15 0100  miss eviction 
+3 23 0100  miss eviction 
+3 31 0100  miss eviction 
+
+2 7 1000  miss eviction 
+2 15 1000  miss eviction 
+2 23 1000  miss eviction 
+2 31 1000  miss eviction 
+3 7 1000  miss eviction 
+3 15 1000  miss eviction 
+3 23 1000  miss eviction 
+3 31 1000  miss eviction 
+
+2 7 1100  miss eviction 
+2 15 1100  miss eviction 
+2 23 1100  miss eviction 
+2 31 1100  miss eviction 
+3 7 1100  miss eviction 
+3 15 1100  miss eviction 
+3 23 1100  miss eviction 
+3 31 1100  miss eviction 
+
+2 7 0000  miss eviction 
+2 15 0000  miss eviction 
+2 23 0000  miss eviction 
+2 31 0000  miss eviction 
+3 7 0000  miss eviction 
+3 15 0000  miss eviction 
+3 23 0000  miss eviction 
+3 31 0000  miss eviction 
+
+2 7 0100  miss eviction 
+2 15 0100  miss eviction 
+2 23 0100  miss eviction 
+2 31 0100  miss eviction 
+3 7 0100  miss eviction 
+3 15 0100  miss eviction 
+3 23 0100  miss eviction 
+3 31 0100  miss eviction 
+
+2 7 1000  miss eviction 
+2 15 1000  miss eviction 
+2 23 1000  miss eviction 
+2 31 1000  miss eviction 
+3 7 1000  miss eviction 
+3 15 1000  miss eviction 
+3 23 1000  miss eviction 
+3 31 1000  miss eviction 
+
+2 7 1100  miss eviction 
+2 15 1100  miss eviction 
+2 23 1100  miss eviction 
+2 31 1100  miss eviction 
+3 7 1100  miss eviction 
+3 15 1100  miss eviction 
+3 23 1100  miss eviction 
+3 31 1100  miss eviction 
+
+0 7 0000  miss eviction 
+0 15 0000  miss eviction 
+0 23 0000  miss eviction 
+0 31 0000  miss eviction 
+1 7 0000  miss eviction 
+1 15 0000  miss eviction 
+1 23 0000  miss eviction 
+1 31 0000  miss eviction 
+
+0 7 0100  miss eviction 
+0 15 0100  miss eviction 
+0 23 0100  miss eviction 
+0 31 0100  miss eviction 
+1 7 0100  miss eviction 
+1 15 0100  miss eviction 
+1 23 0100  miss eviction 
+1 31 0100  miss eviction 
+
+0 7 1000  miss eviction 
+0 15 1000  miss eviction 
+0 23 1000  miss eviction 
+0 31 1000  miss eviction 
+1 7 1000  miss eviction 
+1 15 1000  miss eviction 
+1 23 1000  miss eviction 
+1 31 1000  miss eviction 
+
+0 7 1100  miss eviction 
+0 15 1100  miss eviction 
+0 23 1100  miss eviction 
+0 31 1100  miss eviction 
+1 7 1100  miss eviction 
+1 15 1100  miss eviction 
+1 23 1100  miss eviction 
+1 31 1100  miss eviction 
+
+0 7 0000  miss eviction 
+0 15 0000  miss eviction 
+0 23 0000  miss eviction 
+0 31 0000  miss eviction 
+1 7 0000  miss eviction 
+1 15 0000  miss eviction 
+1 23 0000  miss eviction 
+1 31 0000  miss eviction 
+
+0 7 0100  miss eviction 
+0 15 0100  miss eviction 
+0 23 0100  miss eviction 
+0 31 0100  miss eviction 
+1 7 0100  miss eviction 
+1 15 0100  miss eviction 
+1 23 0100  miss eviction 
+1 31 0100  miss eviction 
+
+0 7 1000  miss eviction 
+0 15 1000  miss eviction 
+0 23 1000  miss eviction 
+0 31 1000  miss eviction 
+1 7 1000  miss eviction 
+1 15 1000  miss eviction 
+1 23 1000  miss eviction 
+1 31 1000  miss eviction 
+
+0 7 1100  miss eviction 
+0 15 1100  miss eviction 
+0 23 1100  miss eviction 
+0 31 1100  miss eviction 
+1 7 1100  miss eviction 
+1 15 1100  miss eviction 
+1 23 1100  miss eviction 
+1 31 1100  miss eviction 
+
+2 7 0000  miss eviction 
+2 15 0000  miss eviction 
+2 23 0000  miss eviction 
+2 31 0000  miss eviction 
+3 7 0000  miss eviction 
+3 15 0000  miss eviction 
+3 23 0000  miss eviction 
+3 31 0000  miss eviction 
+
+2 7 0100  miss eviction 
+2 15 0100  miss eviction 
+2 23 0100  miss eviction 
+2 31 0100  miss eviction 
+3 7 0100  miss eviction 
+3 15 0100  miss eviction 
+3 23 0100  miss eviction 
+3 31 0100  miss eviction 
+
+2 7 1000  miss eviction 
+2 15 1000  miss eviction 
+2 23 1000  miss eviction 
+2 31 1000  miss eviction 
+3 7 1000  miss eviction 
+3 15 1000  miss eviction 
+3 23 1000  miss eviction 
+3 31 1000  miss eviction 
+
+2 7 1100  miss eviction 
+2 15 1100  miss eviction 
+2 23 1100  miss eviction 
+2 31 1100  miss eviction 
+3 7 1100  miss eviction 
+3 15 1100  miss eviction 
+3 23 1100  miss eviction 
+3 31 1100  miss eviction 
+
+2 7 0000  miss eviction 
+2 15 0000  miss eviction 
+2 23 0000  miss eviction 
+2 31 0000  miss eviction 
+3 7 0000  miss eviction 
+3 15 0000  miss eviction 
+3 23 0000  miss eviction 
+3 31 0000  miss eviction 
+
+2 7 0100  miss eviction 
+2 15 0100  miss eviction 
+2 23 0100  miss eviction 
+2 31 0100  miss eviction 
+3 7 0100  miss eviction 
+3 15 0100  miss eviction 
+3 23 0100  miss eviction 
+3 31 0100  miss eviction 
+
+2 7 1000  miss eviction 
+2 15 1000  miss eviction 
+2 23 1000  miss eviction 
+2 31 1000  miss eviction 
+3 7 1000  miss eviction 
+3 15 1000  miss eviction 
+3 23 1000  miss eviction 
+3 31 1000  miss eviction 
+
+2 7 1100  miss eviction 
+2 15 1100  miss eviction 
+2 23 1100  miss eviction 
+2 31 1100  miss eviction 
+3 7 1100  miss eviction 
+3 15 1100  miss eviction 
+3 23 1100  miss eviction 
+3 31 1100  miss eviction 
+
+0 7 0000  miss eviction 
+0 15 0000  miss eviction 
+0 23 0000  miss eviction 
+0 31 0000  miss eviction 
+1 7 0000  miss eviction 
+1 15 0000  miss eviction 
+1 23 0000  miss eviction 
+1 31 0000  miss eviction 
+
+0 7 0100  miss eviction 
+0 15 0100  miss eviction 
+0 23 0100  miss eviction 
+0 31 0100  miss eviction 
+1 7 0100  miss eviction 
+1 15 0100  miss eviction 
+1 23 0100  miss eviction 
+1 31 0100  miss eviction 
+
+0 7 1000  miss eviction 
+0 15 1000  miss eviction 
+0 23 1000  miss eviction 
+0 31 1000  miss eviction 
+1 7 1000  miss eviction 
+1 15 1000  miss eviction 
+1 23 1000  miss eviction 
+1 31 1000  miss eviction 
+
+0 7 1100  miss eviction 
+0 15 1100  miss eviction 
+0 23 1100  miss eviction 
+0 31 1100  miss eviction 
+1 7 1100  miss eviction 
+1 15 1100  miss eviction 
+1 23 1100  miss eviction 
+1 31 1100  miss eviction 
+
+0 7 0000  miss eviction 
+0 15 0000  miss eviction 
+0 23 0000  miss eviction 
+0 31 0000  miss eviction 
+1 7 0000  miss eviction 
+1 15 0000  miss eviction 
+1 23 0000  miss eviction 
+1 31 0000  miss eviction 
+
+0 7 0100  miss eviction 
+0 15 0100  miss eviction 
+0 23 0100  miss eviction 
+0 31 0100  miss eviction 
+1 7 0100  miss eviction 
+1 15 0100  miss eviction 
+1 23 0100  miss eviction 
+1 31 0100  miss eviction 
+
+0 7 1000  miss eviction 
+0 15 1000  miss eviction 
+0 23 1000  miss eviction 
+0 31 1000  miss eviction 
+1 7 1000  miss eviction 
+1 15 1000  miss eviction 
+1 23 1000  miss eviction 
+1 31 1000  miss eviction 
+
+0 7 1100  miss eviction 
+0 15 1100  miss eviction 
+0 23 1100  miss eviction 
+0 31 1100  miss eviction 
+1 7 1100  miss eviction 
+1 15 1100  miss eviction 
+1 23 1100  miss eviction 
+1 31 1100  miss eviction 
+
+2 7 0000  miss eviction 
+2 15 0000  miss eviction 
+2 23 0000  miss eviction 
+2 31 0000  miss eviction 
+3 7 0000  miss eviction 
+3 15 0000  miss eviction 
+3 23 0000  miss eviction 
+3 31 0000  miss eviction 
+
+2 7 0100  miss eviction 
+2 15 0100  miss eviction 
+2 23 0100  miss eviction 
+2 31 0100  miss eviction 
+3 7 0100  miss eviction 
+3 15 0100  miss eviction 
+3 23 0100  miss eviction 
+3 31 0100  miss eviction 
+
+2 7 1000  miss eviction 
+2 15 1000  miss eviction 
+2 23 1000  miss eviction 
+2 31 1000  miss eviction 
+3 7 1000  miss eviction 
+3 15 1000  miss eviction 
+3 23 1000  miss eviction 
+3 31 1000  miss eviction 
+
+2 7 1100  miss eviction 
+2 15 1100  miss eviction 
+2 23 1100  miss eviction 
+2 31 1100  miss eviction 
+3 7 1100  miss eviction 
+3 15 1100  miss eviction 
+3 23 1100  miss eviction 
+3 31 1100  miss eviction 
+
+2 7 0000  miss eviction 
+2 15 0000  miss eviction 
+2 23 0000  miss eviction 
+2 31 0000  miss eviction 
+3 7 0000  miss eviction 
+3 15 0000  miss eviction 
+3 23 0000  miss eviction 
+3 31 0000  miss eviction 
+
+2 7 0100  miss eviction 
+2 15 0100  miss eviction 
+2 23 0100  miss eviction 
+2 31 0100  miss eviction 
+3 7 0100  miss eviction 
+3 15 0100  miss eviction 
+3 23 0100  miss eviction 
+3 31 0100  miss eviction 
+
+2 7 1000  miss eviction 
+2 15 1000  miss eviction 
+2 23 1000  miss eviction 
+2 31 1000  miss eviction 
+3 7 1000  miss eviction 
+3 15 1000  miss eviction 
+3 23 1000  miss eviction 
+3 31 1000  miss eviction 
+
+2 7 1100  miss eviction 
+2 15 1100  miss eviction 
+2 23 1100  miss eviction 
+2 31 1100  miss eviction 
+3 7 1100  miss eviction 
+3 15 1100  miss eviction 
+3 23 1100  miss eviction 
+3 31 1100  miss eviction 
+
+0 8 0000  miss eviction 
+0 16 0000  miss eviction 
+0 24 0000  miss eviction 
+1 0 0000  miss eviction 
+1 8 0000  miss eviction 
+1 16 0000  miss eviction 
+1 24 0000  miss eviction 
+2 0 0000  miss eviction 
+
+0 8 0100  miss eviction 
+0 16 0100  miss eviction 
+0 24 0100  miss eviction 
+1 0 0100  miss eviction 
+1 8 0100  miss eviction 
+1 16 0100  miss eviction 
+1 24 0100  miss eviction 
+2 0 0100  miss eviction 
+
+0 8 1000  miss eviction 
+0 16 1000  miss eviction 
+0 24 1000  miss eviction 
+1 0 1000  miss eviction 
+1 8 1000  miss eviction 
+1 16 1000  miss eviction 
+1 24 1000  miss eviction 
+2 0 1000  miss eviction 
+
+0 8 1100  miss eviction 
+0 16 1100  miss eviction 
+0 24 1100  miss eviction 
+1 0 1100  miss eviction 
+1 8 1100  miss eviction 
+1 16 1100  miss eviction 
+1 24 1100  miss eviction 
+2 0 1100  miss eviction 
+
+0 8 0000  miss eviction 
+0 16 0000  miss eviction 
+0 24 0000  miss eviction 
+1 0 0000  miss eviction 
+1 8 0000  miss eviction 
+1 16 0000  miss eviction 
+1 24 0000  miss eviction 
+2 0 0000  miss eviction 
+
+0 8 0100  miss eviction 
+0 16 0100  miss eviction 
+0 24 0100  miss eviction 
+1 0 0100  miss eviction 
+1 8 0100  miss eviction 
+1 16 0100  miss eviction 
+1 24 0100  miss eviction 
+2 0 0100  miss eviction 
+
+0 8 1000  miss eviction 
+0 16 1000  miss eviction 
+0 24 1000  miss eviction 
+1 0 1000  miss eviction 
+1 8 1000  miss eviction 
+1 16 1000  miss eviction 
+1 24 1000  miss eviction 
+2 0 1000  miss eviction 
+
+0 8 1100  miss eviction 
+0 16 1100  miss eviction 
+0 24 1100  miss eviction 
+1 0 1100  miss eviction 
+1 8 1100  miss eviction 
+1 16 1100  miss eviction 
+1 24 1100  miss eviction 
+2 0 1100  miss eviction 
+
+2 8 0000  miss eviction 
+2 16 0000  miss eviction 
+2 24 0000  miss eviction 
+3 0 0000  miss eviction 
+3 8 0000  miss eviction 
+3 16 0000  miss eviction 
+3 24 0000  miss eviction 
+0 0 0000  miss eviction 
+
+2 8 0100  miss eviction 
+2 16 0100  miss eviction 
+2 24 0100  miss eviction 
+3 0 0100  miss eviction 
+3 8 0100  miss eviction 
+3 16 0100  miss eviction 
+3 24 0100  miss eviction 
+0 0 0100  miss eviction 
+
+2 8 1000  miss eviction 
+2 16 1000  miss eviction 
+2 24 1000  miss eviction 
+3 0 1000  miss eviction 
+3 8 1000  miss eviction 
+3 16 1000  miss eviction 
+3 24 1000  miss eviction 
+0 0 1000  miss eviction 
+
+2 8 1100  miss eviction 
+2 16 1100  miss eviction 
+2 24 1100  miss eviction 
+3 0 1100  miss eviction 
+3 8 1100  miss eviction 
+3 16 1100  miss eviction 
+3 24 1100  miss eviction 
+0 0 1100  miss eviction 
+
+2 8 0000  miss eviction 
+2 16 0000  miss eviction 
+2 24 0000  miss eviction 
+3 0 0000  miss eviction 
+3 8 0000  miss eviction 
+3 16 0000  miss eviction 
+3 24 0000  miss eviction 
+0 0 0000  miss eviction 
+
+2 8 0100  miss eviction 
+2 16 0100  miss eviction 
+2 24 0100  miss eviction 
+3 0 0100  miss eviction 
+3 8 0100  miss eviction 
+3 16 0100  miss eviction 
+3 24 0100  miss eviction 
+0 0 0100  miss eviction 
+
+2 8 1000  miss eviction 
+2 16 1000  miss eviction 
+2 24 1000  miss eviction 
+3 0 1000  miss eviction 
+3 8 1000  miss eviction 
+3 16 1000  miss eviction 
+3 24 1000  miss eviction 
+0 0 1000  miss eviction 
+
+2 8 1100  miss eviction 
+2 16 1100  miss eviction 
+2 24 1100  miss eviction 
+3 0 1100  miss eviction 
+3 8 1100  miss eviction 
+3 16 1100  miss eviction 
+3 24 1100  miss eviction 
+0 0 1100  miss eviction 
+
+0 8 0000  miss eviction 
+0 16 0000  miss eviction 
+0 24 0000  miss eviction 
+1 0 0000  miss eviction 
+1 8 0000  miss eviction 
+1 16 0000  miss eviction 
+1 24 0000  miss eviction 
+2 0 0000  miss eviction 
+
+0 8 0100  miss eviction 
+0 16 0100  miss eviction 
+0 24 0100  miss eviction 
+1 0 0100  miss eviction 
+1 8 0100  miss eviction 
+1 16 0100  miss eviction 
+1 24 0100  miss eviction 
+2 0 0100  miss eviction 
+
+0 8 1000  miss eviction 
+0 16 1000  miss eviction 
+0 24 1000  miss eviction 
+1 0 1000  miss eviction 
+1 8 1000  miss eviction 
+1 16 1000  miss eviction 
+1 24 1000  miss eviction 
+2 0 1000  miss eviction 
+
+0 8 1100  miss eviction 
+0 16 1100  miss eviction 
+0 24 1100  miss eviction 
+1 0 1100  miss eviction 
+1 8 1100  miss eviction 
+1 16 1100  miss eviction 
+1 24 1100  miss eviction 
+2 0 1100  miss eviction 
+
+0 8 0000  miss eviction 
+0 16 0000  miss eviction 
+0 24 0000  miss eviction 
+1 0 0000  miss eviction 
+1 8 0000  miss eviction 
+1 16 0000  miss eviction 
+1 24 0000  miss eviction 
+2 0 0000  miss eviction 
+
+0 8 0100  miss eviction 
+0 16 0100  miss eviction 
+0 24 0100  miss eviction 
+1 0 0100  miss eviction 
+1 8 0100  miss eviction 
+1 16 0100  miss eviction 
+1 24 0100  miss eviction 
+2 0 0100  miss eviction 
+
+0 8 1000  miss eviction 
+0 16 1000  miss eviction 
+0 24 1000  miss eviction 
+1 0 1000  miss eviction 
+1 8 1000  miss eviction 
+1 16 1000  miss eviction 
+1 24 1000  miss eviction 
+2 0 1000  miss eviction 
+
+0 8 1100  miss eviction 
+0 16 1100  miss eviction 
+0 24 1100  miss eviction 
+1 0 1100  miss eviction 
+1 8 1100  miss eviction 
+1 16 1100  miss eviction 
+1 24 1100  miss eviction 
+2 0 1100  miss eviction 
+
+2 8 0000  miss eviction 
+2 16 0000  miss eviction 
+2 24 0000  miss eviction 
+3 0 0000  miss eviction 
+3 8 0000  miss eviction 
+3 16 0000  miss eviction 
+3 24 0000  miss eviction 
+0 0 0000  miss eviction 
+
+2 8 0100  miss eviction 
+2 16 0100  miss eviction 
+2 24 0100  miss eviction 
+3 0 0100  miss eviction 
+3 8 0100  miss eviction 
+3 16 0100  miss eviction 
+3 24 0100  miss eviction 
+0 0 0100  miss eviction 
+
+2 8 1000  miss eviction 
+2 16 1000  miss eviction 
+2 24 1000  miss eviction 
+3 0 1000  miss eviction 
+3 8 1000  miss eviction 
+3 16 1000  miss eviction 
+3 24 1000  miss eviction 
+0 0 1000  miss eviction 
+
+2 8 1100  miss eviction 
+2 16 1100  miss eviction 
+2 24 1100  miss eviction 
+3 0 1100  miss eviction 
+3 8 1100  miss eviction 
+3 16 1100  miss eviction 
+3 24 1100  miss eviction 
+0 0 1100  miss eviction 
+
+2 8 0000  miss eviction 
+2 16 0000  miss eviction 
+2 24 0000  miss eviction 
+3 0 0000  miss eviction 
+3 8 0000  miss eviction 
+3 16 0000  miss eviction 
+3 24 0000  miss eviction 
+0 0 0000  miss eviction 
+
+2 8 0100  miss eviction 
+2 16 0100  miss eviction 
+2 24 0100  miss eviction 
+3 0 0100  miss eviction 
+3 8 0100  miss eviction 
+3 16 0100  miss eviction 
+3 24 0100  miss eviction 
+0 0 0100  miss eviction 
+
+2 8 1000  miss eviction 
+2 16 1000  miss eviction 
+2 24 1000  miss eviction 
+3 0 1000  miss eviction 
+3 8 1000  miss eviction 
+3 16 1000  miss eviction 
+3 24 1000  miss eviction 
+0 0 1000  miss eviction 
+
+2 8 1100  miss eviction 
+2 16 1100  miss eviction 
+2 24 1100  miss eviction 
+3 0 1100  miss eviction 
+3 8 1100  miss eviction 
+3 16 1100  miss eviction 
+3 24 1100  miss eviction 
+0 0 1100  miss eviction 
+
+0 8 0000  miss eviction 
+0 16 0000  miss eviction 
+0 24 0000  miss eviction 
+1 0 0000  miss eviction 
+1 8 0000  miss eviction 
+1 16 0000  miss eviction 
+1 24 0000  miss eviction 
+2 0 0000  miss eviction 
+
+0 8 0100  miss eviction 
+0 16 0100  miss eviction 
+0 24 0100  miss eviction 
+1 0 0100  miss eviction 
+1 8 0100  miss eviction 
+1 16 0100  miss eviction 
+1 24 0100  miss eviction 
+2 0 0100  miss eviction 
+
+0 8 1000  miss eviction 
+0 16 1000  miss eviction 
+0 24 1000  miss eviction 
+1 0 1000  miss eviction 
+1 8 1000  miss eviction 
+1 16 1000  miss eviction 
+1 24 1000  miss eviction 
+2 0 1000  miss eviction 
+
+0 8 1100  miss eviction 
+0 16 1100  miss eviction 
+0 24 1100  miss eviction 
+1 0 1100  miss eviction 
+1 8 1100  miss eviction 
+1 16 1100  miss eviction 
+1 24 1100  miss eviction 
+2 0 1100  miss eviction 
+
+0 8 0000  miss eviction 
+0 16 0000  miss eviction 
+0 24 0000  miss eviction 
+1 0 0000  miss eviction 
+1 8 0000  miss eviction 
+1 16 0000  miss eviction 
+1 24 0000  miss eviction 
+2 0 0000  miss eviction 
+
+0 8 0100  miss eviction 
+0 16 0100  miss eviction 
+0 24 0100  miss eviction 
+1 0 0100  miss eviction 
+1 8 0100  miss eviction 
+1 16 0100  miss eviction 
+1 24 0100  miss eviction 
+2 0 0100  miss eviction 
+
+0 8 1000  miss eviction 
+0 16 1000  miss eviction 
+0 24 1000  miss eviction 
+1 0 1000  miss eviction 
+1 8 1000  miss eviction 
+1 16 1000  miss eviction 
+1 24 1000  miss eviction 
+2 0 1000  miss eviction 
+
+0 8 1100  miss eviction 
+0 16 1100  miss eviction 
+0 24 1100  miss eviction 
+1 0 1100  miss eviction 
+1 8 1100  miss eviction 
+1 16 1100  miss eviction 
+1 24 1100  miss eviction 
+2 0 1100  miss eviction 
+
+2 8 0000  miss eviction 
+2 16 0000  miss eviction 
+2 24 0000  miss eviction 
+3 0 0000  miss eviction 
+3 8 0000  miss eviction 
+3 16 0000  miss eviction 
+3 24 0000  miss eviction 
+0 0 0000  miss eviction 
+
+2 8 0100  miss eviction 
+2 16 0100  miss eviction 
+2 24 0100  miss eviction 
+3 0 0100  miss eviction 
+3 8 0100  miss eviction 
+3 16 0100  miss eviction 
+3 24 0100  miss eviction 
+0 0 0100  miss eviction 
+
+2 8 1000  miss eviction 
+2 16 1000  miss eviction 
+2 24 1000  miss eviction 
+3 0 1000  miss eviction 
+3 8 1000  miss eviction 
+3 16 1000  miss eviction 
+3 24 1000  miss eviction 
+0 0 1000  miss eviction 
+
+2 8 1100  miss eviction 
+2 16 1100  miss eviction 
+2 24 1100  miss eviction 
+3 0 1100  miss eviction 
+3 8 1100  miss eviction 
+3 16 1100  miss eviction 
+3 24 1100  miss eviction 
+0 0 1100  miss eviction 
+
+2 8 0000  miss eviction 
+2 16 0000  miss eviction 
+2 24 0000  miss eviction 
+3 0 0000  miss eviction 
+3 8 0000  miss eviction 
+3 16 0000  miss eviction 
+3 24 0000  miss eviction 
+0 0 0000  miss eviction 
+
+2 8 0100  miss eviction 
+2 16 0100  miss eviction 
+2 24 0100  miss eviction 
+3 0 0100  miss eviction 
+3 8 0100  miss eviction 
+3 16 0100  miss eviction 
+3 24 0100  miss eviction 
+0 0 0100  miss eviction 
+
+2 8 1000  miss eviction 
+2 16 1000  miss eviction 
+2 24 1000  miss eviction 
+3 0 1000  miss eviction 
+3 8 1000  miss eviction 
+3 16 1000  miss eviction 
+3 24 1000  miss eviction 
+0 0 1000  miss eviction 
+
+2 8 1100  miss eviction 
+2 16 1100  miss eviction 
+2 24 1100  miss eviction 
+3 0 1100  miss eviction 
+3 8 1100  miss eviction 
+3 16 1100  miss eviction 
+3 24 1100  miss eviction 
+0 0 1100  miss eviction 
+
+0 8 0000  miss eviction 
+0 16 0000  miss eviction 
+0 24 0000  miss eviction 
+1 0 0000  miss eviction 
+1 8 0000  miss eviction 
+1 16 0000  miss eviction 
+1 24 0000  miss eviction 
+2 0 0000  miss eviction 
+
+0 8 0100  miss eviction 
+0 16 0100  miss eviction 
+0 24 0100  miss eviction 
+1 0 0100  miss eviction 
+1 8 0100  miss eviction 
+1 16 0100  miss eviction 
+1 24 0100  miss eviction 
+2 0 0100  miss eviction 
+
+0 8 1000  miss eviction 
+0 16 1000  miss eviction 
+0 24 1000  miss eviction 
+1 0 1000  miss eviction 
+1 8 1000  miss eviction 
+1 16 1000  miss eviction 
+1 24 1000  miss eviction 
+2 0 1000  miss eviction 
+
+0 8 1100  miss eviction 
+0 16 1100  miss eviction 
+0 24 1100  miss eviction 
+1 0 1100  miss eviction 
+1 8 1100  miss eviction 
+1 16 1100  miss eviction 
+1 24 1100  miss eviction 
+2 0 1100  miss eviction 
+
+0 8 0000  miss eviction 
+0 16 0000  miss eviction 
+0 24 0000  miss eviction 
+1 0 0000  miss eviction 
+1 8 0000  miss eviction 
+1 16 0000  miss eviction 
+1 24 0000  miss eviction 
+2 0 0000  miss eviction 
+
+0 8 0100  miss eviction 
+0 16 0100  miss eviction 
+0 24 0100  miss eviction 
+1 0 0100  miss eviction 
+1 8 0100  miss eviction 
+1 16 0100  miss eviction 
+1 24 0100  miss eviction 
+2 0 0100  miss eviction 
+
+0 8 1000  miss eviction 
+0 16 1000  miss eviction 
+0 24 1000  miss eviction 
+1 0 1000  miss eviction 
+1 8 1000  miss eviction 
+1 16 1000  miss eviction 
+1 24 1000  miss eviction 
+2 0 1000  miss eviction 
+
+0 8 1100  miss eviction 
+0 16 1100  miss eviction 
+0 24 1100  miss eviction 
+1 0 1100  miss eviction 
+1 8 1100  miss eviction 
+1 16 1100  miss eviction 
+1 24 1100  miss eviction 
+2 0 1100  miss eviction 
+
+2 8 0000  miss eviction 
+2 16 0000  miss eviction 
+2 24 0000  miss eviction 
+3 0 0000  miss eviction 
+3 8 0000  miss eviction 
+3 16 0000  miss eviction 
+3 24 0000  miss eviction 
+0 0 0000  miss eviction 
+
+2 8 0100  miss eviction 
+2 16 0100  miss eviction 
+2 24 0100  miss eviction 
+3 0 0100  miss eviction 
+3 8 0100  miss eviction 
+3 16 0100  miss eviction 
+3 24 0100  miss eviction 
+0 0 0100  miss eviction 
+
+2 8 1000  miss eviction 
+2 16 1000  miss eviction 
+2 24 1000  miss eviction 
+3 0 1000  miss eviction 
+3 8 1000  miss eviction 
+3 16 1000  miss eviction 
+3 24 1000  miss eviction 
+0 0 1000  miss eviction 
+
+2 8 1100  miss eviction 
+2 16 1100  miss eviction 
+2 24 1100  miss eviction 
+3 0 1100  miss eviction 
+3 8 1100  miss eviction 
+3 16 1100  miss eviction 
+3 24 1100  miss eviction 
+0 0 1100  miss eviction 
+
+2 8 0000  miss eviction 
+2 16 0000  miss eviction 
+2 24 0000  miss eviction 
+3 0 0000  miss eviction 
+3 8 0000  miss eviction 
+3 16 0000  miss eviction 
+3 24 0000  miss eviction 
+0 0 0000  miss eviction 
+
+2 8 0100  miss eviction 
+2 16 0100  miss eviction 
+2 24 0100  miss eviction 
+3 0 0100  miss eviction 
+3 8 0100  miss eviction 
+3 16 0100  miss eviction 
+3 24 0100  miss eviction 
+0 0 0100  miss eviction 
+
+2 8 1000  miss eviction 
+2 16 1000  miss eviction 
+2 24 1000  miss eviction 
+3 0 1000  miss eviction 
+3 8 1000  miss eviction 
+3 16 1000  miss eviction 
+3 24 1000  miss eviction 
+0 0 1000  miss eviction 
+
+2 8 1100  miss eviction 
+2 16 1100  miss eviction 
+2 24 1100  miss eviction 
+3 0 1100  miss eviction 
+3 8 1100  miss eviction 
+3 16 1100  miss eviction 
+3 24 1100  miss eviction 
+0 0 1100  miss eviction 
+
+0 9 0000  miss eviction 
+0 17 0000  miss eviction 
+0 25 0000  miss eviction 
+1 1 0000  miss eviction 
+1 9 0000  miss eviction 
+1 17 0000  miss eviction 
+1 25 0000  miss eviction 
+2 1 0000  miss eviction 
+
+0 9 0100  miss eviction 
+0 17 0100  miss eviction 
+0 25 0100  miss eviction 
+1 1 0100  miss eviction 
+1 9 0100  miss eviction 
+1 17 0100  miss eviction 
+1 25 0100  miss eviction 
+2 1 0100  miss eviction 
+
+0 9 1000  miss eviction 
+0 17 1000  miss eviction 
+0 25 1000  miss eviction 
+1 1 1000  miss eviction 
+1 9 1000  miss eviction 
+1 17 1000  miss eviction 
+1 25 1000  miss eviction 
+2 1 1000  miss eviction 
+
+0 9 1100  miss eviction 
+0 17 1100  miss eviction 
+0 25 1100  miss eviction 
+1 1 1100  miss eviction 
+1 9 1100  miss eviction 
+1 17 1100  miss eviction 
+1 25 1100  miss eviction 
+2 1 1100  miss eviction 
+
+0 9 0000  miss eviction 
+0 17 0000  miss eviction 
+0 25 0000  miss eviction 
+1 1 0000  miss eviction 
+1 9 0000  miss eviction 
+1 17 0000  miss eviction 
+1 25 0000  miss eviction 
+2 1 0000  miss eviction 
+
+0 9 0100  miss eviction 
+0 17 0100  miss eviction 
+0 25 0100  miss eviction 
+1 1 0100  miss eviction 
+1 9 0100  miss eviction 
+1 17 0100  miss eviction 
+1 25 0100  miss eviction 
+2 1 0100  miss eviction 
+
+0 9 1000  miss eviction 
+0 17 1000  miss eviction 
+0 25 1000  miss eviction 
+1 1 1000  miss eviction 
+1 9 1000  miss eviction 
+1 17 1000  miss eviction 
+1 25 1000  miss eviction 
+2 1 1000  miss eviction 
+
+0 9 1100  miss eviction 
+0 17 1100  miss eviction 
+0 25 1100  miss eviction 
+1 1 1100  miss eviction 
+1 9 1100  miss eviction 
+1 17 1100  miss eviction 
+1 25 1100  miss eviction 
+2 1 1100  miss eviction 
+
+2 9 0000  miss eviction 
+2 17 0000  miss eviction 
+2 25 0000  miss eviction 
+3 1 0000  miss eviction 
+3 9 0000  miss eviction 
+3 17 0000  miss eviction 
+3 25 0000  miss eviction 
+0 1 0000  miss eviction 
+
+2 9 0100  miss eviction 
+2 17 0100  miss eviction 
+2 25 0100  miss eviction 
+3 1 0100  miss eviction 
+3 9 0100  miss eviction 
+3 17 0100  miss eviction 
+3 25 0100  miss eviction 
+0 1 0100  miss eviction 
+
+2 9 1000  miss eviction 
+2 17 1000  miss eviction 
+2 25 1000  miss eviction 
+3 1 1000  miss eviction 
+3 9 1000  miss eviction 
+3 17 1000  miss eviction 
+3 25 1000  miss eviction 
+0 1 1000  miss eviction 
+
+2 9 1100  miss eviction 
+2 17 1100  miss eviction 
+2 25 1100  miss eviction 
+3 1 1100  miss eviction 
+3 9 1100  miss eviction 
+3 17 1100  miss eviction 
+3 25 1100  miss eviction 
+0 1 1100  miss eviction 
+
+2 9 0000  miss eviction 
+2 17 0000  miss eviction 
+2 25 0000  miss eviction 
+3 1 0000  miss eviction 
+3 9 0000  miss eviction 
+3 17 0000  miss eviction 
+3 25 0000  miss eviction 
+0 1 0000  miss eviction 
+
+2 9 0100  miss eviction 
+2 17 0100  miss eviction 
+2 25 0100  miss eviction 
+3 1 0100  miss eviction 
+3 9 0100  miss eviction 
+3 17 0100  miss eviction 
+3 25 0100  miss eviction 
+0 1 0100  miss eviction 
+
+2 9 1000  miss eviction 
+2 17 1000  miss eviction 
+2 25 1000  miss eviction 
+3 1 1000  miss eviction 
+3 9 1000  miss eviction 
+3 17 1000  miss eviction 
+3 25 1000  miss eviction 
+0 1 1000  miss eviction 
+
+2 9 1100  miss eviction 
+2 17 1100  miss eviction 
+2 25 1100  miss eviction 
+3 1 1100  miss eviction 
+3 9 1100  miss eviction 
+3 17 1100  miss eviction 
+3 25 1100  miss eviction 
+0 1 1100  miss eviction 
+
+0 9 0000  miss eviction 
+0 17 0000  miss eviction 
+0 25 0000  miss eviction 
+1 1 0000  miss eviction 
+1 9 0000  miss eviction 
+1 17 0000  miss eviction 
+1 25 0000  miss eviction 
+2 1 0000  miss eviction 
+
+0 9 0100  miss eviction 
+0 17 0100  miss eviction 
+0 25 0100  miss eviction 
+1 1 0100  miss eviction 
+1 9 0100  miss eviction 
+1 17 0100  miss eviction 
+1 25 0100  miss eviction 
+2 1 0100  miss eviction 
+
+0 9 1000  miss eviction 
+0 17 1000  miss eviction 
+0 25 1000  miss eviction 
+1 1 1000  miss eviction 
+1 9 1000  miss eviction 
+1 17 1000  miss eviction 
+1 25 1000  miss eviction 
+2 1 1000  miss eviction 
+
+0 9 1100  miss eviction 
+0 17 1100  miss eviction 
+0 25 1100  miss eviction 
+1 1 1100  miss eviction 
+1 9 1100  miss eviction 
+1 17 1100  miss eviction 
+1 25 1100  miss eviction 
+2 1 1100  miss eviction 
+
+0 9 0000  miss eviction 
+0 17 0000  miss eviction 
+0 25 0000  miss eviction 
+1 1 0000  miss eviction 
+1 9 0000  miss eviction 
+1 17 0000  miss eviction 
+1 25 0000  miss eviction 
+2 1 0000  miss eviction 
+
+0 9 0100  miss eviction 
+0 17 0100  miss eviction 
+0 25 0100  miss eviction 
+1 1 0100  miss eviction 
+1 9 0100  miss eviction 
+1 17 0100  miss eviction 
+1 25 0100  miss eviction 
+2 1 0100  miss eviction 
+
+0 9 1000  miss eviction 
+0 17 1000  miss eviction 
+0 25 1000  miss eviction 
+1 1 1000  miss eviction 
+1 9 1000  miss eviction 
+1 17 1000  miss eviction 
+1 25 1000  miss eviction 
+2 1 1000  miss eviction 
+
+0 9 1100  miss eviction 
+0 17 1100  miss eviction 
+0 25 1100  miss eviction 
+1 1 1100  miss eviction 
+1 9 1100  miss eviction 
+1 17 1100  miss eviction 
+1 25 1100  miss eviction 
+2 1 1100  miss eviction 
+
+2 9 0000  miss eviction 
+2 17 0000  miss eviction 
+2 25 0000  miss eviction 
+3 1 0000  miss eviction 
+3 9 0000  miss eviction 
+3 17 0000  miss eviction 
+3 25 0000  miss eviction 
+0 1 0000  miss eviction 
+
+2 9 0100  miss eviction 
+2 17 0100  miss eviction 
+2 25 0100  miss eviction 
+3 1 0100  miss eviction 
+3 9 0100  miss eviction 
+3 17 0100  miss eviction 
+3 25 0100  miss eviction 
+0 1 0100  miss eviction 
+
+2 9 1000  miss eviction 
+2 17 1000  miss eviction 
+2 25 1000  miss eviction 
+3 1 1000  miss eviction 
+3 9 1000  miss eviction 
+3 17 1000  miss eviction 
+3 25 1000  miss eviction 
+0 1 1000  miss eviction 
+
+2 9 1100  miss eviction 
+2 17 1100  miss eviction 
+2 25 1100  miss eviction 
+3 1 1100  miss eviction 
+3 9 1100  miss eviction 
+3 17 1100  miss eviction 
+3 25 1100  miss eviction 
+0 1 1100  miss eviction 
+
+2 9 0000  miss eviction 
+2 17 0000  miss eviction 
+2 25 0000  miss eviction 
+3 1 0000  miss eviction 
+3 9 0000  miss eviction 
+3 17 0000  miss eviction 
+3 25 0000  miss eviction 
+0 1 0000  miss eviction 
+
+2 9 0100  miss eviction 
+2 17 0100  miss eviction 
+2 25 0100  miss eviction 
+3 1 0100  miss eviction 
+3 9 0100  miss eviction 
+3 17 0100  miss eviction 
+3 25 0100  miss eviction 
+0 1 0100  miss eviction 
+
+2 9 1000  miss eviction 
+2 17 1000  miss eviction 
+2 25 1000  miss eviction 
+3 1 1000  miss eviction 
+3 9 1000  miss eviction 
+3 17 1000  miss eviction 
+3 25 1000  miss eviction 
+0 1 1000  miss eviction 
+
+2 9 1100  miss eviction 
+2 17 1100  miss eviction 
+2 25 1100  miss eviction 
+3 1 1100  miss eviction 
+3 9 1100  miss eviction 
+3 17 1100  miss eviction 
+3 25 1100  miss eviction 
+0 1 1100  miss eviction 
+
+0 9 0000  miss eviction 
+0 17 0000  miss eviction 
+0 25 0000  miss eviction 
+1 1 0000  miss eviction 
+1 9 0000  miss eviction 
+1 17 0000  miss eviction 
+1 25 0000  miss eviction 
+2 1 0000  miss eviction 
+
+0 9 0100  miss eviction 
+0 17 0100  miss eviction 
+0 25 0100  miss eviction 
+1 1 0100  miss eviction 
+1 9 0100  miss eviction 
+1 17 0100  miss eviction 
+1 25 0100  miss eviction 
+2 1 0100  miss eviction 
+
+0 9 1000  miss eviction 
+0 17 1000  miss eviction 
+0 25 1000  miss eviction 
+1 1 1000  miss eviction 
+1 9 1000  miss eviction 
+1 17 1000  miss eviction 
+1 25 1000  miss eviction 
+2 1 1000  miss eviction 
+
+0 9 1100  miss eviction 
+0 17 1100  miss eviction 
+0 25 1100  miss eviction 
+1 1 1100  miss eviction 
+1 9 1100  miss eviction 
+1 17 1100  miss eviction 
+1 25 1100  miss eviction 
+2 1 1100  miss eviction 
+
+0 9 0000  miss eviction 
+0 17 0000  miss eviction 
+0 25 0000  miss eviction 
+1 1 0000  miss eviction 
+1 9 0000  miss eviction 
+1 17 0000  miss eviction 
+1 25 0000  miss eviction 
+2 1 0000  miss eviction 
+
+0 9 0100  miss eviction 
+0 17 0100  miss eviction 
+0 25 0100  miss eviction 
+1 1 0100  miss eviction 
+1 9 0100  miss eviction 
+1 17 0100  miss eviction 
+1 25 0100  miss eviction 
+2 1 0100  miss eviction 
+
+0 9 1000  miss eviction 
+0 17 1000  miss eviction 
+0 25 1000  miss eviction 
+1 1 1000  miss eviction 
+1 9 1000  miss eviction 
+1 17 1000  miss eviction 
+1 25 1000  miss eviction 
+2 1 1000  miss eviction 
+
+0 9 1100  miss eviction 
+0 17 1100  miss eviction 
+0 25 1100  miss eviction 
+1 1 1100  miss eviction 
+1 9 1100  miss eviction 
+1 17 1100  miss eviction 
+1 25 1100  miss eviction 
+2 1 1100  miss eviction 
+
+2 9 0000  miss eviction 
+2 17 0000  miss eviction 
+2 25 0000  miss eviction 
+3 1 0000  miss eviction 
+3 9 0000  miss eviction 
+3 17 0000  miss eviction 
+3 25 0000  miss eviction 
+0 1 0000  miss eviction 
+
+2 9 0100  miss eviction 
+2 17 0100  miss eviction 
+2 25 0100  miss eviction 
+3 1 0100  miss eviction 
+3 9 0100  miss eviction 
+3 17 0100  miss eviction 
+3 25 0100  miss eviction 
+0 1 0100  miss eviction 
+
+2 9 1000  miss eviction 
+2 17 1000  miss eviction 
+2 25 1000  miss eviction 
+3 1 1000  miss eviction 
+3 9 1000  miss eviction 
+3 17 1000  miss eviction 
+3 25 1000  miss eviction 
+0 1 1000  miss eviction 
+
+2 9 1100  miss eviction 
+2 17 1100  miss eviction 
+2 25 1100  miss eviction 
+3 1 1100  miss eviction 
+3 9 1100  miss eviction 
+3 17 1100  miss eviction 
+3 25 1100  miss eviction 
+0 1 1100  miss eviction 
+
+2 9 0000  miss eviction 
+2 17 0000  miss eviction 
+2 25 0000  miss eviction 
+3 1 0000  miss eviction 
+3 9 0000  miss eviction 
+3 17 0000  miss eviction 
+3 25 0000  miss eviction 
+0 1 0000  miss eviction 
+
+2 9 0100  miss eviction 
+2 17 0100  miss eviction 
+2 25 0100  miss eviction 
+3 1 0100  miss eviction 
+3 9 0100  miss eviction 
+3 17 0100  miss eviction 
+3 25 0100  miss eviction 
+0 1 0100  miss eviction 
+
+2 9 1000  miss eviction 
+2 17 1000  miss eviction 
+2 25 1000  miss eviction 
+3 1 1000  miss eviction 
+3 9 1000  miss eviction 
+3 17 1000  miss eviction 
+3 25 1000  miss eviction 
+0 1 1000  miss eviction 
+
+2 9 1100  miss eviction 
+2 17 1100  miss eviction 
+2 25 1100  miss eviction 
+3 1 1100  miss eviction 
+3 9 1100  miss eviction 
+3 17 1100  miss eviction 
+3 25 1100  miss eviction 
+0 1 1100  miss eviction 
+
+0 9 0000  miss eviction 
+0 17 0000  miss eviction 
+0 25 0000  miss eviction 
+1 1 0000  miss eviction 
+1 9 0000  miss eviction 
+1 17 0000  miss eviction 
+1 25 0000  miss eviction 
+2 1 0000  miss eviction 
+
+0 9 0100  miss eviction 
+0 17 0100  miss eviction 
+0 25 0100  miss eviction 
+1 1 0100  miss eviction 
+1 9 0100  miss eviction 
+1 17 0100  miss eviction 
+1 25 0100  miss eviction 
+2 1 0100  miss eviction 
+
+0 9 1000  miss eviction 
+0 17 1000  miss eviction 
+0 25 1000  miss eviction 
+1 1 1000  miss eviction 
+1 9 1000  miss eviction 
+1 17 1000  miss eviction 
+1 25 1000  miss eviction 
+2 1 1000  miss eviction 
+
+0 9 1100  miss eviction 
+0 17 1100  miss eviction 
+0 25 1100  miss eviction 
+1 1 1100  miss eviction 
+1 9 1100  miss eviction 
+1 17 1100  miss eviction 
+1 25 1100  miss eviction 
+2 1 1100  miss eviction 
+
+0 9 0000  miss eviction 
+0 17 0000  miss eviction 
+0 25 0000  miss eviction 
+1 1 0000  miss eviction 
+1 9 0000  miss eviction 
+1 17 0000  miss eviction 
+1 25 0000  miss eviction 
+2 1 0000  miss eviction 
+
+0 9 0100  miss eviction 
+0 17 0100  miss eviction 
+0 25 0100  miss eviction 
+1 1 0100  miss eviction 
+1 9 0100  miss eviction 
+1 17 0100  miss eviction 
+1 25 0100  miss eviction 
+2 1 0100  miss eviction 
+
+0 9 1000  miss eviction 
+0 17 1000  miss eviction 
+0 25 1000  miss eviction 
+1 1 1000  miss eviction 
+1 9 1000  miss eviction 
+1 17 1000  miss eviction 
+1 25 1000  miss eviction 
+2 1 1000  miss eviction 
+
+0 9 1100  miss eviction 
+0 17 1100  miss eviction 
+0 25 1100  miss eviction 
+1 1 1100  miss eviction 
+1 9 1100  miss eviction 
+1 17 1100  miss eviction 
+1 25 1100  miss eviction 
+2 1 1100  miss eviction 
+
+2 9 0000  miss eviction 
+2 17 0000  miss eviction 
+2 25 0000  miss eviction 
+3 1 0000  miss eviction 
+3 9 0000  miss eviction 
+3 17 0000  miss eviction 
+3 25 0000  miss eviction 
+0 1 0000  miss eviction 
+
+2 9 0100  miss eviction 
+2 17 0100  miss eviction 
+2 25 0100  miss eviction 
+3 1 0100  miss eviction 
+3 9 0100  miss eviction 
+3 17 0100  miss eviction 
+3 25 0100  miss eviction 
+0 1 0100  miss eviction 
+
+2 9 1000  miss eviction 
+2 17 1000  miss eviction 
+2 25 1000  miss eviction 
+3 1 1000  miss eviction 
+3 9 1000  miss eviction 
+3 17 1000  miss eviction 
+3 25 1000  miss eviction 
+0 1 1000  miss eviction 
+
+2 9 1100  miss eviction 
+2 17 1100  miss eviction 
+2 25 1100  miss eviction 
+3 1 1100  miss eviction 
+3 9 1100  miss eviction 
+3 17 1100  miss eviction 
+3 25 1100  miss eviction 
+0 1 1100  miss eviction 
+
+2 9 0000  miss eviction 
+2 17 0000  miss eviction 
+2 25 0000  miss eviction 
+3 1 0000  miss eviction 
+3 9 0000  miss eviction 
+3 17 0000  miss eviction 
+3 25 0000  miss eviction 
+0 1 0000  miss eviction 
+
+2 9 0100  miss eviction 
+2 17 0100  miss eviction 
+2 25 0100  miss eviction 
+3 1 0100  miss eviction 
+3 9 0100  miss eviction 
+3 17 0100  miss eviction 
+3 25 0100  miss eviction 
+0 1 0100  miss eviction 
+
+2 9 1000  miss eviction 
+2 17 1000  miss eviction 
+2 25 1000  miss eviction 
+3 1 1000  miss eviction 
+3 9 1000  miss eviction 
+3 17 1000  miss eviction 
+3 25 1000  miss eviction 
+0 1 1000  miss eviction 
+
+2 9 1100  miss eviction 
+2 17 1100  miss eviction 
+2 25 1100  miss eviction 
+3 1 1100  miss eviction 
+3 9 1100  miss eviction 
+3 17 1100  miss eviction 
+3 25 1100  miss eviction 
+0 1 1100  miss eviction 
+
+0 10 0000  miss eviction 
+0 18 0000  miss eviction 
+0 26 0000  miss eviction 
+1 2 0000  miss eviction 
+1 10 0000  miss eviction 
+1 18 0000  miss eviction 
+1 26 0000  miss eviction 
+2 2 0000  miss eviction 
+
+0 10 0100  miss eviction 
+0 18 0100  miss eviction 
+0 26 0100  miss eviction 
+1 2 0100  miss eviction 
+1 10 0100  miss eviction 
+1 18 0100  miss eviction 
+1 26 0100  miss eviction 
+2 2 0100  miss eviction 
+
+0 10 1000  miss eviction 
+0 18 1000  miss eviction 
+0 26 1000  miss eviction 
+1 2 1000  miss eviction 
+1 10 1000  miss eviction 
+1 18 1000  miss eviction 
+1 26 1000  miss eviction 
+2 2 1000  miss eviction 
+
+0 10 1100  miss eviction 
+0 18 1100  miss eviction 
+0 26 1100  miss eviction 
+1 2 1100  miss eviction 
+1 10 1100  miss eviction 
+1 18 1100  miss eviction 
+1 26 1100  miss eviction 
+2 2 1100  miss eviction 
+
+0 10 0000  miss eviction 
+0 18 0000  miss eviction 
+0 26 0000  miss eviction 
+1 2 0000  miss eviction 
+1 10 0000  miss eviction 
+1 18 0000  miss eviction 
+1 26 0000  miss eviction 
+2 2 0000  miss eviction 
+
+0 10 0100  miss eviction 
+0 18 0100  miss eviction 
+0 26 0100  miss eviction 
+1 2 0100  miss eviction 
+1 10 0100  miss eviction 
+1 18 0100  miss eviction 
+1 26 0100  miss eviction 
+2 2 0100  miss eviction 
+
+0 10 1000  miss eviction 
+0 18 1000  miss eviction 
+0 26 1000  miss eviction 
+1 2 1000  miss eviction 
+1 10 1000  miss eviction 
+1 18 1000  miss eviction 
+1 26 1000  miss eviction 
+2 2 1000  miss eviction 
+
+0 10 1100  miss eviction 
+0 18 1100  miss eviction 
+0 26 1100  miss eviction 
+1 2 1100  miss eviction 
+1 10 1100  miss eviction 
+1 18 1100  miss eviction 
+1 26 1100  miss eviction 
+2 2 1100  miss eviction 
+
+2 10 0000  miss eviction 
+2 18 0000  miss eviction 
+2 26 0000  miss eviction 
+3 2 0000  miss eviction 
+3 10 0000  miss eviction 
+3 18 0000  miss eviction 
+3 26 0000  miss eviction 
+0 2 0000  miss eviction 
+
+2 10 0100  miss eviction 
+2 18 0100  miss eviction 
+2 26 0100  miss eviction 
+3 2 0100  miss eviction 
+3 10 0100  miss eviction 
+3 18 0100  miss eviction 
+3 26 0100  miss eviction 
+0 2 0100  miss eviction 
+
+2 10 1000  miss eviction 
+2 18 1000  miss eviction 
+2 26 1000  miss eviction 
+3 2 1000  miss eviction 
+3 10 1000  miss eviction 
+3 18 1000  miss eviction 
+3 26 1000  miss eviction 
+0 2 1000  miss eviction 
+
+2 10 1100  miss eviction 
+2 18 1100  miss eviction 
+2 26 1100  miss eviction 
+3 2 1100  miss eviction 
+3 10 1100  miss eviction 
+3 18 1100  miss eviction 
+3 26 1100  miss eviction 
+0 2 1100  miss eviction 
+
+2 10 0000  miss eviction 
+2 18 0000  miss eviction 
+2 26 0000  miss eviction 
+3 2 0000  miss eviction 
+3 10 0000  miss eviction 
+3 18 0000  miss eviction 
+3 26 0000  miss eviction 
+0 2 0000  miss eviction 
+
+2 10 0100  miss eviction 
+2 18 0100  miss eviction 
+2 26 0100  miss eviction 
+3 2 0100  miss eviction 
+3 10 0100  miss eviction 
+3 18 0100  miss eviction 
+3 26 0100  miss eviction 
+0 2 0100  miss eviction 
+
+2 10 1000  miss eviction 
+2 18 1000  miss eviction 
+2 26 1000  miss eviction 
+3 2 1000  miss eviction 
+3 10 1000  miss eviction 
+3 18 1000  miss eviction 
+3 26 1000  miss eviction 
+0 2 1000  miss eviction 
+
+2 10 1100  miss eviction 
+2 18 1100  miss eviction 
+2 26 1100  miss eviction 
+3 2 1100  miss eviction 
+3 10 1100  miss eviction 
+3 18 1100  miss eviction 
+3 26 1100  miss eviction 
+0 2 1100  miss eviction 
+
+0 10 0000  miss eviction 
+0 18 0000  miss eviction 
+0 26 0000  miss eviction 
+1 2 0000  miss eviction 
+1 10 0000  miss eviction 
+1 18 0000  miss eviction 
+1 26 0000  miss eviction 
+2 2 0000  miss eviction 
+
+0 10 0100  miss eviction 
+0 18 0100  miss eviction 
+0 26 0100  miss eviction 
+1 2 0100  miss eviction 
+1 10 0100  miss eviction 
+1 18 0100  miss eviction 
+1 26 0100  miss eviction 
+2 2 0100  miss eviction 
+
+0 10 1000  miss eviction 
+0 18 1000  miss eviction 
+0 26 1000  miss eviction 
+1 2 1000  miss eviction 
+1 10 1000  miss eviction 
+1 18 1000  miss eviction 
+1 26 1000  miss eviction 
+2 2 1000  miss eviction 
+
+0 10 1100  miss eviction 
+0 18 1100  miss eviction 
+0 26 1100  miss eviction 
+1 2 1100  miss eviction 
+1 10 1100  miss eviction 
+1 18 1100  miss eviction 
+1 26 1100  miss eviction 
+2 2 1100  miss eviction 
+
+0 10 0000  miss eviction 
+0 18 0000  miss eviction 
+0 26 0000  miss eviction 
+1 2 0000  miss eviction 
+1 10 0000  miss eviction 
+1 18 0000  miss eviction 
+1 26 0000  miss eviction 
+2 2 0000  miss eviction 
+
+0 10 0100  miss eviction 
+0 18 0100  miss eviction 
+0 26 0100  miss eviction 
+1 2 0100  miss eviction 
+1 10 0100  miss eviction 
+1 18 0100  miss eviction 
+1 26 0100  miss eviction 
+2 2 0100  miss eviction 
+
+0 10 1000  miss eviction 
+0 18 1000  miss eviction 
+0 26 1000  miss eviction 
+1 2 1000  miss eviction 
+1 10 1000  miss eviction 
+1 18 1000  miss eviction 
+1 26 1000  miss eviction 
+2 2 1000  miss eviction 
+
+0 10 1100  miss eviction 
+0 18 1100  miss eviction 
+0 26 1100  miss eviction 
+1 2 1100  miss eviction 
+1 10 1100  miss eviction 
+1 18 1100  miss eviction 
+1 26 1100  miss eviction 
+2 2 1100  miss eviction 
+
+2 10 0000  miss eviction 
+2 18 0000  miss eviction 
+2 26 0000  miss eviction 
+3 2 0000  miss eviction 
+3 10 0000  miss eviction 
+3 18 0000  miss eviction 
+3 26 0000  miss eviction 
+0 2 0000  miss eviction 
+
+2 10 0100  miss eviction 
+2 18 0100  miss eviction 
+2 26 0100  miss eviction 
+3 2 0100  miss eviction 
+3 10 0100  miss eviction 
+3 18 0100  miss eviction 
+3 26 0100  miss eviction 
+0 2 0100  miss eviction 
+
+2 10 1000  miss eviction 
+2 18 1000  miss eviction 
+2 26 1000  miss eviction 
+3 2 1000  miss eviction 
+3 10 1000  miss eviction 
+3 18 1000  miss eviction 
+3 26 1000  miss eviction 
+0 2 1000  miss eviction 
+
+2 10 1100  miss eviction 
+2 18 1100  miss eviction 
+2 26 1100  miss eviction 
+3 2 1100  miss eviction 
+3 10 1100  miss eviction 
+3 18 1100  miss eviction 
+3 26 1100  miss eviction 
+0 2 1100  miss eviction 
+
+2 10 0000  miss eviction 
+2 18 0000  miss eviction 
+2 26 0000  miss eviction 
+3 2 0000  miss eviction 
+3 10 0000  miss eviction 
+3 18 0000  miss eviction 
+3 26 0000  miss eviction 
+0 2 0000  miss eviction 
+
+2 10 0100  miss eviction 
+2 18 0100  miss eviction 
+2 26 0100  miss eviction 
+3 2 0100  miss eviction 
+3 10 0100  miss eviction 
+3 18 0100  miss eviction 
+3 26 0100  miss eviction 
+0 2 0100  miss eviction 
+
+2 10 1000  miss eviction 
+2 18 1000  miss eviction 
+2 26 1000  miss eviction 
+3 2 1000  miss eviction 
+3 10 1000  miss eviction 
+3 18 1000  miss eviction 
+3 26 1000  miss eviction 
+0 2 1000  miss eviction 
+
+2 10 1100  miss eviction 
+2 18 1100  miss eviction 
+2 26 1100  miss eviction 
+3 2 1100  miss eviction 
+3 10 1100  miss eviction 
+3 18 1100  miss eviction 
+3 26 1100  miss eviction 
+0 2 1100  miss eviction 
+
+0 10 0000  miss eviction 
+0 18 0000  miss eviction 
+0 26 0000  miss eviction 
+1 2 0000  miss eviction 
+1 10 0000  miss eviction 
+1 18 0000  miss eviction 
+1 26 0000  miss eviction 
+2 2 0000  miss eviction 
+
+0 10 0100  miss eviction 
+0 18 0100  miss eviction 
+0 26 0100  miss eviction 
+1 2 0100  miss eviction 
+1 10 0100  miss eviction 
+1 18 0100  miss eviction 
+1 26 0100  miss eviction 
+2 2 0100  miss eviction 
+
+0 10 1000  miss eviction 
+0 18 1000  miss eviction 
+0 26 1000  miss eviction 
+1 2 1000  miss eviction 
+1 10 1000  miss eviction 
+1 18 1000  miss eviction 
+1 26 1000  miss eviction 
+2 2 1000  miss eviction 
+
+0 10 1100  miss eviction 
+0 18 1100  miss eviction 
+0 26 1100  miss eviction 
+1 2 1100  miss eviction 
+1 10 1100  miss eviction 
+1 18 1100  miss eviction 
+1 26 1100  miss eviction 
+2 2 1100  miss eviction 
+
+0 10 0000  miss eviction 
+0 18 0000  miss eviction 
+0 26 0000  miss eviction 
+1 2 0000  miss eviction 
+1 10 0000  miss eviction 
+1 18 0000  miss eviction 
+1 26 0000  miss eviction 
+2 2 0000  miss eviction 
+
+0 10 0100  miss eviction 
+0 18 0100  miss eviction 
+0 26 0100  miss eviction 
+1 2 0100  miss eviction 
+1 10 0100  miss eviction 
+1 18 0100  miss eviction 
+1 26 0100  miss eviction 
+2 2 0100  miss eviction 
+
+0 10 1000  miss eviction 
+0 18 1000  miss eviction 
+0 26 1000  miss eviction 
+1 2 1000  miss eviction 
+1 10 1000  miss eviction 
+1 18 1000  miss eviction 
+1 26 1000  miss eviction 
+2 2 1000  miss eviction 
+
+0 10 1100  miss eviction 
+0 18 1100  miss eviction 
+0 26 1100  miss eviction 
+1 2 1100  miss eviction 
+1 10 1100  miss eviction 
+1 18 1100  miss eviction 
+1 26 1100  miss eviction 
+2 2 1100  miss eviction 
+
+2 10 0000  miss eviction 
+2 18 0000  miss eviction 
+2 26 0000  miss eviction 
+3 2 0000  miss eviction 
+3 10 0000  miss eviction 
+3 18 0000  miss eviction 
+3 26 0000  miss eviction 
+0 2 0000  miss eviction 
+
+2 10 0100  miss eviction 
+2 18 0100  miss eviction 
+2 26 0100  miss eviction 
+3 2 0100  miss eviction 
+3 10 0100  miss eviction 
+3 18 0100  miss eviction 
+3 26 0100  miss eviction 
+0 2 0100  miss eviction 
+
+2 10 1000  miss eviction 
+2 18 1000  miss eviction 
+2 26 1000  miss eviction 
+3 2 1000  miss eviction 
+3 10 1000  miss eviction 
+3 18 1000  miss eviction 
+3 26 1000  miss eviction 
+0 2 1000  miss eviction 
+
+2 10 1100  miss eviction 
+2 18 1100  miss eviction 
+2 26 1100  miss eviction 
+3 2 1100  miss eviction 
+3 10 1100  miss eviction 
+3 18 1100  miss eviction 
+3 26 1100  miss eviction 
+0 2 1100  miss eviction 
+
+2 10 0000  miss eviction 
+2 18 0000  miss eviction 
+2 26 0000  miss eviction 
+3 2 0000  miss eviction 
+3 10 0000  miss eviction 
+3 18 0000  miss eviction 
+3 26 0000  miss eviction 
+0 2 0000  miss eviction 
+
+2 10 0100  miss eviction 
+2 18 0100  miss eviction 
+2 26 0100  miss eviction 
+3 2 0100  miss eviction 
+3 10 0100  miss eviction 
+3 18 0100  miss eviction 
+3 26 0100  miss eviction 
+0 2 0100  miss eviction 
+
+2 10 1000  miss eviction 
+2 18 1000  miss eviction 
+2 26 1000  miss eviction 
+3 2 1000  miss eviction 
+3 10 1000  miss eviction 
+3 18 1000  miss eviction 
+3 26 1000  miss eviction 
+0 2 1000  miss eviction 
+
+2 10 1100  miss eviction 
+2 18 1100  miss eviction 
+2 26 1100  miss eviction 
+3 2 1100  miss eviction 
+3 10 1100  miss eviction 
+3 18 1100  miss eviction 
+3 26 1100  miss eviction 
+0 2 1100  miss eviction 
+
+0 10 0000  miss eviction 
+0 18 0000  miss eviction 
+0 26 0000  miss eviction 
+1 2 0000  miss eviction 
+1 10 0000  miss eviction 
+1 18 0000  miss eviction 
+1 26 0000  miss eviction 
+2 2 0000  miss eviction 
+
+0 10 0100  miss eviction 
+0 18 0100  miss eviction 
+0 26 0100  miss eviction 
+1 2 0100  miss eviction 
+1 10 0100  miss eviction 
+1 18 0100  miss eviction 
+1 26 0100  miss eviction 
+2 2 0100  miss eviction 
+
+0 10 1000  miss eviction 
+0 18 1000  miss eviction 
+0 26 1000  miss eviction 
+1 2 1000  miss eviction 
+1 10 1000  miss eviction 
+1 18 1000  miss eviction 
+1 26 1000  miss eviction 
+2 2 1000  miss eviction 
+
+0 10 1100  miss eviction 
+0 18 1100  miss eviction 
+0 26 1100  miss eviction 
+1 2 1100  miss eviction 
+1 10 1100  miss eviction 
+1 18 1100  miss eviction 
+1 26 1100  miss eviction 
+2 2 1100  miss eviction 
+
+0 10 0000  miss eviction 
+0 18 0000  miss eviction 
+0 26 0000  miss eviction 
+1 2 0000  miss eviction 
+1 10 0000  miss eviction 
+1 18 0000  miss eviction 
+1 26 0000  miss eviction 
+2 2 0000  miss eviction 
+
+0 10 0100  miss eviction 
+0 18 0100  miss eviction 
+0 26 0100  miss eviction 
+1 2 0100  miss eviction 
+1 10 0100  miss eviction 
+1 18 0100  miss eviction 
+1 26 0100  miss eviction 
+2 2 0100  miss eviction 
+
+0 10 1000  miss eviction 
+0 18 1000  miss eviction 
+0 26 1000  miss eviction 
+1 2 1000  miss eviction 
+1 10 1000  miss eviction 
+1 18 1000  miss eviction 
+1 26 1000  miss eviction 
+2 2 1000  miss eviction 
+
+0 10 1100  miss eviction 
+0 18 1100  miss eviction 
+0 26 1100  miss eviction 
+1 2 1100  miss eviction 
+1 10 1100  miss eviction 
+1 18 1100  miss eviction 
+1 26 1100  miss eviction 
+2 2 1100  miss eviction 
+
+2 10 0000  miss eviction 
+2 18 0000  miss eviction 
+2 26 0000  miss eviction 
+3 2 0000  miss eviction 
+3 10 0000  miss eviction 
+3 18 0000  miss eviction 
+3 26 0000  miss eviction 
+0 2 0000  miss eviction 
+
+2 10 0100  miss eviction 
+2 18 0100  miss eviction 
+2 26 0100  miss eviction 
+3 2 0100  miss eviction 
+3 10 0100  miss eviction 
+3 18 0100  miss eviction 
+3 26 0100  miss eviction 
+0 2 0100  miss eviction 
+
+2 10 1000  miss eviction 
+2 18 1000  miss eviction 
+2 26 1000  miss eviction 
+3 2 1000  miss eviction 
+3 10 1000  miss eviction 
+3 18 1000  miss eviction 
+3 26 1000  miss eviction 
+0 2 1000  miss eviction 
+
+2 10 1100  miss eviction 
+2 18 1100  miss eviction 
+2 26 1100  miss eviction 
+3 2 1100  miss eviction 
+3 10 1100  miss eviction 
+3 18 1100  miss eviction 
+3 26 1100  miss eviction 
+0 2 1100  miss eviction 
+
+2 10 0000  miss eviction 
+2 18 0000  miss eviction 
+2 26 0000  miss eviction 
+3 2 0000  miss eviction 
+3 10 0000  miss eviction 
+3 18 0000  miss eviction 
+3 26 0000  miss eviction 
+0 2 0000  miss eviction 
+
+2 10 0100  miss eviction 
+2 18 0100  miss eviction 
+2 26 0100  miss eviction 
+3 2 0100  miss eviction 
+3 10 0100  miss eviction 
+3 18 0100  miss eviction 
+3 26 0100  miss eviction 
+0 2 0100  miss eviction 
+
+2 10 1000  miss eviction 
+2 18 1000  miss eviction 
+2 26 1000  miss eviction 
+3 2 1000  miss eviction 
+3 10 1000  miss eviction 
+3 18 1000  miss eviction 
+3 26 1000  miss eviction 
+0 2 1000  miss eviction 
+
+2 10 1100  miss eviction 
+2 18 1100  miss eviction 
+2 26 1100  miss eviction 
+3 2 1100  miss eviction 
+3 10 1100  miss eviction 
+3 18 1100  miss eviction 
+3 26 1100  miss eviction 
+0 2 1100  miss eviction 
+
+0 11 0000  miss eviction 
+0 19 0000  miss eviction 
+0 27 0000  miss eviction 
+1 3 0000  miss eviction 
+1 11 0000  miss eviction 
+1 19 0000  miss eviction 
+1 27 0000  miss eviction 
+2 3 0000  miss eviction 
+
+0 11 0100  miss eviction 
+0 19 0100  miss eviction 
+0 27 0100  miss eviction 
+1 3 0100  miss eviction 
+1 11 0100  miss eviction 
+1 19 0100  miss eviction 
+1 27 0100  miss eviction 
+2 3 0100  miss eviction 
+
+0 11 1000  miss eviction 
+0 19 1000  miss eviction 
+0 27 1000  miss eviction 
+1 3 1000  miss eviction 
+1 11 1000  miss eviction 
+1 19 1000  miss eviction 
+1 27 1000  miss eviction 
+2 3 1000  miss eviction 
+
+0 11 1100  miss eviction 
+0 19 1100  miss eviction 
+0 27 1100  miss eviction 
+1 3 1100  miss eviction 
+1 11 1100  miss eviction 
+1 19 1100  miss eviction 
+1 27 1100  miss eviction 
+2 3 1100  miss eviction 
+
+0 11 0000  miss eviction 
+0 19 0000  miss eviction 
+0 27 0000  miss eviction 
+1 3 0000  miss eviction 
+1 11 0000  miss eviction 
+1 19 0000  miss eviction 
+1 27 0000  miss eviction 
+2 3 0000  miss eviction 
+
+0 11 0100  miss eviction 
+0 19 0100  miss eviction 
+0 27 0100  miss eviction 
+1 3 0100  miss eviction 
+1 11 0100  miss eviction 
+1 19 0100  miss eviction 
+1 27 0100  miss eviction 
+2 3 0100  miss eviction 
+
+0 11 1000  miss eviction 
+0 19 1000  miss eviction 
+0 27 1000  miss eviction 
+1 3 1000  miss eviction 
+1 11 1000  miss eviction 
+1 19 1000  miss eviction 
+1 27 1000  miss eviction 
+2 3 1000  miss eviction 
+
+0 11 1100  miss eviction 
+0 19 1100  miss eviction 
+0 27 1100  miss eviction 
+1 3 1100  miss eviction 
+1 11 1100  miss eviction 
+1 19 1100  miss eviction 
+1 27 1100  miss eviction 
+2 3 1100  miss eviction 
+
+2 11 0000  miss eviction 
+2 19 0000  miss eviction 
+2 27 0000  miss eviction 
+3 3 0000  miss eviction 
+3 11 0000  miss eviction 
+3 19 0000  miss eviction 
+3 27 0000  miss eviction 
+0 3 0000  miss eviction 
+
+2 11 0100  miss eviction 
+2 19 0100  miss eviction 
+2 27 0100  miss eviction 
+3 3 0100  miss eviction 
+3 11 0100  miss eviction 
+3 19 0100  miss eviction 
+3 27 0100  miss eviction 
+0 3 0100  miss eviction 
+
+2 11 1000  miss eviction 
+2 19 1000  miss eviction 
+2 27 1000  miss eviction 
+3 3 1000  miss eviction 
+3 11 1000  miss eviction 
+3 19 1000  miss eviction 
+3 27 1000  miss eviction 
+0 3 1000  miss eviction 
+
+2 11 1100  miss eviction 
+2 19 1100  miss eviction 
+2 27 1100  miss eviction 
+3 3 1100  miss eviction 
+3 11 1100  miss eviction 
+3 19 1100  miss eviction 
+3 27 1100  miss eviction 
+0 3 1100  miss eviction 
+
+2 11 0000  miss eviction 
+2 19 0000  miss eviction 
+2 27 0000  miss eviction 
+3 3 0000  miss eviction 
+3 11 0000  miss eviction 
+3 19 0000  miss eviction 
+3 27 0000  miss eviction 
+0 3 0000  miss eviction 
+
+2 11 0100  miss eviction 
+2 19 0100  miss eviction 
+2 27 0100  miss eviction 
+3 3 0100  miss eviction 
+3 11 0100  miss eviction 
+3 19 0100  miss eviction 
+3 27 0100  miss eviction 
+0 3 0100  miss eviction 
+
+2 11 1000  miss eviction 
+2 19 1000  miss eviction 
+2 27 1000  miss eviction 
+3 3 1000  miss eviction 
+3 11 1000  miss eviction 
+3 19 1000  miss eviction 
+3 27 1000  miss eviction 
+0 3 1000  miss eviction 
+
+2 11 1100  miss eviction 
+2 19 1100  miss eviction 
+2 27 1100  miss eviction 
+3 3 1100  miss eviction 
+3 11 1100  miss eviction 
+3 19 1100  miss eviction 
+3 27 1100  miss eviction 
+0 3 1100  miss eviction 
+
+0 11 0000  miss eviction 
+0 19 0000  miss eviction 
+0 27 0000  miss eviction 
+1 3 0000  miss eviction 
+1 11 0000  miss eviction 
+1 19 0000  miss eviction 
+1 27 0000  miss eviction 
+2 3 0000  miss eviction 
+
+0 11 0100  miss eviction 
+0 19 0100  miss eviction 
+0 27 0100  miss eviction 
+1 3 0100  miss eviction 
+1 11 0100  miss eviction 
+1 19 0100  miss eviction 
+1 27 0100  miss eviction 
+2 3 0100  miss eviction 
+
+0 11 1000  miss eviction 
+0 19 1000  miss eviction 
+0 27 1000  miss eviction 
+1 3 1000  miss eviction 
+1 11 1000  miss eviction 
+1 19 1000  miss eviction 
+1 27 1000  miss eviction 
+2 3 1000  miss eviction 
+
+0 11 1100  miss eviction 
+0 19 1100  miss eviction 
+0 27 1100  miss eviction 
+1 3 1100  miss eviction 
+1 11 1100  miss eviction 
+1 19 1100  miss eviction 
+1 27 1100  miss eviction 
+2 3 1100  miss eviction 
+
+0 11 0000  miss eviction 
+0 19 0000  miss eviction 
+0 27 0000  miss eviction 
+1 3 0000  miss eviction 
+1 11 0000  miss eviction 
+1 19 0000  miss eviction 
+1 27 0000  miss eviction 
+2 3 0000  miss eviction 
+
+0 11 0100  miss eviction 
+0 19 0100  miss eviction 
+0 27 0100  miss eviction 
+1 3 0100  miss eviction 
+1 11 0100  miss eviction 
+1 19 0100  miss eviction 
+1 27 0100  miss eviction 
+2 3 0100  miss eviction 
+
+0 11 1000  miss eviction 
+0 19 1000  miss eviction 
+0 27 1000  miss eviction 
+1 3 1000  miss eviction 
+1 11 1000  miss eviction 
+1 19 1000  miss eviction 
+1 27 1000  miss eviction 
+2 3 1000  miss eviction 
+
+0 11 1100  miss eviction 
+0 19 1100  miss eviction 
+0 27 1100  miss eviction 
+1 3 1100  miss eviction 
+1 11 1100  miss eviction 
+1 19 1100  miss eviction 
+1 27 1100  miss eviction 
+2 3 1100  miss eviction 
+
+2 11 0000  miss eviction 
+2 19 0000  miss eviction 
+2 27 0000  miss eviction 
+3 3 0000  miss eviction 
+3 11 0000  miss eviction 
+3 19 0000  miss eviction 
+3 27 0000  miss eviction 
+0 3 0000  miss eviction 
+
+2 11 0100  miss eviction 
+2 19 0100  miss eviction 
+2 27 0100  miss eviction 
+3 3 0100  miss eviction 
+3 11 0100  miss eviction 
+3 19 0100  miss eviction 
+3 27 0100  miss eviction 
+0 3 0100  miss eviction 
+
+2 11 1000  miss eviction 
+2 19 1000  miss eviction 
+2 27 1000  miss eviction 
+3 3 1000  miss eviction 
+3 11 1000  miss eviction 
+3 19 1000  miss eviction 
+3 27 1000  miss eviction 
+0 3 1000  miss eviction 
+
+2 11 1100  miss eviction 
+2 19 1100  miss eviction 
+2 27 1100  miss eviction 
+3 3 1100  miss eviction 
+3 11 1100  miss eviction 
+3 19 1100  miss eviction 
+3 27 1100  miss eviction 
+0 3 1100  miss eviction 
+
+2 11 0000  miss eviction 
+2 19 0000  miss eviction 
+2 27 0000  miss eviction 
+3 3 0000  miss eviction 
+3 11 0000  miss eviction 
+3 19 0000  miss eviction 
+3 27 0000  miss eviction 
+0 3 0000  miss eviction 
+
+2 11 0100  miss eviction 
+2 19 0100  miss eviction 
+2 27 0100  miss eviction 
+3 3 0100  miss eviction 
+3 11 0100  miss eviction 
+3 19 0100  miss eviction 
+3 27 0100  miss eviction 
+0 3 0100  miss eviction 
+
+2 11 1000  miss eviction 
+2 19 1000  miss eviction 
+2 27 1000  miss eviction 
+3 3 1000  miss eviction 
+3 11 1000  miss eviction 
+3 19 1000  miss eviction 
+3 27 1000  miss eviction 
+0 3 1000  miss eviction 
+
+2 11 1100  miss eviction 
+2 19 1100  miss eviction 
+2 27 1100  miss eviction 
+3 3 1100  miss eviction 
+3 11 1100  miss eviction 
+3 19 1100  miss eviction 
+3 27 1100  miss eviction 
+0 3 1100  miss eviction 
+
+0 11 0000  miss eviction 
+0 19 0000  miss eviction 
+0 27 0000  miss eviction 
+1 3 0000  miss eviction 
+1 11 0000  miss eviction 
+1 19 0000  miss eviction 
+1 27 0000  miss eviction 
+2 3 0000  miss eviction 
+
+0 11 0100  miss eviction 
+0 19 0100  miss eviction 
+0 27 0100  miss eviction 
+1 3 0100  miss eviction 
+1 11 0100  miss eviction 
+1 19 0100  miss eviction 
+1 27 0100  miss eviction 
+2 3 0100  miss eviction 
+
+0 11 1000  miss eviction 
+0 19 1000  miss eviction 
+0 27 1000  miss eviction 
+1 3 1000  miss eviction 
+1 11 1000  miss eviction 
+1 19 1000  miss eviction 
+1 27 1000  miss eviction 
+2 3 1000  miss eviction 
+
+0 11 1100  miss eviction 
+0 19 1100  miss eviction 
+0 27 1100  miss eviction 
+1 3 1100  miss eviction 
+1 11 1100  miss eviction 
+1 19 1100  miss eviction 
+1 27 1100  miss eviction 
+2 3 1100  miss eviction 
+
+0 11 0000  miss eviction 
+0 19 0000  miss eviction 
+0 27 0000  miss eviction 
+1 3 0000  miss eviction 
+1 11 0000  miss eviction 
+1 19 0000  miss eviction 
+1 27 0000  miss eviction 
+2 3 0000  miss eviction 
+
+0 11 0100  miss eviction 
+0 19 0100  miss eviction 
+0 27 0100  miss eviction 
+1 3 0100  miss eviction 
+1 11 0100  miss eviction 
+1 19 0100  miss eviction 
+1 27 0100  miss eviction 
+2 3 0100  miss eviction 
+
+0 11 1000  miss eviction 
+0 19 1000  miss eviction 
+0 27 1000  miss eviction 
+1 3 1000  miss eviction 
+1 11 1000  miss eviction 
+1 19 1000  miss eviction 
+1 27 1000  miss eviction 
+2 3 1000  miss eviction 
+
+0 11 1100  miss eviction 
+0 19 1100  miss eviction 
+0 27 1100  miss eviction 
+1 3 1100  miss eviction 
+1 11 1100  miss eviction 
+1 19 1100  miss eviction 
+1 27 1100  miss eviction 
+2 3 1100  miss eviction 
+
+2 11 0000  miss eviction 
+2 19 0000  miss eviction 
+2 27 0000  miss eviction 
+3 3 0000  miss eviction 
+3 11 0000  miss eviction 
+3 19 0000  miss eviction 
+3 27 0000  miss eviction 
+0 3 0000  miss eviction 
+
+2 11 0100  miss eviction 
+2 19 0100  miss eviction 
+2 27 0100  miss eviction 
+3 3 0100  miss eviction 
+3 11 0100  miss eviction 
+3 19 0100  miss eviction 
+3 27 0100  miss eviction 
+0 3 0100  miss eviction 
+
+2 11 1000  miss eviction 
+2 19 1000  miss eviction 
+2 27 1000  miss eviction 
+3 3 1000  miss eviction 
+3 11 1000  miss eviction 
+3 19 1000  miss eviction 
+3 27 1000  miss eviction 
+0 3 1000  miss eviction 
+
+2 11 1100  miss eviction 
+2 19 1100  miss eviction 
+2 27 1100  miss eviction 
+3 3 1100  miss eviction 
+3 11 1100  miss eviction 
+3 19 1100  miss eviction 
+3 27 1100  miss eviction 
+0 3 1100  miss eviction 
+
+2 11 0000  miss eviction 
+2 19 0000  miss eviction 
+2 27 0000  miss eviction 
+3 3 0000  miss eviction 
+3 11 0000  miss eviction 
+3 19 0000  miss eviction 
+3 27 0000  miss eviction 
+0 3 0000  miss eviction 
+
+2 11 0100  miss eviction 
+2 19 0100  miss eviction 
+2 27 0100  miss eviction 
+3 3 0100  miss eviction 
+3 11 0100  miss eviction 
+3 19 0100  miss eviction 
+3 27 0100  miss eviction 
+0 3 0100  miss eviction 
+
+2 11 1000  miss eviction 
+2 19 1000  miss eviction 
+2 27 1000  miss eviction 
+3 3 1000  miss eviction 
+3 11 1000  miss eviction 
+3 19 1000  miss eviction 
+3 27 1000  miss eviction 
+0 3 1000  miss eviction 
+
+2 11 1100  miss eviction 
+2 19 1100  miss eviction 
+2 27 1100  miss eviction 
+3 3 1100  miss eviction 
+3 11 1100  miss eviction 
+3 19 1100  miss eviction 
+3 27 1100  miss eviction 
+0 3 1100  miss eviction 
+
+0 11 0000  miss eviction 
+0 19 0000  miss eviction 
+0 27 0000  miss eviction 
+1 3 0000  miss eviction 
+1 11 0000  miss eviction 
+1 19 0000  miss eviction 
+1 27 0000  miss eviction 
+2 3 0000  miss eviction 
+
+0 11 0100  miss eviction 
+0 19 0100  miss eviction 
+0 27 0100  miss eviction 
+1 3 0100  miss eviction 
+1 11 0100  miss eviction 
+1 19 0100  miss eviction 
+1 27 0100  miss eviction 
+2 3 0100  miss eviction 
+
+0 11 1000  miss eviction 
+0 19 1000  miss eviction 
+0 27 1000  miss eviction 
+1 3 1000  miss eviction 
+1 11 1000  miss eviction 
+1 19 1000  miss eviction 
+1 27 1000  miss eviction 
+2 3 1000  miss eviction 
+
+0 11 1100  miss eviction 
+0 19 1100  miss eviction 
+0 27 1100  miss eviction 
+1 3 1100  miss eviction 
+1 11 1100  miss eviction 
+1 19 1100  miss eviction 
+1 27 1100  miss eviction 
+2 3 1100  miss eviction 
+
+0 11 0000  miss eviction 
+0 19 0000  miss eviction 
+0 27 0000  miss eviction 
+1 3 0000  miss eviction 
+1 11 0000  miss eviction 
+1 19 0000  miss eviction 
+1 27 0000  miss eviction 
+2 3 0000  miss eviction 
+
+0 11 0100  miss eviction 
+0 19 0100  miss eviction 
+0 27 0100  miss eviction 
+1 3 0100  miss eviction 
+1 11 0100  miss eviction 
+1 19 0100  miss eviction 
+1 27 0100  miss eviction 
+2 3 0100  miss eviction 
+
+0 11 1000  miss eviction 
+0 19 1000  miss eviction 
+0 27 1000  miss eviction 
+1 3 1000  miss eviction 
+1 11 1000  miss eviction 
+1 19 1000  miss eviction 
+1 27 1000  miss eviction 
+2 3 1000  miss eviction 
+
+0 11 1100  miss eviction 
+0 19 1100  miss eviction 
+0 27 1100  miss eviction 
+1 3 1100  miss eviction 
+1 11 1100  miss eviction 
+1 19 1100  miss eviction 
+1 27 1100  miss eviction 
+2 3 1100  miss eviction 
+
+2 11 0000  miss eviction 
+2 19 0000  miss eviction 
+2 27 0000  miss eviction 
+3 3 0000  miss eviction 
+3 11 0000  miss eviction 
+3 19 0000  miss eviction 
+3 27 0000  miss eviction 
+0 3 0000  miss eviction 
+
+2 11 0100  miss eviction 
+2 19 0100  miss eviction 
+2 27 0100  miss eviction 
+3 3 0100  miss eviction 
+3 11 0100  miss eviction 
+3 19 0100  miss eviction 
+3 27 0100  miss eviction 
+0 3 0100  miss eviction 
+
+2 11 1000  miss eviction 
+2 19 1000  miss eviction 
+2 27 1000  miss eviction 
+3 3 1000  miss eviction 
+3 11 1000  miss eviction 
+3 19 1000  miss eviction 
+3 27 1000  miss eviction 
+0 3 1000  miss eviction 
+
+2 11 1100  miss eviction 
+2 19 1100  miss eviction 
+2 27 1100  miss eviction 
+3 3 1100  miss eviction 
+3 11 1100  miss eviction 
+3 19 1100  miss eviction 
+3 27 1100  miss eviction 
+0 3 1100  miss eviction 
+
+2 11 0000  miss eviction 
+2 19 0000  miss eviction 
+2 27 0000  miss eviction 
+3 3 0000  miss eviction 
+3 11 0000  miss eviction 
+3 19 0000  miss eviction 
+3 27 0000  miss eviction 
+0 3 0000  miss eviction 
+
+2 11 0100  miss eviction 
+2 19 0100  miss eviction 
+2 27 0100  miss eviction 
+3 3 0100  miss eviction 
+3 11 0100  miss eviction 
+3 19 0100  miss eviction 
+3 27 0100  miss eviction 
+0 3 0100  miss eviction 
+
+2 11 1000  miss eviction 
+2 19 1000  miss eviction 
+2 27 1000  miss eviction 
+3 3 1000  miss eviction 
+3 11 1000  miss eviction 
+3 19 1000  miss eviction 
+3 27 1000  miss eviction 
+0 3 1000  miss eviction 
+
+2 11 1100  miss eviction 
+2 19 1100  miss eviction 
+2 27 1100  miss eviction 
+3 3 1100  miss eviction 
+3 11 1100  miss eviction 
+3 19 1100  miss eviction 
+3 27 1100  miss eviction 
+0 3 1100  miss eviction 
+
+0 12 0000  miss eviction 
+0 20 0000  miss eviction 
+0 28 0000  miss eviction 
+1 4 0000  miss eviction 
+1 12 0000  miss eviction 
+1 20 0000  miss eviction 
+1 28 0000  miss eviction 
+2 4 0000  miss eviction 
+
+0 12 0100  miss eviction 
+0 20 0100  miss eviction 
+0 28 0100  miss eviction 
+1 4 0100  miss eviction 
+1 12 0100  miss eviction 
+1 20 0100  miss eviction 
+1 28 0100  miss eviction 
+2 4 0100  miss eviction 
+
+0 12 1000  miss eviction 
+0 20 1000  miss eviction 
+0 28 1000  miss eviction 
+1 4 1000  miss eviction 
+1 12 1000  miss eviction 
+1 20 1000  miss eviction 
+1 28 1000  miss eviction 
+2 4 1000  miss eviction 
+
+0 12 1100  miss eviction 
+0 20 1100  miss eviction 
+0 28 1100  miss eviction 
+1 4 1100  miss eviction 
+1 12 1100  miss eviction 
+1 20 1100  miss eviction 
+1 28 1100  miss eviction 
+2 4 1100  miss eviction 
+
+0 12 0000  miss eviction 
+0 20 0000  miss eviction 
+0 28 0000  miss eviction 
+1 4 0000  miss eviction 
+1 12 0000  miss eviction 
+1 20 0000  miss eviction 
+1 28 0000  miss eviction 
+2 4 0000  miss eviction 
+
+0 12 0100  miss eviction 
+0 20 0100  miss eviction 
+0 28 0100  miss eviction 
+1 4 0100  miss eviction 
+1 12 0100  miss eviction 
+1 20 0100  miss eviction 
+1 28 0100  miss eviction 
+2 4 0100  miss eviction 
+
+0 12 1000  miss eviction 
+0 20 1000  miss eviction 
+0 28 1000  miss eviction 
+1 4 1000  miss eviction 
+1 12 1000  miss eviction 
+1 20 1000  miss eviction 
+1 28 1000  miss eviction 
+2 4 1000  miss eviction 
+
+0 12 1100  miss eviction 
+0 20 1100  miss eviction 
+0 28 1100  miss eviction 
+1 4 1100  miss eviction 
+1 12 1100  miss eviction 
+1 20 1100  miss eviction 
+1 28 1100  miss eviction 
+2 4 1100  miss eviction 
+
+2 12 0000  miss eviction 
+2 20 0000  miss eviction 
+2 28 0000  miss eviction 
+3 4 0000  miss eviction 
+3 12 0000  miss eviction 
+3 20 0000  miss eviction 
+3 28 0000  miss eviction 
+0 4 0000  miss eviction 
+
+2 12 0100  miss eviction 
+2 20 0100  miss eviction 
+2 28 0100  miss eviction 
+3 4 0100  miss eviction 
+3 12 0100  miss eviction 
+3 20 0100  miss eviction 
+3 28 0100  miss eviction 
+0 4 0100  miss eviction 
+
+2 12 1000  miss eviction 
+2 20 1000  miss eviction 
+2 28 1000  miss eviction 
+3 4 1000  miss eviction 
+3 12 1000  miss eviction 
+3 20 1000  miss eviction 
+3 28 1000  miss eviction 
+0 4 1000  miss eviction 
+
+2 12 1100  miss eviction 
+2 20 1100  miss eviction 
+2 28 1100  miss eviction 
+3 4 1100  miss eviction 
+3 12 1100  miss eviction 
+3 20 1100  miss eviction 
+3 28 1100  miss eviction 
+0 4 1100  miss eviction 
+
+2 12 0000  miss eviction 
+2 20 0000  miss eviction 
+2 28 0000  miss eviction 
+3 4 0000  miss eviction 
+3 12 0000  miss eviction 
+3 20 0000  miss eviction 
+3 28 0000  miss eviction 
+0 4 0000  miss eviction 
+
+2 12 0100  miss eviction 
+2 20 0100  miss eviction 
+2 28 0100  miss eviction 
+3 4 0100  miss eviction 
+3 12 0100  miss eviction 
+3 20 0100  miss eviction 
+3 28 0100  miss eviction 
+0 4 0100  miss eviction 
+
+2 12 1000  miss eviction 
+2 20 1000  miss eviction 
+2 28 1000  miss eviction 
+3 4 1000  miss eviction 
+3 12 1000  miss eviction 
+3 20 1000  miss eviction 
+3 28 1000  miss eviction 
+0 4 1000  miss eviction 
+
+2 12 1100  miss eviction 
+2 20 1100  miss eviction 
+2 28 1100  miss eviction 
+3 4 1100  miss eviction 
+3 12 1100  miss eviction 
+3 20 1100  miss eviction 
+3 28 1100  miss eviction 
+0 4 1100  miss eviction 
+
+0 12 0000  miss eviction 
+0 20 0000  miss eviction 
+0 28 0000  miss eviction 
+1 4 0000  miss eviction 
+1 12 0000  miss eviction 
+1 20 0000  miss eviction 
+1 28 0000  miss eviction 
+2 4 0000  miss eviction 
+
+0 12 0100  miss eviction 
+0 20 0100  miss eviction 
+0 28 0100  miss eviction 
+1 4 0100  miss eviction 
+1 12 0100  miss eviction 
+1 20 0100  miss eviction 
+1 28 0100  miss eviction 
+2 4 0100  miss eviction 
+
+0 12 1000  miss eviction 
+0 20 1000  miss eviction 
+0 28 1000  miss eviction 
+1 4 1000  miss eviction 
+1 12 1000  miss eviction 
+1 20 1000  miss eviction 
+1 28 1000  miss eviction 
+2 4 1000  miss eviction 
+
+0 12 1100  miss eviction 
+0 20 1100  miss eviction 
+0 28 1100  miss eviction 
+1 4 1100  miss eviction 
+1 12 1100  miss eviction 
+1 20 1100  miss eviction 
+1 28 1100  miss eviction 
+2 4 1100  miss eviction 
+
+0 12 0000  miss eviction 
+0 20 0000  miss eviction 
+0 28 0000  miss eviction 
+1 4 0000  miss eviction 
+1 12 0000  miss eviction 
+1 20 0000  miss eviction 
+1 28 0000  miss eviction 
+2 4 0000  miss eviction 
+
+0 12 0100  miss eviction 
+0 20 0100  miss eviction 
+0 28 0100  miss eviction 
+1 4 0100  miss eviction 
+1 12 0100  miss eviction 
+1 20 0100  miss eviction 
+1 28 0100  miss eviction 
+2 4 0100  miss eviction 
+
+0 12 1000  miss eviction 
+0 20 1000  miss eviction 
+0 28 1000  miss eviction 
+1 4 1000  miss eviction 
+1 12 1000  miss eviction 
+1 20 1000  miss eviction 
+1 28 1000  miss eviction 
+2 4 1000  miss eviction 
+
+0 12 1100  miss eviction 
+0 20 1100  miss eviction 
+0 28 1100  miss eviction 
+1 4 1100  miss eviction 
+1 12 1100  miss eviction 
+1 20 1100  miss eviction 
+1 28 1100  miss eviction 
+2 4 1100  miss eviction 
+
+2 12 0000  miss eviction 
+2 20 0000  miss eviction 
+2 28 0000  miss eviction 
+3 4 0000  miss eviction 
+3 12 0000  miss eviction 
+3 20 0000  miss eviction 
+3 28 0000  miss eviction 
+0 4 0000  miss eviction 
+
+2 12 0100  miss eviction 
+2 20 0100  miss eviction 
+2 28 0100  miss eviction 
+3 4 0100  miss eviction 
+3 12 0100  miss eviction 
+3 20 0100  miss eviction 
+3 28 0100  miss eviction 
+0 4 0100  miss eviction 
+
+2 12 1000  miss eviction 
+2 20 1000  miss eviction 
+2 28 1000  miss eviction 
+3 4 1000  miss eviction 
+3 12 1000  miss eviction 
+3 20 1000  miss eviction 
+3 28 1000  miss eviction 
+0 4 1000  miss eviction 
+
+2 12 1100  miss eviction 
+2 20 1100  miss eviction 
+2 28 1100  miss eviction 
+3 4 1100  miss eviction 
+3 12 1100  miss eviction 
+3 20 1100  miss eviction 
+3 28 1100  miss eviction 
+0 4 1100  miss eviction 
+
+2 12 0000  miss eviction 
+2 20 0000  miss eviction 
+2 28 0000  miss eviction 
+3 4 0000  miss eviction 
+3 12 0000  miss eviction 
+3 20 0000  miss eviction 
+3 28 0000  miss eviction 
+0 4 0000  miss eviction 
+
+2 12 0100  miss eviction 
+2 20 0100  miss eviction 
+2 28 0100  miss eviction 
+3 4 0100  miss eviction 
+3 12 0100  miss eviction 
+3 20 0100  miss eviction 
+3 28 0100  miss eviction 
+0 4 0100  miss eviction 
+
+2 12 1000  miss eviction 
+2 20 1000  miss eviction 
+2 28 1000  miss eviction 
+3 4 1000  miss eviction 
+3 12 1000  miss eviction 
+3 20 1000  miss eviction 
+3 28 1000  miss eviction 
+0 4 1000  miss eviction 
+
+2 12 1100  miss eviction 
+2 20 1100  miss eviction 
+2 28 1100  miss eviction 
+3 4 1100  miss eviction 
+3 12 1100  miss eviction 
+3 20 1100  miss eviction 
+3 28 1100  miss eviction 
+0 4 1100  miss eviction 
+
+0 12 0000  miss eviction 
+0 20 0000  miss eviction 
+0 28 0000  miss eviction 
+1 4 0000  miss eviction 
+1 12 0000  miss eviction 
+1 20 0000  miss eviction 
+1 28 0000  miss eviction 
+2 4 0000  miss eviction 
+
+0 12 0100  miss eviction 
+0 20 0100  miss eviction 
+0 28 0100  miss eviction 
+1 4 0100  miss eviction 
+1 12 0100  miss eviction 
+1 20 0100  miss eviction 
+1 28 0100  miss eviction 
+2 4 0100  miss eviction 
+
+0 12 1000  miss eviction 
+0 20 1000  miss eviction 
+0 28 1000  miss eviction 
+1 4 1000  miss eviction 
+1 12 1000  miss eviction 
+1 20 1000  miss eviction 
+1 28 1000  miss eviction 
+2 4 1000  miss eviction 
+
+0 12 1100  miss eviction 
+0 20 1100  miss eviction 
+0 28 1100  miss eviction 
+1 4 1100  miss eviction 
+1 12 1100  miss eviction 
+1 20 1100  miss eviction 
+1 28 1100  miss eviction 
+2 4 1100  miss eviction 
+
+0 12 0000  miss eviction 
+0 20 0000  miss eviction 
+0 28 0000  miss eviction 
+1 4 0000  miss eviction 
+1 12 0000  miss eviction 
+1 20 0000  miss eviction 
+1 28 0000  miss eviction 
+2 4 0000  miss eviction 
+
+0 12 0100  miss eviction 
+0 20 0100  miss eviction 
+0 28 0100  miss eviction 
+1 4 0100  miss eviction 
+1 12 0100  miss eviction 
+1 20 0100  miss eviction 
+1 28 0100  miss eviction 
+2 4 0100  miss eviction 
+
+0 12 1000  miss eviction 
+0 20 1000  miss eviction 
+0 28 1000  miss eviction 
+1 4 1000  miss eviction 
+1 12 1000  miss eviction 
+1 20 1000  miss eviction 
+1 28 1000  miss eviction 
+2 4 1000  miss eviction 
+
+0 12 1100  miss eviction 
+0 20 1100  miss eviction 
+0 28 1100  miss eviction 
+1 4 1100  miss eviction 
+1 12 1100  miss eviction 
+1 20 1100  miss eviction 
+1 28 1100  miss eviction 
+2 4 1100  miss eviction 
+
+2 12 0000  miss eviction 
+2 20 0000  miss eviction 
+2 28 0000  miss eviction 
+3 4 0000  miss eviction 
+3 12 0000  miss eviction 
+3 20 0000  miss eviction 
+3 28 0000  miss eviction 
+0 4 0000  miss eviction 
+
+2 12 0100  miss eviction 
+2 20 0100  miss eviction 
+2 28 0100  miss eviction 
+3 4 0100  miss eviction 
+3 12 0100  miss eviction 
+3 20 0100  miss eviction 
+3 28 0100  miss eviction 
+0 4 0100  miss eviction 
+
+2 12 1000  miss eviction 
+2 20 1000  miss eviction 
+2 28 1000  miss eviction 
+3 4 1000  miss eviction 
+3 12 1000  miss eviction 
+3 20 1000  miss eviction 
+3 28 1000  miss eviction 
+0 4 1000  miss eviction 
+
+2 12 1100  miss eviction 
+2 20 1100  miss eviction 
+2 28 1100  miss eviction 
+3 4 1100  miss eviction 
+3 12 1100  miss eviction 
+3 20 1100  miss eviction 
+3 28 1100  miss eviction 
+0 4 1100  miss eviction 
+
+2 12 0000  miss eviction 
+2 20 0000  miss eviction 
+2 28 0000  miss eviction 
+3 4 0000  miss eviction 
+3 12 0000  miss eviction 
+3 20 0000  miss eviction 
+3 28 0000  miss eviction 
+0 4 0000  miss eviction 
+
+2 12 0100  miss eviction 
+2 20 0100  miss eviction 
+2 28 0100  miss eviction 
+3 4 0100  miss eviction 
+3 12 0100  miss eviction 
+3 20 0100  miss eviction 
+3 28 0100  miss eviction 
+0 4 0100  miss eviction 
+
+2 12 1000  miss eviction 
+2 20 1000  miss eviction 
+2 28 1000  miss eviction 
+3 4 1000  miss eviction 
+3 12 1000  miss eviction 
+3 20 1000  miss eviction 
+3 28 1000  miss eviction 
+0 4 1000  miss eviction 
+
+2 12 1100  miss eviction 
+2 20 1100  miss eviction 
+2 28 1100  miss eviction 
+3 4 1100  miss eviction 
+3 12 1100  miss eviction 
+3 20 1100  miss eviction 
+3 28 1100  miss eviction 
+0 4 1100  miss eviction 
+
+0 12 0000  miss eviction 
+0 20 0000  miss eviction 
+0 28 0000  miss eviction 
+1 4 0000  miss eviction 
+1 12 0000  miss eviction 
+1 20 0000  miss eviction 
+1 28 0000  miss eviction 
+2 4 0000  miss eviction 
+
+0 12 0100  miss eviction 
+0 20 0100  miss eviction 
+0 28 0100  miss eviction 
+1 4 0100  miss eviction 
+1 12 0100  miss eviction 
+1 20 0100  miss eviction 
+1 28 0100  miss eviction 
+2 4 0100  miss eviction 
+
+0 12 1000  miss eviction 
+0 20 1000  miss eviction 
+0 28 1000  miss eviction 
+1 4 1000  miss eviction 
+1 12 1000  miss eviction 
+1 20 1000  miss eviction 
+1 28 1000  miss eviction 
+2 4 1000  miss eviction 
+
+0 12 1100  miss eviction 
+0 20 1100  miss eviction 
+0 28 1100  miss eviction 
+1 4 1100  miss eviction 
+1 12 1100  miss eviction 
+1 20 1100  miss eviction 
+1 28 1100  miss eviction 
+2 4 1100  miss eviction 
+
+0 12 0000  miss eviction 
+0 20 0000  miss eviction 
+0 28 0000  miss eviction 
+1 4 0000  miss eviction 
+1 12 0000  miss eviction 
+1 20 0000  miss eviction 
+1 28 0000  miss eviction 
+2 4 0000  miss eviction 
+
+0 12 0100  miss eviction 
+0 20 0100  miss eviction 
+0 28 0100  miss eviction 
+1 4 0100  miss eviction 
+1 12 0100  miss eviction 
+1 20 0100  miss eviction 
+1 28 0100  miss eviction 
+2 4 0100  miss eviction 
+
+0 12 1000  miss eviction 
+0 20 1000  miss eviction 
+0 28 1000  miss eviction 
+1 4 1000  miss eviction 
+1 12 1000  miss eviction 
+1 20 1000  miss eviction 
+1 28 1000  miss eviction 
+2 4 1000  miss eviction 
+
+0 12 1100  miss eviction 
+0 20 1100  miss eviction 
+0 28 1100  miss eviction 
+1 4 1100  miss eviction 
+1 12 1100  miss eviction 
+1 20 1100  miss eviction 
+1 28 1100  miss eviction 
+2 4 1100  miss eviction 
+
+2 12 0000  miss eviction 
+2 20 0000  miss eviction 
+2 28 0000  miss eviction 
+3 4 0000  miss eviction 
+3 12 0000  miss eviction 
+3 20 0000  miss eviction 
+3 28 0000  miss eviction 
+0 4 0000  miss eviction 
+
+2 12 0100  miss eviction 
+2 20 0100  miss eviction 
+2 28 0100  miss eviction 
+3 4 0100  miss eviction 
+3 12 0100  miss eviction 
+3 20 0100  miss eviction 
+3 28 0100  miss eviction 
+0 4 0100  miss eviction 
+
+2 12 1000  miss eviction 
+2 20 1000  miss eviction 
+2 28 1000  miss eviction 
+3 4 1000  miss eviction 
+3 12 1000  miss eviction 
+3 20 1000  miss eviction 
+3 28 1000  miss eviction 
+0 4 1000  miss eviction 
+
+2 12 1100  miss eviction 
+2 20 1100  miss eviction 
+2 28 1100  miss eviction 
+3 4 1100  miss eviction 
+3 12 1100  miss eviction 
+3 20 1100  miss eviction 
+3 28 1100  miss eviction 
+0 4 1100  miss eviction 
+
+2 12 0000  miss eviction 
+2 20 0000  miss eviction 
+2 28 0000  miss eviction 
+3 4 0000  miss eviction 
+3 12 0000  miss eviction 
+3 20 0000  miss eviction 
+3 28 0000  miss eviction 
+0 4 0000  miss eviction 
+
+2 12 0100  miss eviction 
+2 20 0100  miss eviction 
+2 28 0100  miss eviction 
+3 4 0100  miss eviction 
+3 12 0100  miss eviction 
+3 20 0100  miss eviction 
+3 28 0100  miss eviction 
+0 4 0100  miss eviction 
+
+2 12 1000  miss eviction 
+2 20 1000  miss eviction 
+2 28 1000  miss eviction 
+3 4 1000  miss eviction 
+3 12 1000  miss eviction 
+3 20 1000  miss eviction 
+3 28 1000  miss eviction 
+0 4 1000  miss eviction 
+
+2 12 1100  miss eviction 
+2 20 1100  miss eviction 
+2 28 1100  miss eviction 
+3 4 1100  miss eviction 
+3 12 1100  miss eviction 
+3 20 1100  miss eviction 
+3 28 1100  miss eviction 
+0 4 1100  miss eviction 
+
+0 13 0000  miss eviction 
+0 21 0000  miss eviction 
+0 29 0000  miss eviction 
+1 5 0000  miss eviction 
+1 13 0000  miss eviction 
+1 21 0000  miss eviction 
+1 29 0000  miss eviction 
+2 5 0000  miss eviction 
+
+0 13 0100  miss eviction 
+0 21 0100  miss eviction 
+0 29 0100  miss eviction 
+1 5 0100  miss eviction 
+1 13 0100  miss eviction 
+1 21 0100  miss eviction 
+1 29 0100  miss eviction 
+2 5 0100  miss eviction 
+
+0 13 1000  miss eviction 
+0 21 1000  miss eviction 
+0 29 1000  miss eviction 
+1 5 1000  miss eviction 
+1 13 1000  miss eviction 
+1 21 1000  miss eviction 
+1 29 1000  miss eviction 
+2 5 1000  miss eviction 
+
+0 13 1100  miss eviction 
+0 21 1100  miss eviction 
+0 29 1100  miss eviction 
+1 5 1100  miss eviction 
+1 13 1100  miss eviction 
+1 21 1100  miss eviction 
+1 29 1100  miss eviction 
+2 5 1100  miss eviction 
+
+0 13 0000  miss eviction 
+0 21 0000  miss eviction 
+0 29 0000  miss eviction 
+1 5 0000  miss eviction 
+1 13 0000  miss eviction 
+1 21 0000  miss eviction 
+1 29 0000  miss eviction 
+2 5 0000  miss eviction 
+
+0 13 0100  miss eviction 
+0 21 0100  miss eviction 
+0 29 0100  miss eviction 
+1 5 0100  miss eviction 
+1 13 0100  miss eviction 
+1 21 0100  miss eviction 
+1 29 0100  miss eviction 
+2 5 0100  miss eviction 
+
+0 13 1000  miss eviction 
+0 21 1000  miss eviction 
+0 29 1000  miss eviction 
+1 5 1000  miss eviction 
+1 13 1000  miss eviction 
+1 21 1000  miss eviction 
+1 29 1000  miss eviction 
+2 5 1000  miss eviction 
+
+0 13 1100  miss eviction 
+0 21 1100  miss eviction 
+0 29 1100  miss eviction 
+1 5 1100  miss eviction 
+1 13 1100  miss eviction 
+1 21 1100  miss eviction 
+1 29 1100  miss eviction 
+2 5 1100  miss eviction 
+
+2 13 0000  miss eviction 
+2 21 0000  miss eviction 
+2 29 0000  miss eviction 
+3 5 0000  miss eviction 
+3 13 0000  miss eviction 
+3 21 0000  miss eviction 
+3 29 0000  miss eviction 
+0 5 0000  miss eviction 
+
+2 13 0100  miss eviction 
+2 21 0100  miss eviction 
+2 29 0100  miss eviction 
+3 5 0100  miss eviction 
+3 13 0100  miss eviction 
+3 21 0100  miss eviction 
+3 29 0100  miss eviction 
+0 5 0100  miss eviction 
+
+2 13 1000  miss eviction 
+2 21 1000  miss eviction 
+2 29 1000  miss eviction 
+3 5 1000  miss eviction 
+3 13 1000  miss eviction 
+3 21 1000  miss eviction 
+3 29 1000  miss eviction 
+0 5 1000  miss eviction 
+
+2 13 1100  miss eviction 
+2 21 1100  miss eviction 
+2 29 1100  miss eviction 
+3 5 1100  miss eviction 
+3 13 1100  miss eviction 
+3 21 1100  miss eviction 
+3 29 1100  miss eviction 
+0 5 1100  miss eviction 
+
+2 13 0000  miss eviction 
+2 21 0000  miss eviction 
+2 29 0000  miss eviction 
+3 5 0000  miss eviction 
+3 13 0000  miss eviction 
+3 21 0000  miss eviction 
+3 29 0000  miss eviction 
+0 5 0000  miss eviction 
+
+2 13 0100  miss eviction 
+2 21 0100  miss eviction 
+2 29 0100  miss eviction 
+3 5 0100  miss eviction 
+3 13 0100  miss eviction 
+3 21 0100  miss eviction 
+3 29 0100  miss eviction 
+0 5 0100  miss eviction 
+
+2 13 1000  miss eviction 
+2 21 1000  miss eviction 
+2 29 1000  miss eviction 
+3 5 1000  miss eviction 
+3 13 1000  miss eviction 
+3 21 1000  miss eviction 
+3 29 1000  miss eviction 
+0 5 1000  miss eviction 
+
+2 13 1100  miss eviction 
+2 21 1100  miss eviction 
+2 29 1100  miss eviction 
+3 5 1100  miss eviction 
+3 13 1100  miss eviction 
+3 21 1100  miss eviction 
+3 29 1100  miss eviction 
+0 5 1100  miss eviction 
+
+0 13 0000  miss eviction 
+0 21 0000  miss eviction 
+0 29 0000  miss eviction 
+1 5 0000  miss eviction 
+1 13 0000  miss eviction 
+1 21 0000  miss eviction 
+1 29 0000  miss eviction 
+2 5 0000  miss eviction 
+
+0 13 0100  miss eviction 
+0 21 0100  miss eviction 
+0 29 0100  miss eviction 
+1 5 0100  miss eviction 
+1 13 0100  miss eviction 
+1 21 0100  miss eviction 
+1 29 0100  miss eviction 
+2 5 0100  miss eviction 
+
+0 13 1000  miss eviction 
+0 21 1000  miss eviction 
+0 29 1000  miss eviction 
+1 5 1000  miss eviction 
+1 13 1000  miss eviction 
+1 21 1000  miss eviction 
+1 29 1000  miss eviction 
+2 5 1000  miss eviction 
+
+0 13 1100  miss eviction 
+0 21 1100  miss eviction 
+0 29 1100  miss eviction 
+1 5 1100  miss eviction 
+1 13 1100  miss eviction 
+1 21 1100  miss eviction 
+1 29 1100  miss eviction 
+2 5 1100  miss eviction 
+
+0 13 0000  miss eviction 
+0 21 0000  miss eviction 
+0 29 0000  miss eviction 
+1 5 0000  miss eviction 
+1 13 0000  miss eviction 
+1 21 0000  miss eviction 
+1 29 0000  miss eviction 
+2 5 0000  miss eviction 
+
+0 13 0100  miss eviction 
+0 21 0100  miss eviction 
+0 29 0100  miss eviction 
+1 5 0100  miss eviction 
+1 13 0100  miss eviction 
+1 21 0100  miss eviction 
+1 29 0100  miss eviction 
+2 5 0100  miss eviction 
+
+0 13 1000  miss eviction 
+0 21 1000  miss eviction 
+0 29 1000  miss eviction 
+1 5 1000  miss eviction 
+1 13 1000  miss eviction 
+1 21 1000  miss eviction 
+1 29 1000  miss eviction 
+2 5 1000  miss eviction 
+
+0 13 1100  miss eviction 
+0 21 1100  miss eviction 
+0 29 1100  miss eviction 
+1 5 1100  miss eviction 
+1 13 1100  miss eviction 
+1 21 1100  miss eviction 
+1 29 1100  miss eviction 
+2 5 1100  miss eviction 
+
+2 13 0000  miss eviction 
+2 21 0000  miss eviction 
+2 29 0000  miss eviction 
+3 5 0000  miss eviction 
+3 13 0000  miss eviction 
+3 21 0000  miss eviction 
+3 29 0000  miss eviction 
+0 5 0000  miss eviction 
+
+2 13 0100  miss eviction 
+2 21 0100  miss eviction 
+2 29 0100  miss eviction 
+3 5 0100  miss eviction 
+3 13 0100  miss eviction 
+3 21 0100  miss eviction 
+3 29 0100  miss eviction 
+0 5 0100  miss eviction 
+
+2 13 1000  miss eviction 
+2 21 1000  miss eviction 
+2 29 1000  miss eviction 
+3 5 1000  miss eviction 
+3 13 1000  miss eviction 
+3 21 1000  miss eviction 
+3 29 1000  miss eviction 
+0 5 1000  miss eviction 
+
+2 13 1100  miss eviction 
+2 21 1100  miss eviction 
+2 29 1100  miss eviction 
+3 5 1100  miss eviction 
+3 13 1100  miss eviction 
+3 21 1100  miss eviction 
+3 29 1100  miss eviction 
+0 5 1100  miss eviction 
+
+2 13 0000  miss eviction 
+2 21 0000  miss eviction 
+2 29 0000  miss eviction 
+3 5 0000  miss eviction 
+3 13 0000  miss eviction 
+3 21 0000  miss eviction 
+3 29 0000  miss eviction 
+0 5 0000  miss eviction 
+
+2 13 0100  miss eviction 
+2 21 0100  miss eviction 
+2 29 0100  miss eviction 
+3 5 0100  miss eviction 
+3 13 0100  miss eviction 
+3 21 0100  miss eviction 
+3 29 0100  miss eviction 
+0 5 0100  miss eviction 
+
+2 13 1000  miss eviction 
+2 21 1000  miss eviction 
+2 29 1000  miss eviction 
+3 5 1000  miss eviction 
+3 13 1000  miss eviction 
+3 21 1000  miss eviction 
+3 29 1000  miss eviction 
+0 5 1000  miss eviction 
+
+2 13 1100  miss eviction 
+2 21 1100  miss eviction 
+2 29 1100  miss eviction 
+3 5 1100  miss eviction 
+3 13 1100  miss eviction 
+3 21 1100  miss eviction 
+3 29 1100  miss eviction 
+0 5 1100  miss eviction 
+
+0 13 0000  miss eviction 
+0 21 0000  miss eviction 
+0 29 0000  miss eviction 
+1 5 0000  miss eviction 
+1 13 0000  miss eviction 
+1 21 0000  miss eviction 
+1 29 0000  miss eviction 
+2 5 0000  miss eviction 
+
+0 13 0100  miss eviction 
+0 21 0100  miss eviction 
+0 29 0100  miss eviction 
+1 5 0100  miss eviction 
+1 13 0100  miss eviction 
+1 21 0100  miss eviction 
+1 29 0100  miss eviction 
+2 5 0100  miss eviction 
+
+0 13 1000  miss eviction 
+0 21 1000  miss eviction 
+0 29 1000  miss eviction 
+1 5 1000  miss eviction 
+1 13 1000  miss eviction 
+1 21 1000  miss eviction 
+1 29 1000  miss eviction 
+2 5 1000  miss eviction 
+
+0 13 1100  miss eviction 
+0 21 1100  miss eviction 
+0 29 1100  miss eviction 
+1 5 1100  miss eviction 
+1 13 1100  miss eviction 
+1 21 1100  miss eviction 
+1 29 1100  miss eviction 
+2 5 1100  miss eviction 
+
+0 13 0000  miss eviction 
+0 21 0000  miss eviction 
+0 29 0000  miss eviction 
+1 5 0000  miss eviction 
+1 13 0000  miss eviction 
+1 21 0000  miss eviction 
+1 29 0000  miss eviction 
+2 5 0000  miss eviction 
+
+0 13 0100  miss eviction 
+0 21 0100  miss eviction 
+0 29 0100  miss eviction 
+1 5 0100  miss eviction 
+1 13 0100  miss eviction 
+1 21 0100  miss eviction 
+1 29 0100  miss eviction 
+2 5 0100  miss eviction 
+
+0 13 1000  miss eviction 
+0 21 1000  miss eviction 
+0 29 1000  miss eviction 
+1 5 1000  miss eviction 
+1 13 1000  miss eviction 
+1 21 1000  miss eviction 
+1 29 1000  miss eviction 
+2 5 1000  miss eviction 
+
+0 13 1100  miss eviction 
+0 21 1100  miss eviction 
+0 29 1100  miss eviction 
+1 5 1100  miss eviction 
+1 13 1100  miss eviction 
+1 21 1100  miss eviction 
+1 29 1100  miss eviction 
+2 5 1100  miss eviction 
+
+2 13 0000  miss eviction 
+2 21 0000  miss eviction 
+2 29 0000  miss eviction 
+3 5 0000  miss eviction 
+3 13 0000  miss eviction 
+3 21 0000  miss eviction 
+3 29 0000  miss eviction 
+0 5 0000  miss eviction 
+
+2 13 0100  miss eviction 
+2 21 0100  miss eviction 
+2 29 0100  miss eviction 
+3 5 0100  miss eviction 
+3 13 0100  miss eviction 
+3 21 0100  miss eviction 
+3 29 0100  miss eviction 
+0 5 0100  miss eviction 
+
+2 13 1000  miss eviction 
+2 21 1000  miss eviction 
+2 29 1000  miss eviction 
+3 5 1000  miss eviction 
+3 13 1000  miss eviction 
+3 21 1000  miss eviction 
+3 29 1000  miss eviction 
+0 5 1000  miss eviction 
+
+2 13 1100  miss eviction 
+2 21 1100  miss eviction 
+2 29 1100  miss eviction 
+3 5 1100  miss eviction 
+3 13 1100  miss eviction 
+3 21 1100  miss eviction 
+3 29 1100  miss eviction 
+0 5 1100  miss eviction 
+
+2 13 0000  miss eviction 
+2 21 0000  miss eviction 
+2 29 0000  miss eviction 
+3 5 0000  miss eviction 
+3 13 0000  miss eviction 
+3 21 0000  miss eviction 
+3 29 0000  miss eviction 
+0 5 0000  miss eviction 
+
+2 13 0100  miss eviction 
+2 21 0100  miss eviction 
+2 29 0100  miss eviction 
+3 5 0100  miss eviction 
+3 13 0100  miss eviction 
+3 21 0100  miss eviction 
+3 29 0100  miss eviction 
+0 5 0100  miss eviction 
+
+2 13 1000  miss eviction 
+2 21 1000  miss eviction 
+2 29 1000  miss eviction 
+3 5 1000  miss eviction 
+3 13 1000  miss eviction 
+3 21 1000  miss eviction 
+3 29 1000  miss eviction 
+0 5 1000  miss eviction 
+
+2 13 1100  miss eviction 
+2 21 1100  miss eviction 
+2 29 1100  miss eviction 
+3 5 1100  miss eviction 
+3 13 1100  miss eviction 
+3 21 1100  miss eviction 
+3 29 1100  miss eviction 
+0 5 1100  miss eviction 
+
+0 13 0000  miss eviction 
+0 21 0000  miss eviction 
+0 29 0000  miss eviction 
+1 5 0000  miss eviction 
+1 13 0000  miss eviction 
+1 21 0000  miss eviction 
+1 29 0000  miss eviction 
+2 5 0000  miss eviction 
+
+0 13 0100  miss eviction 
+0 21 0100  miss eviction 
+0 29 0100  miss eviction 
+1 5 0100  miss eviction 
+1 13 0100  miss eviction 
+1 21 0100  miss eviction 
+1 29 0100  miss eviction 
+2 5 0100  miss eviction 
+
+0 13 1000  miss eviction 
+0 21 1000  miss eviction 
+0 29 1000  miss eviction 
+1 5 1000  miss eviction 
+1 13 1000  miss eviction 
+1 21 1000  miss eviction 
+1 29 1000  miss eviction 
+2 5 1000  miss eviction 
+
+0 13 1100  miss eviction 
+0 21 1100  miss eviction 
+0 29 1100  miss eviction 
+1 5 1100  miss eviction 
+1 13 1100  miss eviction 
+1 21 1100  miss eviction 
+1 29 1100  miss eviction 
+2 5 1100  miss eviction 
+
+0 13 0000  miss eviction 
+0 21 0000  miss eviction 
+0 29 0000  miss eviction 
+1 5 0000  miss eviction 
+1 13 0000  miss eviction 
+1 21 0000  miss eviction 
+1 29 0000  miss eviction 
+2 5 0000  miss eviction 
+
+0 13 0100  miss eviction 
+0 21 0100  miss eviction 
+0 29 0100  miss eviction 
+1 5 0100  miss eviction 
+1 13 0100  miss eviction 
+1 21 0100  miss eviction 
+1 29 0100  miss eviction 
+2 5 0100  miss eviction 
+
+0 13 1000  miss eviction 
+0 21 1000  miss eviction 
+0 29 1000  miss eviction 
+1 5 1000  miss eviction 
+1 13 1000  miss eviction 
+1 21 1000  miss eviction 
+1 29 1000  miss eviction 
+2 5 1000  miss eviction 
+
+0 13 1100  miss eviction 
+0 21 1100  miss eviction 
+0 29 1100  miss eviction 
+1 5 1100  miss eviction 
+1 13 1100  miss eviction 
+1 21 1100  miss eviction 
+1 29 1100  miss eviction 
+2 5 1100  miss eviction 
+
+2 13 0000  miss eviction 
+2 21 0000  miss eviction 
+2 29 0000  miss eviction 
+3 5 0000  miss eviction 
+3 13 0000  miss eviction 
+3 21 0000  miss eviction 
+3 29 0000  miss eviction 
+0 5 0000  miss eviction 
+
+2 13 0100  miss eviction 
+2 21 0100  miss eviction 
+2 29 0100  miss eviction 
+3 5 0100  miss eviction 
+3 13 0100  miss eviction 
+3 21 0100  miss eviction 
+3 29 0100  miss eviction 
+0 5 0100  miss eviction 
+
+2 13 1000  miss eviction 
+2 21 1000  miss eviction 
+2 29 1000  miss eviction 
+3 5 1000  miss eviction 
+3 13 1000  miss eviction 
+3 21 1000  miss eviction 
+3 29 1000  miss eviction 
+0 5 1000  miss eviction 
+
+2 13 1100  miss eviction 
+2 21 1100  miss eviction 
+2 29 1100  miss eviction 
+3 5 1100  miss eviction 
+3 13 1100  miss eviction 
+3 21 1100  miss eviction 
+3 29 1100  miss eviction 
+0 5 1100  miss eviction 
+
+2 13 0000  miss eviction 
+2 21 0000  miss eviction 
+2 29 0000  miss eviction 
+3 5 0000  miss eviction 
+3 13 0000  miss eviction 
+3 21 0000  miss eviction 
+3 29 0000  miss eviction 
+0 5 0000  miss eviction 
+
+2 13 0100  miss eviction 
+2 21 0100  miss eviction 
+2 29 0100  miss eviction 
+3 5 0100  miss eviction 
+3 13 0100  miss eviction 
+3 21 0100  miss eviction 
+3 29 0100  miss eviction 
+0 5 0100  miss eviction 
+
+2 13 1000  miss eviction 
+2 21 1000  miss eviction 
+2 29 1000  miss eviction 
+3 5 1000  miss eviction 
+3 13 1000  miss eviction 
+3 21 1000  miss eviction 
+3 29 1000  miss eviction 
+0 5 1000  miss eviction 
+
+2 13 1100  miss eviction 
+2 21 1100  miss eviction 
+2 29 1100  miss eviction 
+3 5 1100  miss eviction 
+3 13 1100  miss eviction 
+3 21 1100  miss eviction 
+3 29 1100  miss eviction 
+0 5 1100  miss eviction 
+
+0 6 1101  miss eviction 

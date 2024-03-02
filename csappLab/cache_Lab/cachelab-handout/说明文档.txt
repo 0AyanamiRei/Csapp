@@ -1,0 +1,109 @@
+1、Logistics
+    要求实验环境是64-bits x86-64的机器。
+
+2、Overview
+    实验有两个part
+    Part A：编写一个小型的C程序(200-300行) 模拟缓存内存的行为
+    Part B：优化一个小型的矩阵转置函数，要求最小化缓存不命中次数
+
+4、Description
+    目录下的traces是用来测评 Part A的代码的
+    其内容是由valgrind的linux程序生成的指令如下：
+    linux> valgrind --log-fd=1 --tool=lackey -v --trace-mem=yes ls -l
+    Valgrind memory traces 具有以下形式：
+    I 0400d7d4,8
+     M 0421c7f0,4
+     L 04f6b868,8
+     S 7ff0005c8,8
+    每一行代表一到两次memory accesses, 格式如下：
+    [space]operation address,size
+
+    operation:I L S M
+    I:表示instruction load
+    L:表示data load
+    S:表示data store
+    M:表示data modify(数据修改， 数据加载后跟着数据存储)
+    每个'I'前面不加空格，其余加空格
+    'address'为64位的16进制内存地址；
+    'size'指明了操作访问的字节大小 
+
+Part A description：
+    Part A的任务是在csim.c中编写一个cache simulator的程序，以valgrind memory trace
+    作为输入，模拟缓存在该输入的hit/miss,并且输出hit、miss、eviction的总数
+
+    目录中已经提供了一个csim-ref的reference cache simulator(参考缓存模拟器)的二进制可执行
+    文件，可以模拟具有任意大小和关联性的缓存在valgrind trace文件上的行为,它使用的是LRU替换策略。
+
+    使用方式如下：
+    ./csim-ref [-hv] -s <s> -E <E> -b <b> -t <tracefile>
+    -h：可选的帮助信息，打印使用信息
+    -v：可选的详细标志，显示trace info
+    -s <s>：cache set的数量，S=2^s(填写s)
+    -E <E>：cache lines的数量
+    -b <b>：cache blocks的大小，B=2^b(填写b)
+    -t <tracefile>：valgrind tace的名称
+    举例： linux> ./csim-ref -s 4 -E 1 -b 4 -t traces/yi.trace
+    输出： hits:4 misses:5 evictions:3
+    
+    举例： linux> ./csim-ref -v -s 4 -E 1 -b 4 -t traces/yi.trace
+    输出： L 10,1 miss
+           M 20,1 miss hit
+           L 22,1 hit
+           S 18,1 hit
+           L 110,1 miss eviction
+           L 210,1 miss eviction
+           M 12,1 miss eviction hit
+           hits:4 misses:5 evictions:3
+    任务就是fii in the csim.c 使其接受与csim-ref相同的命令行参数并且有相同的输出
+    : csim.c file 完全是空的，你需要从头编写
+
+Part A's Programming Rules：
+    ·代码开头包含你的name 和 loginID
+    ·程序必须没有warning和error
+    ·必须正确处理任意的s E b参数，所以你需要使用malloc函数，  输入man malloc获取信息
+    ·'I'开头的行valgrind只会放在第一列，没有空格, 因为我们只关注缓存性能
+    ·为了得到A部分的scores，必须在main函数末尾调用函数printSummary打印需要的数据
+    ·假设内存访问是正确对齐的，即单个内存访问不会跨越边界
+
+Suggestions for Part A：
+    ·使用较小的traces， 比如traces/dave.trace，这样有利于debugging
+    ·虽然不要求你写出./csim-ref -v输出的中间过程，但是这样做有利于debugging
+    ·建议你使用getopt函数来解析命令行参数，需要头文件<getopt.h>、<stdlib.h>、<unistd.h>
+     输入man 3  getopt获取更多信息
+    ·每次'L或'S'最多导致一次cache miss， 'M'操作视为加载后存储到同一地址，可能会导致两次cache miss
+    ·如果您想使用15-122的C0-style，你可以包含contracts.h
+
+个人总结:
+    e....好像不需要改数据,他只是检查了tag和valid,数据改不改没啥关系
+
+Part B description：
+    Part B的任务是编写一个转置函数在trans.c中，使cache misses尽可能少。
+    trans.c中已经给出了一个transpose function, 不过它的cache misses很高，你只需要编写一个相似的函数"transpose_submit"
+    注意：不要修改函数transpose_submit定义上面的string，这用于自动评分识别。
+    得分标准：
+    • 32 × 32: 8 points if m < 300, 0 points if m > 600
+    • 64 × 64: 8 points if m < 1, 300, 0 points if m > 2, 000
+    • 61 × 67: 10 points if m < 2, 000, 0 points if m > 3, 000
+    你可以按照如下的格式在trans.c中编写多个转置函数：
+    /* Header comment */
+    char trans_simple_desc[] = "A simple transpose";
+    void trans_simple(int M, int N, int A[N][M], int B[M][N])
+    {
+    /* your transpose code here */
+    }
+
+    然后使用
+Part B's Programming Rules：
+    ·只允许在transpose function中定义至多12个int类型变量
+    ·不需要使用递归
+    ·不允许使用其他的数组
+    ·不需要修改数组A[N][M]的值, 但是你可以数组B中的值做任何操作
+
+Suggestions for Part A：
+    ·test-trans程序将每个转置函数i的trace保存在了trace.fi中，你可以使用指令 "./csim-ref -v -s 5 -E 1 -b 5 -t trace.fi"
+     查看命中和不命中的来源
+    ·因为你的转置函数将会在一个direct-mapped cache上进行评估，所以conflict misses是一个潜在的问题，
+     思考一下代码中可能出现conflict misses的情况，尤其是沿着对角线，试着想出一些访问模式，减少这些冲突的数量
+    ·Blocking的技术在文档中有讲(本地已下载)
+
+

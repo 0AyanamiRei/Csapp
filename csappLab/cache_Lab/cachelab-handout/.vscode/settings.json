@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "cachelab.h": "c",
+        "random": "c",
+        "stdio.h": "c"
+    }
+}

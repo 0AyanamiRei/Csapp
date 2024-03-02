@@ -1,0 +1,10 @@
+{
+    "cmake.configureOnOpen": false,
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "malloc.h": "c",
+        "unistd.h": "c"
+    }
+
+
+}
