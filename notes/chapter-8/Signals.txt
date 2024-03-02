@@ -30,5 +30,22 @@ as a Linux signal.
 
     介绍了修改每个signal对应行为的函数signal(int signum, sighandler_t handler);
     这给到我们自定义处理signal的自由, 可以往handler填函数的地s址，称为：signal handler
-    改变signal default行为的这个操作我们叫"installing the handler"。
+    改变signal default行为的这个操作我们叫"installing the handler"
+
+    **Blocking signals
+    Linux提供了阻塞信号的隐式和显示机制。
+
+    隐式的阻塞信号源于为程序记录信号的方式，是用一个int大小(32位)的比特去记录，如果当前正在处理信号s, 
+    此时我们说s这个信号会被隐式的阻塞, 也就是书上写的"内核默认阻塞任何当前处理程序正在处理信号类型的待处理信号"
+    (这句话也太长了吧·····)
+
+    显示的阻塞信号，这是我们需要掌握的，使用函数sigprocmask(翻译下来应该叫做signal-process-mask)
+    以及一些辅助的函数(主要还是sigprocmask函数), 它能够明确的告诉我们要阻塞什么信号，以及如何解除对该信号的阻塞
+
+    
+
+
+
+
+
 
