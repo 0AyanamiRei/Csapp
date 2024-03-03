@@ -12,7 +12,7 @@
 #include <unistd.h>
 #include <errno.h>
 
-#define time 5
+
 
 // char *fgets(char *s, int size, FILE *stream);
 
@@ -22,11 +22,49 @@
     2. 实际上unistd.h库中已为我们实现了好了定时向调用进程(自身)发送信号的功能:
             unsigned int alarm(unsigned int seconds); 在seconds秒后发送信号SIGALRM
 
-
+    询问过大模型后,我们得知当进程调用fgets等待用户输入的时候,如果被信号中断,fgets不会将stdin的数据写入到s
+    而且会返回NULL
 */
+#define time 5
+typedef void (*sighandler_t)(int);
+volatile char *res;
 
+void unix_error(char *msg)
+{
+    fprintf(stderr, "%s: %s\n", msg, strerror(errno));
+    exit(0);
+}
+
+pid_t Fork(void)
+{
+    pid_t pid;
+
+    if ((pid = fork()) < 0)
+        unix_error("Fork error");
+    return pid;
+}
+
+sighandler_t Signal(int signum, sighandler_t handler)
+{
+    if (signal(signum, handler) == SIG_ERR)
+        unix_error("signal error");
+}
+
+void SIGALRM_handler(int sig)
+{/* 我们应该在信号处理函数中选择返回 */
+    char no_entry;
+    if(no_entry){/* 在5s内没有输入则返回NULL */
+        ;
+    }
+    else{ /* 在5s内有任何输入 则返回指针s */
+        ;
+    }
+
+}
 
 char *tfgets(char *s, int size, FILE *stream)
 {
-    char *res = fgets(s, size, stream);
+    Signal(SIGALRM, SIGALRM_handler);
+
+    *res = fgets(s, size, stdin);
 }
