@@ -1,18 +1,18 @@
-/* Good job! you avoid the race condition!*/
-#include"/home/refrain/csapp/Csapp/code/mycsapp.c"
+/* WARNING: This code is buggy! */
 
-/*race condition:
+#include"/home/refrain/csapp/Csapp/code/mycsapp.c"
+/*解释各个函数:
+    Sio_error(char s[]); 打印字符串s并且终止进程;
+    Execve(const char *filename, char *const argv[], char *const envp[]) execve(filename, argv, envp) < 0 则终止进程
+    SIGCHLD:默认行为=忽略(进程忽略掉该信号), 事件=子进程停止或者终止
+*/
+
+/* 为什么有race condition?
         child立马exit-------+
         |         1         ↓
 ····---fork()---addjob()---(handler)deletejob()
         |_______2______|
 如果从路线1的时间比路线2更小,那么就会先进行deletejob再进行addjob
-*/
-
-/* avoid the race condition:
-    究其根本race的情况是：父进程在addjob(子进程)之前,子进程就已经将信号SIGCHLD传给了父进程并交给
-    handler处理,导致父进程被挂起,先进行deletejob()无效操作, 所以我们只需要让addjob()这个操作和fork()
-    操作稳定在一起执行即可, 那么在fork()到addjob()过程之间屏蔽掉SIGCHLD信号即可
 */
 
 void handler(int sig)
@@ -36,26 +36,21 @@ void handler(int sig)
 int main(int argc, char **argv)
 {
     int pid;
-    sigset_t mask_all, prev_CHLD, mask_CHLD;
+    sigset_t mask_all, prev_all;
 
     Sigfillset(&mask_all);
-    Sigemptyset(&mask_CHLD);
-    Sigaddset(&mask_CHLD, SIGCHLD);
     Signal(SIGCHLD, handler);
     initjobs(); /* Initialize the job list */
 
     while (1)
     {
-        Sigprocmask(SIG_BLOCK, &mask_CHLD, &prev_CHLD); /* Block the SIGCHLD for parent */
         if ((pid = Fork()) == 0)
         { /* Child process */
-            Sigprocmask(SIG_SETMASK, &prev_CHLD, NULL); /* Unblock the SIGCHLD for child */
             Execve("/bin/date", argv, NULL);
         }
-         /* Parent process */
-        Sigprocmask(SIG_BLOCK, &mask_all, NULL);
+        Sigprocmask(SIG_BLOCK, &mask_all, &prev_all); /* Parent process */
         addjob(pid);                                  /* Add the child to the job list */
-        Sigprocmask(SIG_SETMASK, &prev_CHLD, NULL);
+        Sigprocmask(SIG_SETMASK, &prev_all, NULL);
     }
     exit(0);
 }
