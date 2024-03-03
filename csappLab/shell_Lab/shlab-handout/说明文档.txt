@@ -1,1 +1,67 @@
-OK了兄弟们也是开始shlab了,让我们来阅读一下write up和
+OK了兄弟们也是开始shlab了,让我们来阅读一下write up
+
+Introduction
+    这次assignment的目的是更深入了process control和signal, 将会编写一个简单的支持job control的Unix shell
+    程序。
+
+Logistics
+    依旧是使用命令：tar xvf shlab-handout.tar来解压.tar文件
+    输入make来compile和link一些测试例程
+    tsh.c顶部的注释可以写上你的team member name和 id
+
+    在tsh.c( tiny shell )文件中，已经有一个简单的Unix shell框架了，我们已经实现了一些函数。
+    你的任务就是完成这剩下列出的函数功能，作为规范，这里罗列了每个功能大致需要的代码行数(包括注释)
+    • eval           : 解析和解释命令行的主要例程. [70 lines]
+    • builtin cmd    : 识别并解释 built-in commands：quit、fg、bg、jobs. [25 lines]
+    • do bgfg        : 实现bg和fg built-in commands. [50 lines]
+    • waitfg         : 等待fg完成作业. [20 lines]
+    • sigchld handler: 捕获SIGCHILD信号. [80 lines]
+    • sigint handler : 捕获SIGINT(Ctrl+c)信号. [15 lines]
+    • sigtstp handler: 捕获SIGTSTP(Ctrl+z)信号. [15 lines]
+
+    修改完代码后执行之前请输入指令make,运行你的shell时请输出tsh>·····
+
+General Overview of Unix Shells
+    shell是一个交互式的命令行解释器，往命令行中输入指令执行想要的操作
+    命令行是一个由空格分隔的ASCII文本序列，第一个词是内置的命令名称或者是可执行文件的
+    路径,其余是命令行参数。
+    如果第一个词是内置命令shell会立刻在当前进程中执行命令;
+    否则，shell会fork一个子进程，在子进程的上下文中加载并运行程序.
+    
+    解释单个命令行创建的子进程称为作业，一个作业可以由多个子进程通过 unix pipes连接起来.
+
+    如果命令行以字符'&'结尾，表示该job在后台bg运行，这意味着shell不会等到该job终止就打印提示符"tsh>    "
+    并等待下一条命令行, 否则job在前台运行, 这意味着shell会等待job终止后再等待下一条命令行。
+    记住这样一个规则：任何时候fg只能有一个job在运行,而可以有任意多的jobs在bg运行。
+    e.g.：
+    tsh> jobs                              :shell执行built-in jobs指令
+    tsh> /bin/ls -l -d                     :在fg运行程序ls
+                                            ps:当程序运行时 int main(int argc, char *argv[])有:
+                                            • argc == 3
+                                            • argv[0] == "/bin/ls"
+                                            • argv[1]== "-l"
+                                            • argv[2]== "-d"
+    tsh> /bin/ls -l -d &                   :运行程序ls在bg
+
+    shell支持jobs control
+    • jobs      : 列出正在运行和停止的bg jobs.
+    • bg <job>  : 将停止的bg job更改为正在运行的bg job.
+    • fg <job>  : 将停止或正在运行的bg job更改在fg 运行.
+    • kill <job>: 终止作业.
+
+    你完成的tsh应该包含以下功能
+    • 提示信息应该是 "tsh>"
+    • 用户输入的命令行应该由一个"name"和0或多个参数组成,每个参数由一个或多个空格分隔
+    • tsh不需要支持pipes '|' 或者是I/O重定向 '<','>'
+    • 输入Ctrl-C(Ctrl-Z)应该发送对应的信号给当前的fg job, 如果没有fg job,它应该是无效的
+    • 如果命令行以'&'结尾,在bg 运行job,否则在fg运行job
+    • 每个job用ID(PID or JID)来标识, "%5"表示JID 5, "5"表示PID 5
+    • tsh支持以下build-in 指令: quit、jobs、bg <job>、fg <job>
+    • tsh应该回收所有的zombie processes, 如果任何jobs因接受到它没有捕获的信号而终止
+      tsh应该打印job's PID和description of the offending signal
+
+Checking Your Work
+    Reference solution：我们提供一个参考的tsh: tshref, 你写的tsh应该和其保持一致的输出(ID除外)
+    Shell driver.pl：测试你的shell的一个程序，具体使用方法见文档
+
+    
