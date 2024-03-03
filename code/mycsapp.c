@@ -29,6 +29,7 @@
 #include <netdb.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <setjmp.h>
 
 /* Misc constants */
 #define MAXLINE 8192 /* Max text line length */

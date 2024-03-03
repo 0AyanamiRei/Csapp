@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <setjmp.h>
+#include"/home/refrain/csapp/Csapp/code/mycsapp.c"
 
 jmp_buf env1, env2;
 
