@@ -15,6 +15,8 @@
     操作稳定在一起执行即可, 那么在fork()到addjob()过程之间屏蔽掉SIGCHLD信号即可
 */
 
+/* 有关信号屏蔽的函数解析见mycsapp.c 函数解析4 */
+
 void handler(int sig)
 {
     int olderrno = errno;

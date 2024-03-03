@@ -302,3 +302,20 @@ void Execve(const char *filename, char *const argv[], char *const envp[])
  *   if pid = 0, 发送信号sig给调用kill函数所在进程组中的每个进程
  *   if pid < 0, 发送信号sig给进程|pid|所在进程组中的每个进程
  */
+
+
+// 4 信号屏蔽函数
+/* int sigprocmask(int how, const sigset_t *set, sigsetÿt *oldset);
+ *  假设使用位来记录屏蔽向量的变量为blocked
+ *  how:可选以下参数
+ *  ·SIG_BLOCK:   把set中的信号添加到blocked (blocked = blocked | set)
+ *  ·SIG_UNBLOCK: 从blcoked中删除set中的信号 (blocked = blocked & ~set)
+ *  ·SIG_SETMASK:赋值blocked = set
+ * oldset: 如果不为NULL,则存储blocked修改之前的值
+ * 
+ * 还有一些函数简单介绍一下功能：
+ * int sigemptyset(sigset_t *set): 初始化set为0
+ * int sigfillset(sigset_t *set) : 添加所有信号到set中
+ * int sigaddset(sigset_t *set, int signum): 添加signum信号到set中
+ * int sigdelset(sigset_t *set, int signum): 从set中删除signum信号
+ */
