@@ -37,6 +37,7 @@
 #define LISTENQ 1024 /* Second argument to listen() */
 
 extern char **environ;
+typedef void (*sighandler_t)(int); 
 
 /* 声明函数 */
 void unix_error(char *msg);
@@ -56,6 +57,7 @@ void Sigaddset(sigset_t *set, int signum);
 void Sigdelset(sigset_t *set, int signum);
 int Sigismember(const sigset_t *set, int signum);
 void Execve(const char *filename, char *const argv[], char *const envp[]);
+sighandler_t Signal(int signum, sighandler_t handler);
 
 
 
@@ -251,6 +253,11 @@ void Execve(const char *filename, char *const argv[], char *const envp[])
 	unix_error("Execve error");
 }
 
+sighandler_t Signal(int signum, sighandler_t handler)
+{
+    if(signal(signum, handler) == SIG_ERR)
+        unix_error("signal error");
+}
 
 
 
