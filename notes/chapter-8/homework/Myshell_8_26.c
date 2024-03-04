@@ -43,10 +43,15 @@ typedef struct job
     int argc;
     char state; /*stopped or running*/
     char **argv;
-    job *pre;   /*point to next job*/
+    job *next;   /*point to next job*/
 }job;
 
+/* global 变量*/
+job* bg_head = NULL;
+
+
 /* 添加一个job到bg */
+void add_job();
 
 
 typedef void (*sighandler_t)(int);
@@ -66,6 +71,11 @@ int parseline(char *buf, char **argv);
 int builtin_command(char **argv);
 
 
+/* signal handler function*/
+void SIGCHLD_handler(int sig);
+
+
+
 
 /* 设计思路
     使用parseline()函数解析命令行的内容, 返回值表示前后台任务, 并设置argv为输入name和参数
@@ -74,13 +84,18 @@ int builtin_command(char **argv);
     对于shell主进程, 我们选择在接收一个指令并fork一个前台作业后, 调用sigsuspend挂起, 这样在三个情况任意发生一个之前
     shell都会处于挂起状态, 并且会在接收到信号后立刻接触.
     ***但是问题进而演变了-> 怎么区分前台作业结束和后台作业结束?
-    对于Ctrl+Z和Ctrl+C我们能保证信号来源确切是我们期望的, 但是对于SIGCHILD信号是来自前台作业还是后台作业, 并不知道,
-    思考后我们发现, SIGCHILD信号被设置为SIG_IGN后,父进程会忽略掉这个信号,从而不会解除挂起状态, 如果能够在前台作业完成
+    对于Ctrl+Z和Ctrl+C我们能保证信号来源确切是我们期望的, 但是对于SIGCHLD信号是来自前台作业还是后台作业, 并不知道,
+    思考后我们发现, SIGCHLD信号被设置为SIG_IGN后,父进程会忽略掉这个信号,从而不会解除挂起状态, 如果能够在前台作业完成
     后给父进程发送一个SIGUSR信号,而后台作业不发生,那么就可以识别前后台作业了, 但是前台作业完成后怎么才能发送SIGUSR呢?
+    这个时候就必须要全局的数据结构去存放这种信息了,这个问题我们留给设计数据结构,也就是问题二中继续讨论.
+
+
+
+
 
   解决第二个问题, 如何设计数据结构去管理后台的作业才恰当?
     我打算实现一个链表去动态的管理后台作业, 根据copilot的建议,如果能够将一个作业的信息传递给信号处理函数,那么
-    我们就能区分前台与后台SIGCHILD的问题了.
+    我们就能区分前台与后台SIGCHLD的问题了.
 
 
 
@@ -118,6 +133,7 @@ int main(int argc, char **argv, char **envp) {
 
 
 
+/* pre function */
 
 void unix_error(char *msg)
 {
@@ -140,13 +156,16 @@ sighandler_t Signal(int signum, sighandler_t handler)
         unix_error("signal error");
 }
 
+
+/* main function */
+
 void eval(char *cmdline)
 {
     char *argv[MAXARGS];
     char buf[MAXLINE];
     int bg;
     pid_t pid;
-
+    
     strcpy(buf, cmdline);
     bg = parseline(buf, argv);
 
@@ -210,4 +229,18 @@ int parseline(char *buf, char **argv)
         argv[--argc] = NULL;
 
     return bg;
+}
+
+
+
+/* signal handler function*/
+
+void SIGCHLD_handler(int sig){
+    char check_bg = TRUE; /* 依赖全局数据结构的信息得到前后台进程 */
+    if(check_bg) { 
+        ;
+    }
+    else {
+        ;
+    }
 }
