@@ -5,6 +5,8 @@
         "stdio.h": "c",
         "stdlib.h": "c",
         "unistd.h": "c",
-        "setjmp.h": "c"
+        "setjmp.h": "c",
+        "signal.h": "c",
+        "wait.h": "c"
     }
 }

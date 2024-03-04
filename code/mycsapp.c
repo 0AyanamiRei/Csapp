@@ -312,7 +312,7 @@ sighandler_t Signal(int signum, sighandler_t handler)
  */
 
 
-// 4 信号屏蔽函数
+// 4 信号屏蔽函数(注意我们添加的是要屏蔽的信号)
 /* int sigprocmask(int how, const sigset_t *set, sigsetÿt *oldset);
  *  假设使用位来记录屏蔽向量的变量为blocked
  *  how:可选以下参数
