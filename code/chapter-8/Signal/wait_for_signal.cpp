@@ -1,6 +1,12 @@
 /* It's usefule but inefficient !!  cycle is a waste !!*/
 
-#include"/home/refrain/csapp/Csapp/code/mycsapp.c"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <errno.h>
+#include <unistd.h>
+#include <signal.h>
+#include <sys/wait.h>
 
 /* 设计的初衷
     当Linux shell创建一个fg-job(前台作业)的时候, 我们必须等待其终止才能继续接受命令.
@@ -51,20 +57,20 @@ int main(int argc, char **argv)
 {
     sigset_t mask, prev;
 
-    Signal(SIGCHLD, sigchld_handler);
-    Signal(SIGINT, sigint_handler);
-    Sigemptyset(&mask);
-    Sigaddset(&mask, SIGCHLD);
+    signal(SIGCHLD, sigchld_handler);
+    signal(SIGINT, sigint_handler);
+    sigemptyset(&mask);
+    sigaddset(&mask, SIGCHLD);
 
     while (1)
     {
-        Sigprocmask(SIG_BLOCK, &mask, &prev); /* Block SIGCHLD */
-        if (Fork() == 0)                      /* Child */
+        sigprocmask(SIG_BLOCK, &mask, &prev); /* Block SIGCHLD */
+        if (fork() == 0)                      /* Child */
             exit(0);
 
         /* Parent */
         pid = 0;
-        Sigprocmask(SIG_SETMASK, &prev, NULL); /* Unblock SIGCHLD */
+        sigprocmask(SIG_SETMASK, &prev, NULL); /* Unblock SIGCHLD */
 
         /* Wait for SIGCHLD to be received (wasteful) */
         while (!pid)
@@ -72,6 +78,7 @@ int main(int argc, char **argv)
 
         /* Do some work after receiving SIGCHLD */
         printf(".");
+        sleep(10);
     }
     exit(0);
 }

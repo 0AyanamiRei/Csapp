@@ -16,7 +16,7 @@
 */
 
 
-#include "/home/refrain/csapp/Csapp/code/chapter-8/ECF/mycsapp.c"
+#include "/home/refrain/csapp/Csapp/code/mycsapp.c"
 
 /* 顺带学习一下: 函数指针 */
 typedef void (*sighandler_t)(int);

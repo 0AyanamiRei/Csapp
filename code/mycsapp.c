@@ -37,7 +37,7 @@
 #define LISTENQ 1024 /* Second argument to listen() */
 
 extern char **environ;
-typedef void (*sighandler_t)(int); 
+typedef void (*sighandler_t)(int);
 
 /* 声明函数 */
 void unix_error(char *msg);
@@ -58,8 +58,6 @@ void Sigdelset(sigset_t *set, int signum);
 int Sigismember(const sigset_t *set, int signum);
 void Execve(const char *filename, char *const argv[], char *const envp[]);
 sighandler_t Signal(int signum, sighandler_t handler);
-
-
 
 /* 实现函数 */
 
@@ -246,37 +244,17 @@ int Sigismember(const sigset_t *set, int signum)
     return rc;
 }
 
-
-void Execve(const char *filename, char *const argv[], char *const envp[]) 
+void Execve(const char *filename, char *const argv[], char *const envp[])
 {
     if (execve(filename, argv, envp) < 0)
-	unix_error("Execve error");
+        unix_error("Execve error");
 }
 
 sighandler_t Signal(int signum, sighandler_t handler)
 {
-    if(signal(signum, handler) == SIG_ERR)
+    if (signal(signum, handler) == SIG_ERR)
         unix_error("signal error");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* 函数解析 */
 // 1 waitpid
@@ -311,7 +289,6 @@ sighandler_t Signal(int signum, sighandler_t handler)
  *   if pid < 0, 发送信号sig给进程|pid|所在进程组中的每个进程
  */
 
-
 // 4 信号屏蔽函数(注意我们添加的是要屏蔽的信号)
 /* int sigprocmask(int how, const sigset_t *set, sigsetÿt *oldset);
  *  假设使用位来记录屏蔽向量的变量为blocked
@@ -320,7 +297,7 @@ sighandler_t Signal(int signum, sighandler_t handler)
  *  ·SIG_UNBLOCK: 从blcoked中删除set中的信号 (blocked = blocked & ~set)
  *  ·SIG_SETMASK:赋值blocked = set
  * oldset: 如果不为NULL,则存储blocked修改之前的值
- * 
+ *
  * 还有一些函数简单介绍一下功能：
  * int sigemptyset(sigset_t *set): 初始化set为0
  * int sigfillset(sigset_t *set) : 添加所有信号到set中
