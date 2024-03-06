@@ -1,0 +1,66 @@
+task1 阅读书中关于Rio的代码实现，阅读是如何处理出错，处理异常的。
+
+Unix I/O
+    打开一个文件, 内核会返回一个称为"描述符"的非负整数，在同一个进程中，打开文件会使用最小的
+    一个"描述符", linux shell创建每个进程的时候，有三个打开的文件：
+    ·标准输入 stdin   描述符为0
+    ·标准输出 stdout  描述符为1
+    ·标准错误 stderr  描述符为2
+    每次打开一个文件的时候，系统会返回一个新的文件描述符，系统为每个进程维护一个文件描述符表
+    每次打开一个文件，就在这个表中找到最小的未使用的文件描述符
+
+    举个例子(练习题10.1)
+        int fd1, fd2;
+        fd1 = Open("foo.txt", O_RDONLY, 0);
+        Close(fd1);
+        fd2 = Open("baz.txt", O_RDONLY, 0);
+        printf("fd2 = %d\n", fd2);
+    进入进程一开始，Linux shell会打开stdin stdout stderr三个文件(猜测是依次打开)会得到描述符0+1+2
+    那么fd1的值就是3，然后关闭了foo.txt文件, 这样记录fd1的文件描述符就会返回到文件描述符表中,打开fd2的时候
+    系统在表中选择最小的一个文件描述符，所以fd2的值就是3，输出fd2=3
+
+    对每个打开的文件，内核保持一个文件的位置k(试回想一下，一个linux文件就是一个m个字节的序列)
+    初始为0(长一点点的字符串?),应用程序能够通过seek操作(linux中为lseek())修改文件的当前位置k, 当k≥m的时候
+    会触发一个叫EOF(end of file)的条件,应用程序通过检测到这个条件来判断是否读到文件末尾, 注意,书上加了一句话
+    “文件结尾并没有明确的"EOF"符号”
+
+    介绍了一下文件的类型, 这里略过。
+
+进程中如何打开文件
+    int open(const char *filename, int flags, mode_t mode);
+    通过上述定义的函数来打开一个文件或创建一个新的文件, 我们来仔细解析这个函数的参数
+
+    ·filename, 函数将filename转换为一个"文件描述符", 并且返回描述符数字,这个数字总是最小的
+    (也就是上面练习题中提到的从文件描述符表中选择一个最小的文件描述符)
+    ·flags, 指明进程打算如何访问这个文件, 不同的flags参数之间通过或操作("|")连接(这说明通过不同的位去表示不同参数)
+    比如 O_WRONLY|O_APPEND, 表明我们要以只写的方式打开一个文件,并设置文件位置k=m,在文件末
+    ·mode, 指定新文件的访问权限位， 作为上下文的信息的一部分，每个进程都有一个通过umask函数设置的umask掩码,
+    进程使用带mode参数的open函数创建一个新文件的时候，系统给予新文件访问权mode & ~umask
+
+应用程序如何读写文件
+    ssize_t read(int fd, void *buf, size_t count);
+    ssize_t write(int fd, const void *buf, size_t count);
+
+    I suggest you try to read the MAN manual to learn new function. They are in the file called read_man.txt and write_man.txt
+
+R/O包
+    关于R/O包，这里提供了很多更安全的I/O函数实现，不是很重要，后续有时间再回来研读实现过程。
+
+读取文件元数据、读取目录内容
+    int stat(const char *filename, struct stat *buf);
+    int fstat(int fd, struct stat *buf);
+    通过stat和fstat(前者以文件名作为输入，后者以文件描述符作为输入)，根据输入文件的信息(文件的metadata)
+    输出到一个定义好的数据结构 stuct stat{····}, 通过这个数据结构的内容，我们能查询到该文件的各种描述。
+
+    DIR *opendir(const char *name);
+    struct dirent *readdir(DIR *dirp);
+    通过readdir系列的函数来读取目录的内容(回忆一下，csapp讲过文件的类型，其中就有directory:目录这个类型)
+    学习这系列的函数或许对今年jyy的os lab第一个实验有帮助？
+
+共享文件
+    这里开始是比较晦涩难懂的内容，因为我们并不熟悉内核是如何表示打开的文件, 我们先来看三个重要的数据结构
+    ·Descriptor table 描述符表
+    ·File table 文件表
+    ·v-node table v-node表
+
+    关于描述符表，每个进程都有自己的描述符表，
