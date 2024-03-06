@@ -1,0 +1,37 @@
+记录关于Shell实验发送的BUG以及修复日志
+
+2024-3-5
+bug1
+    ./shell 后输入"无效命令"后 输出"name: Command not found"后shell无法继续接收下一个命令输入, 也无法Ctrl+Z或Ctrl+C退出
+    在  if(!bg).....
+        printf("sigsuspend挂起该进程!\n");
+        sigsuspend(&mask);
+        printf("sigsuspend解除了!\n");
+    的代码中,只打印出了第一句"sigsuspend挂起该进程!"
+    说明父进程确实收到SIGCHLD信号,并交给了信号处理函数, 在每一个信号处理函数开始,我们都有printf("接收到SIGCHLD信号!\n")类似的代码
+    但是输入"foo 1"后,只有foo程序内我们添加的打印消息, 开启消息"eeeee"和结束消息"Over!!"
+
+    /* 我发现我好像没有设置信号处理函数.......额额额额额额额,  尴尬= = */
+
+    意识到这里立马设置了signal, 完美！
+
+bug2
+    输入"foo 1"后有正确的看到"sigsuspend挂起该进程!"和"sigsuspend解除了!" 以及等待下一条指令的界面，但是立刻就退出了
+    可以发现,在printf("sigsuspend解除了!\n");sleep(50); 也无法避免立刻退出的问题
+    怀疑是SIGUSR1的默认行为导致的,我们添加对SIGUSR1信号的处理函数(因为我们需要发送该信号通知shell前台作业已完成)
+
+    在不断的简化程序后,我们得到最简单的一个程序, 只解析了foo 1命令, 使用sigsuspend挂起等待前台任务foo 1完成的
+    我们使用strace -o output.txt ./shell然后输入foo 1后发现了问题:(以下事件按顺序发送)
+    clone(child_stack=NULL.....) = 31320: 创建一个新的进程, 返回PID=31320
+    wait4(-1, NULL, 0, NULL) = 31320: 等待任何一个子进程结束, 返回的是结束的子进程的PID
+    pause()=> (To be restarted if no handler): 使调用进程挂起直到捕获一个信号
+    然后shell就一直卡在这了, so..... 我直接翻翻书,发现书上对于等待前台job已经给我们实现了一个框架了图8-42
+
+    分析二者差异:
+        ·书上代码会在调用信号处理函数之前使用变量olderrno保存error以便退出时恢复
+        ·书上代码避免掉了race condition, 也就是我们的问题, 在pause()之前就接受到了SIGCHLD信号
+        ·书上的代码没有办法区分前台作业和后台作业
+    好吧,确实读书的时候不够仔细的看例子, 对于后台作业管理, 同样的,在fork到addjob这段时间里,我们都要阻塞SIGCHLD信号
+    同时又要在调用execve之前解除子进程阻塞的SIGCHLD信号.
+2024-3-6
+    日志更新: 目前已经实现"等待前台作业", "添加后台作业到vector中管理", 急需处理的是关于后台作业的回收问题.

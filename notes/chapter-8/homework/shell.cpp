@@ -34,7 +34,7 @@
 #define Stopped 0
 #define Running 1
 
-typedef struct Job
+struct Job
 {
     pid_t pid;
     pid_t pgid;
@@ -42,7 +42,7 @@ typedef struct Job
     char state; /*stopped or running*/
     char **argv;
     struct Job *next; /*point to next job*/
-} Job;
+};
 
 /* global 变量*/
 Job *bg_head = NULL;
@@ -56,7 +56,7 @@ void unix_error(char *msg);
 void Free(void *ptr);
 char *Fgets(char *ptr, int n, FILE *stream);
 sighandler_t Signal(int signum, sighandler_t handler);
-
+void print_String(char *message);
 
 /* job's linklist function */
 void add_job(Job *bg_head, Job *job);
@@ -88,9 +88,31 @@ void SIGUSR1_handler(int sig);
 void pf_wait(int bg)
 {
     if (!bg)
-        printf("Now, we are waitting for the fg job accomplished.\n");
+        print_String("Now, we are waitting for the fg job accomplished.\n");
 }
 
+void pf_Job(Job *job)
+{
+    print_String("state, pid = ");
+    print_int(job->state);
+    print_int(job->pid);
+}
+
+void pf_bgJobs() {
+    print_String("打印所有的子进程id:\n");
+    Job* temp = bg_head->next;
+    while (temp != NULL) {
+        print_int(temp->pid);
+        print_String(" ");
+        temp = temp->next;
+    }
+    print_String("\n");
+}
+
+void debug(){
+    print_String("wait a moment·····\n");
+    sleep(5);
+}
 /* 设计思路
 使用parseline()函数解析命令行的内容, 返回值表示前后台任务, 并设置argv为输入name和参数
 
@@ -116,6 +138,14 @@ shell都会处于挂起状态, 并且会在接收到信号后立刻接触.
 对于我们使用的shell, 上述两个信号会由内核直接发送给fg_job, 当子进程发生结束,停止,继续的行为时都会向父进程发送
 SIGCHLD信号,这为SIGCHLD信号处理函数带来了很大的不便.
 
+根据书上的代码回答如何区分前后台作业的问题:
+    if(!bg){
+        pid = 0;
+        while(!pid) sigsuspend(&prev);
+    }
+    对于前台作业我们采用这样的挂起方式, 仔细思考, 这里的pid是前台作业的pid, 直到waitpid回收了前台作业返回其id给pid
+    才会真正的结束"挂起"的状态, 比如某个后台作业完成后 解除了sigsuspend, 但是shell仍处于while循环中, 所以这是一个
+    很巧妙的处理方法.
 */
 
 int main(int argc, char **argv, char **envp)
@@ -123,19 +153,79 @@ int main(int argc, char **argv, char **envp)
     bg_head = (Job *)malloc(sizeof(Job));
     char cmdline[MAXLINE]; /* Command line */
     ppid = getppid();
+    Signal(SIGCHLD, SIGCHLD_handler);
+    Signal(SIGINT, SIGCHLD_handler);
+    Signal(SIGTSTP, SIGCHLD_handler);
+    Signal(SIGUSR1, SIGUSR1_handler);
 
     do
     {
-        printf("Ciallo~(∠・ω< )⌒☆ > ");
+        print_String("Ciallo~(∠・ω< )⌒☆ > ");
         Fgets(cmdline, MAXLINE, stdin);
         if (feof(stdin))
         {
-            exit(0);
+            _exit(0);
         }
-        eval(cmdline);
+        /******************************************************/
+        char *argv[MAXARGS];
+        char buf[MAXLINE];
+        int bg;
+        int argc;
+        pid_t pid;
+
+        strcpy(buf, cmdline);
+        bg = parseline(buf, argc, argv);
+
+        if (argv[0] == NULL)
+            return;
+
+        /* builtin_command return 0 表明可能是一个可执行程序 */
+        if (!builtin_command(argv))
+        {
+            if ((pid = Fork()) == 0) { /* child */
+                if (execve(argv[0], argv, environ) < 0)
+                {
+                    print_String(argv[0]);
+                    print_String(": Command not found.\n");
+                    _exit(0);
+                }
+            }
+            else { /* parent */
+                Job *job = (Job *)malloc(sizeof(Job));
+                *job = (Job){pid, pid, argc, Running, argv, NULL}; /* 简化了, 进程组ID=进程ID */
+                if (!bg)
+                    fg_job = job;
+                else
+                    add_job(bg_head, job);
+            }
+        }
+
+        if (!bg) { /* 等待: 1,fg job完成 2,SIGINT信号 3,SIGTSTP信号 */
+
+            sigset_t mask;
+            sigemptyset(&mask);
+            sigfillset(&mask);
+            sigdelset(&mask, SIGCHLD); /* 通过信号处理函数让识别前台job还是后台job */
+
+            print_String("sigsuspend挂起该进程!\n");
+            sigsuspend(&mask);
+            print_String("sigsuspend解除了!\n");
+            sleep(50);
+            debug();
+        } else {
+            pf_wait(bg);
+            print_int(pid);
+            print_String(" ");
+            print_String(cmdline);
+        }
+
+
+
+        /******************************************************/
+        debug();
     } while (TRUE);
 
-    exit(0);
+    _exit(0);
 }
 
 /* pre function */
@@ -143,7 +233,7 @@ int main(int argc, char **argv, char **envp)
 void unix_error(char *msg)
 {
     fprintf(stderr, "%s: %s\n", msg, strerror(errno));
-    exit(0);
+    _exit(0);
 }
 
 pid_t Fork(void)
@@ -177,6 +267,36 @@ if (((rptr = fgets(ptr, n, stream)) == NULL) && ferror(stream))
 return rptr;
 }
 
+void print_int(int value) {
+    char buffer[20];  // 足够大以容纳任何整数
+    int i = 0;
+
+    // 特殊情况：value为0
+    if (value == 0) {
+        write(STDOUT_FILENO, "0", 1);
+        return;
+    }
+
+    // 将整数转换为字符串
+    while (value > 0) {
+        buffer[i++] = '0' + (value % 10);
+        value /= 10;
+    }
+
+    // 反转字符串
+    for (int j = 0; j < i / 2; ++j) {
+        char temp = buffer[j];
+        buffer[j] = buffer[i - j - 1];
+        buffer[i - j - 1] = temp;
+    }
+
+    // 输出字符串
+    write(STDOUT_FILENO, buffer, i);
+}
+
+void print_String(char *message) {
+    write(STDOUT_FILENO, message, strlen(message));
+}
 
 /* main function */
 
@@ -200,8 +320,9 @@ void eval(char *cmdline)
         if ((pid = Fork()) == 0) { /* child */
             if (execve(argv[0], argv, environ) < 0)
             {
-                printf("%s: Command not found.\n", argv[0]);
-                exit(0);
+                print_String(argv[0]);
+                print_String(": Command not found.\n");
+                _exit(0);
             }
         }
         else { /* parent */
@@ -213,17 +334,25 @@ void eval(char *cmdline)
                 add_job(bg_head, job);
         }
     }
-        if (!bg) { /* 等待: 1,fg job完成 2,SIGINT信号 3,SIGTSTP信号 */
-            pf_wait(bg);
-            sigset_t mask;
-            sigfillset(&mask);
-            sigdelset(&mask, SIGCHLD); /* 通过信号处理函数让识别前台job还是后台job */
-            sigsuspend(&mask);
-        } else {
-            pf_wait(bg);
-            printf("%d %s", pid, cmdline);
-        }
-    return;
+
+    if (!bg) { /* 等待: 1,fg job完成 2,SIGINT信号 3,SIGTSTP信号 */
+
+        sigset_t mask;
+        sigemptyset(&mask);
+        sigfillset(&mask);
+        sigdelset(&mask, SIGCHLD); /* 通过信号处理函数让识别前台job还是后台job */
+
+        print_String("sigsuspend挂起该进程!\n");
+        sigsuspend(&mask);
+        print_String("sigsuspend解除了!\n");
+        sleep(50);
+        debug();
+    } else {
+        pf_wait(bg);
+        print_int(pid);
+        print_String(" ");
+        print_String(cmdline);
+    }
 }
 
 int parseline(char *buf, int& argc, char **argv)
@@ -261,7 +390,7 @@ int builtin_command(char **argv)
 {
     if (!strcmp(argv[0], "quit"))
     {
-        exit(0); /* 结束shell进程 */
+        _exit(0); /* 结束shell进程 */
     }
     else if (!strcmp(argv[0], "&"))
     {
@@ -287,17 +416,17 @@ int builtin_command(char **argv)
 
 int jobs(char **argv)
 {
-    printf("We will show all of the jobs:····\nAll right,to be refining····\n");
+    print_String("We will show all of the jobs:····\nAll right,to be refining····\n");
 }
 
 int bg(char **argv)
 {
-    printf("We will restart the job to bg:PID=%d, ····\nAll right,to be refining····\n");
+    print_String("We will restart the job to bg:PID=%d, ····\nAll right,to be refining····\n");
 }
 
 int fg(char **argv)
 {
-    printf("We will restart the job to fg:PID=%d, ····\nAll right,to be refining····\n");
+    print_String("We will restart the job to fg:PID=%d, ····\nAll right,to be refining····\n");
 }
 
 
@@ -306,20 +435,19 @@ int fg(char **argv)
 
 void SIGCHLD_handler(int sig)
 {
+    print_String("接收到SIGCHLD信号!\n");
     char check_bg = TRUE; /* 依赖全局数据结构的信息得到前后台进程 */
     int status = 0;
     /* 收到该信号意味着有子进程终止了,由父进程调用处理函数 */
     pid_t pid = waitpid(-1, &status, WNOHANG);
-
-    printf("回收作业\n");
-
+    
     if (pid == fg_job->pid)
         check_bg = FALSE;
 
     if (!check_bg) { /* 前台作业 */
         if (WIFEXITED(status))
         { /* 正常退出(注意没有编写exit或return的子进程默认exit(0)) */
-            printf("fg child %d terminated by status %d\n", pid, status);
+            print_String("fg child  terminated by status \n");
         }
         else if (WIFSIGNALED(status))
         {
@@ -329,9 +457,12 @@ void SIGCHLD_handler(int sig)
         }
         else
         {
-            printf("fg child %d terminated abnormally\n", pid);
+            print_String("fg child ");
+            print_int(pid);
+            print_String(" terminated abnormally\n");
         }
         Free(fg_job);        /* 最好是对前台作业清空状态 */
+        debug();
         kill(ppid, SIGUSR1); /* 发送信号给shell,解除sigsuspend状态 */
     }
     else
@@ -339,7 +470,11 @@ void SIGCHLD_handler(int sig)
         delete_job(bg_head, pid);
         if (WIFEXITED(status))
         {
-            printf("bg child %d terminated by status %d\n", pid, status);
+            print_String("bg child ");
+            print_int(pid);
+            print_String(" terminated by status ");
+            print_int(status);
+            print_String("\n");
         }
         else if (WIFSIGNALED(status))
         {
@@ -349,76 +484,51 @@ void SIGCHLD_handler(int sig)
         }
         else
         {
-            printf("bg child %d terminated abnormally\n", pid);
+            print_String("bg child ");
+            print_int(pid);
+            print_String(" terminated abnormally\n");
         }
     }
 }
 
 void SIGUSR1_handler(int sig)
 { /* 这个信号仅仅提醒shell前台作业完成, 什么都不需要做 */
-    ;
+    print_String("接收到SIGUSR1信号!\n");
 }
 
 void SIGINT_handler(int sig)
-{
-    ;
+{/* Ctrl+C 来自键盘的中断信号 */
+    print_String("接收到SIGINT信号!\n");
 }
 
 void SIGTSTP_handler(int sig)
-{
-    ;
+{/* Ctrl+Z 来自键盘的中断信号 */
+    print_String("接收到SIGTSTP信号!\n");
 }
 
 /* job's linklist function */
-void add_job(Job *bg_head, Job *job)
-{
-    if (bg_head->next == NULL)
-    {
-        bg_head->next = job;
-        return;
-    }
+void add_job(Job* bg_head, Job* job) {
     job->next = bg_head->next;
     bg_head->next = job;
 }
 
-void delete_job(Job *bg_head, pid_t id)
-{
-    if (bg_head == NULL)
-        return;
-    Job *cur = bg_head;
-    Job *prev = NULL;
-    while (cur != NULL && cur->pid != id)
-    {
-        prev = cur;
-        cur = cur->next;
+void delete_job(Job* bg_head, int pid) {
+    Job* temp = bg_head->next, *prev = bg_head;
+    while (temp != NULL && temp->pid != pid) {
+        prev = temp;
+        temp = temp->next;
     }
-    if (cur == NULL)
-    {
-        printf("Error, no job's id = %d!\n", id);
-        return;
-    }
-    if (prev == NULL)
-    {
-        // Deleting the head of the list
-        bg_head = cur->next;
-    }
-    else
-    {
-        prev->next = cur->next;
-    }
-    free(cur);
+    if (temp == NULL) return;
+    prev->next = temp->next;
+    free(temp);
 }
 
 Job *search_job(Job *bg_head, pid_t id)
 {
-    Job *current = bg_head->next;
-    while (current != NULL)
-    {
-        if (current->pid == id)
-        {
-            return current;
-        }
-        current = current->next;
+    Job* temp = bg_head->next;
+    while(temp != NULL && temp->pid != id){
+        temp = temp->next;
     }
-    return NULL;
+    if(temp == NULL) return NULL;
+    return temp;
 }
