@@ -24,6 +24,28 @@ CMU15-213 2015 lecture17开篇三分钟 David老师的这段话醍醐灌顶，�
     · 灵活的数据放置，全相联缓存可以减少因为缓存行已满而导致的缓存不命中
     · 避免冲突不命中，对于其他类型的缓存，不同的数据块可能会映射到同一个缓存行，导致conflict miss
     · 优化替换策略， 全相联缓存可以使用更复杂的替换策略，比如LRU，能进一步减少缓存不命中的可能性
+3、疏通一下对于VP的Page Hits(cache hit)和Page Faults(cache miss)过程，因为读的时候比较绕，而且由于历史问题，命令上和cache不太一样
+    假设CPU想要读VP2这个虚拟页, 首先, 地址翻译硬件通过虚拟地址来定位page table中的PTE2, 然后检查PTE2的valid bit是否设置
+    如果设置那么我们称page hits, 如果没有被设置，我们称page faults
+    如果是page hits, PTE2中存放有指向DRAM的地址，这个地址处的数据就是我们缓存的VP2
+    如果是page faults, 那么触发一个page fault exception(坏了，设计到异常了), 然后调用内核中的"缺页异常处理程序", 通过这个程序
+    选择一个victim page, 被选择的page如果被修改则会复制会磁盘中，接下来，内核会从磁盘中复制VP2的内容到DRAM中,然后该处理程序返回
+    重启导致page faults的指令，重新将VP2的虚拟地址发送给地址翻译硬件, 然后就是page hits的过程了。
+    评价一下：
+            跟cache hit和cache miss还是很相似的，只是这里涉及了异常与异常处理，更详细了.
 
-3、
+4、csapp中译第565页说了在VM中blcok被称为page, 那么swapping和paging的一些操作对应cache的什么呢？？
+    block<----->page
+    Caching?<----->Swapping/Paging
+    Load?<----->Page In
+    Victim?<----->Page Out
+    page in指的是将未缓存的数据从硬盘调入DRAM的过程；
+    page out指当DRAM的空间不足时候，os选择性地将DRAM中的数据移出，存储到硬盘的虚拟内存区域的过程
+    个人感觉有点类似cache中提到的load(加载)和victim(驱逐)吧····
+
+
+    
+
+
+
     
