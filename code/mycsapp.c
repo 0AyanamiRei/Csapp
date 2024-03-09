@@ -1,15 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <errno.h>
-#include <getopt.h>
-#include <signal.h>
-#include <asm/signal.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
 #include <ctype.h>
@@ -29,7 +19,6 @@
 #include <netdb.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include <setjmp.h>
 
 /* Misc constants */
 #define MAXLINE 8192 /* Max text line length */
@@ -39,25 +28,6 @@
 extern char **environ;
 typedef void (*sighandler_t)(int);
 
-/* 声明函数 */
-void unix_error(char *msg);
-char *Fgets(char *ptr, int n, FILE *stream);
-pid_t Fork(void);
-void app_error(char *msg);
-void Kill(pid_t pid, int signum);
-ssize_t Sio_putl(long v);
-ssize_t Sio_puts(char s[]);
-void Sio_error(char s[]);
-unsigned int Sleep(unsigned int secs);
-pid_t Waitpid(pid_t pid, int *iptr, int options);
-void Sigprocmask(int how, const sigset_t *set, sigset_t *oldset);
-void Sigemptyset(sigset_t *set);
-void Sigfillset(sigset_t *set);
-void Sigaddset(sigset_t *set, int signum);
-void Sigdelset(sigset_t *set, int signum);
-int Sigismember(const sigset_t *set, int signum);
-void Execve(const char *filename, char *const argv[], char *const envp[]);
-sighandler_t Signal(int signum, sighandler_t handler);
 
 /* 实现函数 */
 
@@ -255,6 +225,39 @@ sighandler_t Signal(int signum, sighandler_t handler)
     if (signal(signum, handler) == SIG_ERR)
         unix_error("signal error");
 }
+
+void *Mmap(void *addr, size_t len, int prot, int flags, int fd, off_t offset) 
+{
+    void *ptr;
+
+    if ((ptr = mmap(addr, len, prot, flags, fd, offset)) == ((void *) -1))
+	unix_error("mmap error");
+    return(ptr);
+}
+
+void Munmap(void *start, size_t length) 
+{
+    if (munmap(start, length) < 0)
+	unix_error("munmap error");
+}
+
+void Close(int fd) 
+{
+    int rc;
+
+    if ((rc = close(fd)) < 0)
+	unix_error("Close error");
+}
+
+int Open(const char *pathname, int flags, mode_t mode) 
+{
+    int rc;
+
+    if ((rc = open(pathname, flags, mode))  < 0)
+	unix_error("Open error");
+    return rc;
+}
+
 
 /* 函数解析 */
 // 1 waitpid

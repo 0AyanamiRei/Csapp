@@ -67,8 +67,11 @@ CMU15-213 2015 lecture17开篇三分钟 David老师的这段话醍醐灌顶，�
     ·匿名文件：cs中通常指没有名字或路径的文件，通常存在内存中，也被称为临时文件，进程的/proc/[pid]/maps文件会列出
     这个进程映射的所有内存areas，包括匿名文件
 
-    
+    swap file和swap space(area)，交换文件和交换空间，
 
+
+8、关于PPO和VPO相等
+    
 
 
 
