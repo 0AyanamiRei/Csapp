@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.md": "bat",
         "types.h": "c",
         "errno.h": "c",
         "stdio.h": "c",
@@ -7,6 +8,9 @@
         "unistd.h": "c",
         "setjmp.h": "c",
         "signal.h": "c",
-        "wait.h": "c"
+        "wait.h": "c",
+        "fcntl.h": "c",
+        "random": "c",
+        "time.h": "c"
     }
 }
